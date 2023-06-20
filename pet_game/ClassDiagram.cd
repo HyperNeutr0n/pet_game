@@ -1,41 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="pet_game.Player">
-    <Position X="1" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAAgAAgAAAAAAAAIAAAACAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Pet">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABIAAAAQAAAAAAAAAAAAEAAAAAAAAAQAAAAg=</HashCode>
+      <HashCode>AAAkiACABIAAgAQAAEEEAAQAAAAEAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Pet.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Player" />
+      <Field Name="owner" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="toyList" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="pet_game.Cat">
-    <Position X="3.75" Y="3.75" Width="1.5" />
+    <Position X="3.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>Cat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Fish">
-    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Position X="6.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Chameleon">
-    <Position X="9.25" Y="3.75" Width="1.5" />
+    <Position X="9.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Chameleon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pet_game.Toy">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAhAAAAAQAAAAAAAAAAAAQAAAAEAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Toy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
