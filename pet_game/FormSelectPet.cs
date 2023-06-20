@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pet_game
 {
-    public partial class FormMain : Form
+    public partial class FormSelectPet : Form
     {
-        public FormMain()
+        public FormSelectPet()
         {
             InitializeComponent();
+        }
+        FormGame frmGame;
+        private void FormSelectPet_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
