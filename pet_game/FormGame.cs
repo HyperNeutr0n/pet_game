@@ -32,6 +32,7 @@ namespace pet_game
             labelDateTime.Text = DateTime.Now.ToString();
             panelData.Visible = true;
             panelActivity.Visible = true;
+            labelTitle.Visible = false;
             pictureBoxPet.Image = myPet.Picture;
             pictureBoxPet.SizeMode = PictureBoxSizeMode.StretchImage;
             if(myPet is Cat)
