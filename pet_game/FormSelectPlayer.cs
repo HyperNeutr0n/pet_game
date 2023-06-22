@@ -24,24 +24,14 @@ namespace pet_game
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
-        {/*
-            frmGame.myPlayer = new Player(textBoxPlayerName.Text, 100, DateTime.Now);
-            if (radioButtonCat.Checked)
-            {
-                frmGame.myPet = new Cat();
-            }
-            else if (radioButtonFish.Checked)
-            {
-                frmGame.myPet = new Fish();
-            }
-            else if (radioButtonChameleon.Checked)
-            {
-                frmGame.myPet = new Chameleon();
-            }
-            frmGame.StartGame();
-            this.Close();
-            this.Owner.Close();
-            */
+        {
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormSelectPet formSelectPet = new FormSelectPet();
+            formSelectPet.Owner = this;
+            formSelectPet.ShowDialog();
         }
     }
 }

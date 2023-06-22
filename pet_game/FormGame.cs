@@ -43,7 +43,7 @@ namespace pet_game
                 buttonPlay.Enabled = false;
                 buttonBath.Enabled = false;
                 buttonClean.Enabled = false;
-                buttonVaccinate.Enabled = false;
+                buttonVaccinate.Enabled = true;
             }else if(myPet is Chameleon)
             {
                 buttonPlay.Enabled = false;
@@ -56,6 +56,7 @@ namespace pet_game
         {
             panelData.Visible = false;
             panelActivity.Visible = false;
+
         }
 
         private void resetGameToolStripMenuItem_Click(object sender, EventArgs e)
