@@ -16,45 +16,20 @@ namespace pet_game
         {
             InitializeComponent();
         }
+
+        #region objects
         FormGame frmGame;
+        #endregion
+
+        #region form load
         private void FormSelectPet_Load(object sender, EventArgs e)
-        {/*
-            radioButtonCat.BackgroundImage = Properties.Resources.cat_happy;
-            radioButtonFish.BackgroundImage = Properties.Resources.fish_happy;
-            radioButtonChameleon.BackgroundImage = Properties.Resources.chameleon_happy;
-            radioButtonCat.BackgroundImageLayout = ImageLayout.Stretch;
-            radioButtonFish.BackgroundImageLayout = ImageLayout.Stretch;
-            radioButtonChameleon.BackgroundImageLayout = ImageLayout.Stretch;
-            */
-            radioButtonCat.Checked = true;
-
-            comboBoxEnvironment.Items.Add("River");
-            comboBoxEnvironment.Items.Add("Sea");
-            comboBoxEnvironment.Items.Add("Pond");
-            comboBoxEnvironment.DropDownStyle = ComboBoxStyle.DropDownList;
-            frmGame = (FormGame)this.Owner.Owner;
-        }
-
-        private void buttonPlay_Click(object sender, EventArgs e)
         {
-            frmGame.myPlayer = new Player(textBoxPlayerName.Text, 100, DateTime.Now);
-            if (radioButtonCat.Checked)
-            {
-                frmGame.myPet = new Cat(textBoxPetName.Text, radioButtonCat.BackgroundImage, frmGame.myPlayer);
-            }
-            else if (radioButtonFish.Checked)
-            {
-                frmGame.myPet = new Fish(textBoxPetName.Text, radioButtonFish.BackgroundImage, frmGame.myPlayer, comboBoxEnvironment.Text);
-            }
-            else if (radioButtonChameleon.Checked)
-            {
-                frmGame.myPet = new Chameleon(textBoxPetName.Text, radioButtonChameleon.BackgroundImage, frmGame.myPlayer, Color.Green);
-            }
-            frmGame.StartGame();
-            this.Close();
-            this.Owner.Close();
+            radioButtonCat.Checked = true;
+            frmGame = this.Owner.Owner as FormGame;
         }
+        #endregion
 
+        #region radio button interaction
         private void radioButtonCat_CheckedChanged(object sender, EventArgs e)
         {
             labelEnvirontment.Visible = false;
@@ -73,5 +48,37 @@ namespace pet_game
             labelEnvirontment.Visible = false;
             comboBoxEnvironment.Visible = false;
         }
+        #endregion
+
+        #region play button
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmGame.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
+
+                if (radioButtonCat.Checked)
+                {
+                    frmGame.pet = new Cat(textBoxPetName.Text, radioButtonCat.BackgroundImage, frmGame.player);
+                }
+                else if (radioButtonFish.Checked)
+                {
+                    frmGame.pet = new Fish(textBoxPetName.Text, radioButtonFish.BackgroundImage, frmGame.player, comboBoxEnvironment.Text);
+                }
+                else if (radioButtonChameleon.Checked)
+                {
+                    frmGame.pet = new Chameleon(textBoxPetName.Text, radioButtonChameleon.BackgroundImage, frmGame.player, Color.Green);
+                }
+
+                frmGame.StartGame();
+                this.Close();
+                this.Owner.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
 }

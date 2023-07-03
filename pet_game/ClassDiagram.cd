@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="pet_game.Player">
-    <Position X="1.25" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAgAAgAAAAAAAAIAAAACAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -10,7 +10,7 @@
   <Class Name="pet_game.Pet">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAkiACABIAAgAQAAEEEAAQAAAAEAAAAAAEAAAAAAAg=</HashCode>
+      <HashCode>AAAkigCABYAAgAQAAEEEAAQAAAAEAAAAAAEAAAAAAAg=</HashCode>
       <FileName>Pet.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -21,28 +21,28 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="pet_game.Cat">
-    <Position X="3.75" Y="5.25" Width="1.5" />
+    <Position X="3.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAAgAgAAAQAAAAAAAAAAAAABAAAAAQQAgAAAAAAAAAA=</HashCode>
       <FileName>Cat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Fish">
-    <Position X="6.5" Y="5.25" Width="1.5" />
+    <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAgACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Fish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Chameleon">
-    <Position X="9.25" Y="5.25" Width="1.5" />
+    <Position X="9.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAgAAAQAAAgAAAAAAAAAAgAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Chameleon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="pet_game.Toy">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAhAAAAAQAAAAAAAAAAAAQAAAAEAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Toy.cs</FileName>

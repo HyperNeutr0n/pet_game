@@ -22,9 +22,9 @@ namespace pet_game
         protected Pet(string name, Image picture, Player owner)
         {
             this.Name = name;
-            this.Health = 100;
-            this.Energy = 100;
-            this.Happiness = 100;
+            this.Health = 40;
+            this.Energy = 40;
+            this.Happiness = 40;
             this.Picture = picture;
             this.Owner = owner;
             this.ToyList = new List<Toy>();
@@ -112,6 +112,13 @@ namespace pet_game
         protected string DisplayDataPet()
         {
             return this.Name + "\nHealth : " + this.Health + "%   Energy : " + this.Energy + "%   Happiness : " + this.Happiness + "%";
+        }
+
+        public abstract void Feed();
+
+        public virtual void Sleep()
+        {
+            return;
         }
         #endregion
     }

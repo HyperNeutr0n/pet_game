@@ -16,15 +16,23 @@ namespace pet_game
         {
             InitializeComponent();
         }
+
+        #region objects
         FormGame frmGame;
+        #endregion
+
+        #region form loads
         private void FormSelectPlayer_Load(object sender, EventArgs e)
         {
             
             frmGame = (FormGame)this.Owner.Owner;
         }
+        #endregion
 
+        #region form interaction
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -33,5 +41,6 @@ namespace pet_game
             formSelectPet.Owner = this;
             formSelectPet.ShowDialog();
         }
+        #endregion
     }
 }

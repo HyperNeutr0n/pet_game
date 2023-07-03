@@ -28,6 +28,24 @@ namespace pet_game
         {
             return base.DisplayDataPet() + "\nCurrent Color : " + this.CurrentColor.ToString();
         }
+
+        public override void Feed()
+        {
+            base.Health += 30;
+            base.Energy += 50;
+        }
+
+        public override void Sleep()
+        {
+            base.Health += 60;
+            base.Energy += 60;
+
+        }
+
+        public void ChangeColor(Color newColor)
+        {
+            this.CurrentColor = newColor;
+        }
         #endregion
     }
 }
