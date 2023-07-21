@@ -6,6 +6,7 @@ using System.Drawing;
 
 namespace pet_game
 {
+    [Serializable]
     public class Cat : Pet
     {
         #region data members
@@ -46,10 +47,13 @@ namespace pet_game
             base.Energy += 70;
         }
 
-        public void Play()
+        public override void Play(Toy toy)
         {
-            base.Happiness += 50;
-            base.Energy -= 30;
+            if(toy != null)
+            {
+                base.Happiness += toy.Benefit;
+            }
+        
         }
 
         public void Bath()

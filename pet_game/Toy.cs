@@ -1,24 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
 namespace pet_game
 {
+    [Serializable]
     public class Toy
     {
         #region data members
         private string name;
         private int price;
         private int benefit;
+        private Image picture;
         #endregion
 
         #region constructor
-        public Toy(string name, int price, int benefit)
+        public Toy(string name, int price, int benefit, Image Picture)
         {
             this.Name = name;
             this.Price = price;
             this.Benefit = benefit;
+            this.Picture = Picture;
         }
         #endregion
 
@@ -59,6 +63,8 @@ namespace pet_game
                 else benefit = 1;
             }
         }
+
+        public Image Picture { get => picture; set => picture = value; }
         #endregion
 
         #region methods

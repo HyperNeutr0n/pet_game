@@ -5,6 +5,7 @@ using System.Text;
 
 namespace pet_game
 {
+    [Serializable]
     public class Player
     {
         #region data members

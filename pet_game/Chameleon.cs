@@ -6,6 +6,7 @@ using System.Text;
 
 namespace pet_game
 {
+    [Serializable]
     public class Chameleon : Pet
     {
         #region data members

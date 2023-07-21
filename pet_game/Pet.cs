@@ -6,6 +6,7 @@ using System.Text;
 
 namespace pet_game
 {
+    [Serializable]
     public abstract class Pet
     {
         #region data members
@@ -22,9 +23,9 @@ namespace pet_game
         protected Pet(string name, Image picture, Player owner)
         {
             this.Name = name;
-            this.Health = 40;
-            this.Energy = 40;
-            this.Happiness = 40;
+            this.Health = 100;
+            this.Energy = 100;
+            this.Happiness = 100;
             this.Picture = picture;
             this.Owner = owner;
             this.ToyList = new List<Toy>();
@@ -119,6 +120,92 @@ namespace pet_game
         public virtual void Sleep()
         {
             return;
+        }
+
+        public virtual void Play(Toy toy)
+        {
+
+        }
+
+        public void Buy(Toy newToy)
+        {
+            if (this.Owner.Coins >= newToy.Price)
+            {
+                bool sudahpunya = false;
+                foreach (Toy toy in ToyList)
+                {
+                    if (toy.Name == newToy.Name) 
+                    sudahpunya = true;
+                    break;
+                }
+                if (sudahpunya == false)
+                {
+                    this.toyList.Add(newToy);
+                    this.Owner.Coins -= newToy.Price;
+                }
+                else
+                {
+                    throw new Exception("Barang sudah ada");
+                }
+            }
+            else
+            {
+                throw new Exception("Koin tidak cukup");
+            }
+        }
+
+        public string CheckHealth()
+        {
+            string condition = "";
+            if(this.Health >= 10 && this.Health <= 50)
+            {
+                condition = "Weak";
+            }
+            else if (this.Health >= 51 && this.Health <= 75)
+            {
+                condition = "Moderate";
+            }
+            else 
+            {
+                condition = "Strong";
+            }
+            return condition;
+        }
+
+        public string CheckEnergy()
+        {
+            string condition = "";
+            if (this.Energy >= 10 && this.Energy <= 50)
+            {
+                condition = "Weak";
+            }
+            else if (this.Energy >= 51 && this.Energy <= 75)
+            {
+                condition = "Moderate";
+            }
+            else
+            {
+                condition = "Strong";
+            }
+            return condition;
+        }
+
+        public string CheckHappy()
+        {
+            string condition = "";
+            if (this.Happiness >= 10 && this.Happiness <= 50)
+            {
+                condition = "Weak";
+            }
+            else if (this.Happiness >= 51 && this.Happiness <= 75)
+            {
+                condition = "Moderate";
+            }
+            else
+            {
+                condition = "Strong";
+            }
+            return condition;
         }
         #endregion
     }

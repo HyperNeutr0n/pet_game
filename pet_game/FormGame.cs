@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +22,10 @@ namespace pet_game
         #region objects
         public Pet pet;
         public Player player;
+
+        public List<Player> listPlayer = new List<Player>();
+        public List<Pet> listPet = new List<Pet>();
+        int detik = 0;
         #endregion
 
         #region methods
@@ -54,6 +60,7 @@ namespace pet_game
                 buttonClean.Enabled = false;
                 buttonVaccinate.Enabled = false;
             }
+            timerGame.Start();
         }
         #endregion
 
@@ -62,6 +69,22 @@ namespace pet_game
         {
             panelData.Visible = false;
             panelActivity.Visible = false;
+
+           // if (File.Exists("DataPlater.vc"))
+           // {
+              //  FileStream stream = new FileStream("DataPlater.vc", FileMode.Open, FileAccess.REad);
+               // BinaryFormatter format = new BinaryFormatter();
+               // listPlayer = (List<Player>) format.Deserialize(stream);
+               // stream.Close();
+          //  }
+
+          //  if (File.Exists("DataPet.vc"))
+          //  {
+               // FileStream stream = new FileStream("DataPet.vc", FileMode.Open, FileAccess.REad);
+               // BinaryFormatter format = new BinaryFormatter();
+               // listPet = (List<Pet>)format.Deserialize(stream);
+               // stream.Close();
+            //}
         }
         #endregion
 
@@ -106,7 +129,10 @@ namespace pet_game
         }
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            ((Cat)pet).Play();
+            FormSelection selection= new FormSelection();
+            selection.Owner= this;
+            selection.ShowDialog();
+            
 
             labelPetData.Text = pet.DisplayData();
         }
@@ -145,6 +171,73 @@ namespace pet_game
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ChangeActivity(string activity)
+        {
+            if(pet is Cat)
+            {
+                if(activity == "Feed")
+                {
+                    pictureBoxPet.Image = Properties.Resources.cat_feed;
+                }
+                else if( activity == "-")
+                {
+                    pictureBoxPet.Image = Properties.Resources.cat_happy;
+                }
+            }
+            timerImage.Start();
+
+        }
+
+
         #endregion
+
+        private void timerImage_Tick(object sender, EventArgs e)
+        {
+            detik++;
+            if(detik == 3)
+            {
+                timerImage.Stop();
+                ChangeActivity("-");
+            }
+        }
+
+        private void timerGame_Tick(object sender, EventArgs e)
+        {
+            pet.Happiness -= 10;
+            pet.Energy-= 10;
+            pet.Health-= 10;
+
+            labelPetData.Text = pet.DisplayData();
+            
+            if(pet.CheckEnergy() == "Weak" && pet.CheckHappy()== "Weak" && pet.CheckHealth()== "Weak")
+            {
+                timerGame.Stop();
+                panelActivity.Visible= false;
+                panelData.Visible= false;
+                MessageBox.Show("You Lose");
+            }
+        }
+
+        private void SaveFilePlayer(string filename)
+        {
+            FileStream stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            BinaryFormatter format = new BinaryFormatter();
+            format.Serialize(stream, listPlayer);
+            stream.Close();
+        }
+
+        private void SaveFilePet(string filename)
+        {
+            FileStream stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            BinaryFormatter format = new BinaryFormatter();
+            format.Serialize(stream, listPet);
+            stream.Close();
+        }
+        private void FormGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //SaveFilePlayer("DataPlater.vc");
+            //SaveFilePet("DataPet.vc");
+        }
     }
 }

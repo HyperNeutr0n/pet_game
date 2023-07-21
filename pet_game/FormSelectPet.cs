@@ -69,7 +69,8 @@ namespace pet_game
                 {
                     frmGame.pet = new Chameleon(textBoxPetName.Text, radioButtonChameleon.BackgroundImage, frmGame.player, Color.Green);
                 }
-
+                frmGame.listPlayer.Add(frmGame.player);
+                frmGame.listPet.Add(frmGame.pet);
                 frmGame.StartGame();
                 this.Close();
                 this.Owner.Close();

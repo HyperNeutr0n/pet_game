@@ -19,6 +19,7 @@ namespace pet_game
 
         #region objects
         FormGame frmGame;
+        
         #endregion
 
         #region form loads
@@ -32,7 +33,16 @@ namespace pet_game
         #region form interaction
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-
+            frmGame.player = (Player) comboBoxPlayer.SelectedItem;
+            foreach(Pet pet in frmGame.listPet)
+            {
+                if(pet.Name == frmGame.player.Name)
+                {
+                    frmGame.pet = pet;
+                }
+            }
+            frmGame.StartGame();
+            this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
