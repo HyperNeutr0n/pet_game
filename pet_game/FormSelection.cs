@@ -21,8 +21,12 @@ namespace pet_game
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            gameform.pet.Play(selectToy);
-            gameform.labelPetData.Text = gameform.pet.DisplayData();
+            if (gameform.pet is Cat)
+            {
+                gameform.pet.Play(selectToy);
+            }
+            gameform.Progress();
+            gameform.timerGame.Start();
             this.Close();
         }
 
@@ -31,6 +35,7 @@ namespace pet_game
             FormShop shop = new FormShop();
             shop.Owner = this;
             shop.ShowDialog();
+         
         }
 
         private void FormSelection_Load(object sender, EventArgs e)

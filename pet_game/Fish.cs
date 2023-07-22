@@ -49,6 +49,25 @@ namespace pet_game
                 throw new Exception("Not enough coins to clean the pool!");
             }
         }
+
+        public override void ChangeStatus()
+        {
+            base.Happiness -= (5 - CheckDeco());
+            base.Health -= (5 - CheckDeco());
+            base.Energy -= (5 - CheckDeco());
+        }
+
+        public int CheckDeco()
+        {
+            if (base.ToyList.Count !=  0)
+            {
+                return ToyList.Count *1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         #endregion
     }
 }

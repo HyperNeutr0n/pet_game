@@ -31,11 +31,12 @@ namespace pet_game
         #region methods
         public void StartGame()
         {
-            labelPlayerData.Text = player.DisplayData();
-            labelPetData.Text = pet.DisplayData();
+            
             labelDateTime.Text = DateTime.Now.ToString("dd/MMM/yyyy\nhh:mm:ss");
             labelTitle.Visible = false;
-
+            labelCoin.Text = pet.Owner.Coins.ToString();
+            labelPet.Text = pet.Name;
+            labelPlayer.Text = player.Name; 
             panelData.Visible = true;
             panelActivity.Visible = true;
 
@@ -45,13 +46,17 @@ namespace pet_game
             if (pet is Cat)
             {
                 buttonClean.Enabled = false;
+                labelVaccine.Visible = true;
+                labelVaccine.Text = pet.DisplayData();
+                pictureBoxVac.Visible = true;
             }
             else if (pet is Fish)
             {
                 buttonSleep.Enabled = false;
-                buttonPlay.Enabled = false;
+                buttonPlay.Enabled = true;
                 buttonBath.Enabled = false;
                 buttonVaccinate.Enabled = false;
+                this.BackgroundImage = Properties.Resources.shop;
             }
             else if (pet is Chameleon)
             {
@@ -60,6 +65,7 @@ namespace pet_game
                 buttonClean.Enabled = false;
                 buttonVaccinate.Enabled = false;
             }
+            Progress();
             timerGame.Start();
         }
         #endregion
@@ -117,31 +123,30 @@ namespace pet_game
         private void buttonFeed_Click(object sender, EventArgs e)
         {
             pet.Feed();
+            Progress();
 
-            labelPetData.Text = pet.DisplayData();
         }
         
         private void buttonSleep_Click(object sender, EventArgs e)
         {
             pet.Sleep();
+            Progress();
 
-            labelPetData.Text = pet.DisplayData();
+
         }
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+            timerGame.Stop();
             FormSelection selection= new FormSelection();
             selection.Owner= this;
             selection.ShowDialog();
-            
-
-            labelPetData.Text = pet.DisplayData();
+           
         }
 
         private void buttonBath_Click(object sender, EventArgs e)
         {
             ((Cat)pet).Bath();
-
-            labelPetData.Text = pet.DisplayData();
+            Progress();
         }
 
         private void buttonVaccinate_Click(object sender, EventArgs e)
@@ -149,8 +154,7 @@ namespace pet_game
             try
             {
                 ((Cat)pet).Vaccinate();
-
-                labelPetData.Text = pet.DisplayData();
+                labelVaccine.Text = pet.DisplayData();
             }
             catch (Exception ex)
             {
@@ -163,8 +167,7 @@ namespace pet_game
             try
             {
                 ((Fish)pet).Clean();
-
-                labelPetData.Text = pet.DisplayData();
+                Progress();
             }
             catch (Exception ex)
             {
@@ -204,11 +207,9 @@ namespace pet_game
 
         private void timerGame_Tick(object sender, EventArgs e)
         {
-            pet.Happiness -= 10;
-            pet.Energy-= 10;
-            pet.Health-= 10;
-
-            labelPetData.Text = pet.DisplayData();
+            pet.ChangeStatus();
+            labelHealth.Text = pet.Health.ToString();
+            Progress();
             
             if(pet.CheckEnergy() == "Weak" && pet.CheckHappy()== "Weak" && pet.CheckHealth()== "Weak")
             {
@@ -239,5 +240,14 @@ namespace pet_game
             //SaveFilePlayer("DataPlater.vc");
             //SaveFilePet("DataPet.vc");
         }
+
+        public void Progress()
+        {
+            progressBarHappy.Value = pet.Happiness;
+            progressBarHealth.Value = pet.Health;
+            progressBarEnergy.Value = pet.Energy;
+        }
+
+        
     }
 }

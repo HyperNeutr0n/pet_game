@@ -1,8 +1,10 @@
-﻿using System;
+﻿using pet_game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,8 @@ namespace pet_game
 {
     public partial class FormSelectPet : Form
     {
+        List<Image> selectImage = new List<Image>() { Properties.Resources.cat_happy, Properties.Resources.fish_happy, Properties.Resources.chameleon_happy };
+        int index = 0;
         public FormSelectPet()
         {
             InitializeComponent();
@@ -24,30 +28,46 @@ namespace pet_game
         #region form load
         private void FormSelectPet_Load(object sender, EventArgs e)
         {
-            radioButtonCat.Checked = true;
             frmGame = this.Owner.Owner as FormGame;
+            pictureBoxSeelection.BackgroundImage = selectImage[index];
+            CheckFish();
+           
         }
         #endregion
 
-        #region radio button interaction
-        private void radioButtonCat_CheckedChanged(object sender, EventArgs e)
+        #region Button change
+        private void buttonL_Click(object sender, EventArgs e)
         {
-            labelEnvirontment.Visible = false;
-            comboBoxEnvironment.Visible = false;
-
+            index -= 1;
+            if (index > -1)
+            {
+                pictureBoxSeelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                index = selectImage.Count - 1;
+                pictureBoxSeelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
         }
 
-        private void radioButtonFish_CheckedChanged(object sender, EventArgs e)
+        private void buttonR_Click(object sender, EventArgs e)
         {
-            labelEnvirontment.Visible = true;
-            comboBoxEnvironment.Visible = true;
+            index += 1;
+            if (index > 2)
+            {
+                index = 0;
+                pictureBoxSeelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                pictureBoxSeelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
         }
 
-        private void radioButtonChameleon_CheckedChanged(object sender, EventArgs e)
-        {
-            labelEnvirontment.Visible = false;
-            comboBoxEnvironment.Visible = false;
-        }
         #endregion
 
         #region play button
@@ -57,23 +77,25 @@ namespace pet_game
             {
                 frmGame.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
 
-                if (radioButtonCat.Checked)
+                if (index == 0)
                 {
-                    frmGame.pet = new Cat(textBoxPetName.Text, radioButtonCat.BackgroundImage, frmGame.player);
+                    frmGame.pet = new Cat(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player);
                 }
-                else if (radioButtonFish.Checked)
+                else if (index == 1)
                 {
-                    frmGame.pet = new Fish(textBoxPetName.Text, radioButtonFish.BackgroundImage, frmGame.player, comboBoxEnvironment.Text);
+                    frmGame.pet = new Fish(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player, comboBoxEnvironment.Text);
                 }
-                else if (radioButtonChameleon.Checked)
+                else if (index == 2)
                 {
-                    frmGame.pet = new Chameleon(textBoxPetName.Text, radioButtonChameleon.BackgroundImage, frmGame.player, Color.Green);
+                    frmGame.pet = new Chameleon(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player, Color.Green);
                 }
                 frmGame.listPlayer.Add(frmGame.player);
                 frmGame.listPet.Add(frmGame.pet);
                 frmGame.StartGame();
                 this.Close();
                 this.Owner.Close();
+
+               
             }
             catch (Exception ex)
             {
@@ -81,5 +103,19 @@ namespace pet_game
             }
         }
         #endregion
+
+       private void CheckFish()
+        {
+            if (index == 1)
+            {
+                labelEnvirontment.Visible = true;
+                comboBoxEnvironment.Visible = true;
+            }
+            else
+            {
+                labelEnvirontment.Visible = false;
+                comboBoxEnvironment.Visible = false;
+            }
+        }
     }
 }

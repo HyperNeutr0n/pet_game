@@ -195,5 +195,17 @@
   <ItemGroup>
     <None Include="Resources\shop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning-pixel-art-free-vector-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngfind.com-smile-emoji-png-215707.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

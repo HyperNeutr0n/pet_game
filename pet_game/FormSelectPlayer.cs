@@ -33,16 +33,27 @@ namespace pet_game
         #region form interaction
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            frmGame.player = (Player) comboBoxPlayer.SelectedItem;
-            foreach(Pet pet in frmGame.listPet)
+            try
             {
-                if(pet.Name == frmGame.player.Name)
+                if (comboBoxPlayer.SelectedItem != null)
                 {
-                    frmGame.pet = pet;
+                    frmGame.player = (Player)comboBoxPlayer.SelectedItem;
+                    foreach (Pet pet in frmGame.listPet)
+                    {
+                        if (pet.Name == frmGame.player.Name)
+                        {
+                            frmGame.pet = pet;
+                        }
+                    }
+                    frmGame.StartGame();
+                    this.Close();
                 }
+                else throw new Exception("Please select a player!");
             }
-            frmGame.StartGame();
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

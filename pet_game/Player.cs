@@ -54,7 +54,7 @@ namespace pet_game
         #region methods
         public string DisplayData()
         {
-            return this.Name + "\nCoins : " + this.Coins;
+            return this.Name + "Coins : " + this.Coins;
         }
         #endregion
     }

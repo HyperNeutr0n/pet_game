@@ -28,11 +28,11 @@ namespace pet_game
         public override string DisplayData()
         {
             string status = "No";
-            if (VaccinationStatus)
+            if (VaccinationStatus == true)
             {
                 status = "Yes";
             }
-            return base.DisplayDataPet() + "\nVaccination Status : " + status;
+            return status;
         }
 
         public override void Feed()
@@ -53,7 +53,6 @@ namespace pet_game
             {
                 base.Happiness += toy.Benefit;
             }
-        
         }
 
         public void Bath()
@@ -78,6 +77,13 @@ namespace pet_game
             {
                 throw new Exception("Not enough coin");
             }
+        }
+
+        public override void ChangeStatus()
+        {
+            base.Happiness -= 5;
+            base.Health -= 5;
+            base.Energy -= 5 ;
         }
         #endregion
     }

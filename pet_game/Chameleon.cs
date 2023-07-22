@@ -47,6 +47,13 @@ namespace pet_game
         {
             this.CurrentColor = newColor;
         }
+
+        public override void ChangeStatus()
+        {
+            base.Happiness -= 5;
+            base.Health -= 5;
+            base.Energy -= 5;
+        }
         #endregion
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(221, 745);
+            this.linkLabel1.Location = new System.Drawing.Point(223, 725);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(165, 45);
             this.linkLabel1.TabIndex = 24;
@@ -100,9 +100,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 189);
+            this.pictureBox1.Location = new System.Drawing.Point(58, 188);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(293, 270);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
@@ -114,7 +115,6 @@
             this.labelData.Name = "labelData";
             this.labelData.Size = new System.Drawing.Size(315, 218);
             this.labelData.TabIndex = 26;
-            this.labelData.Text = "Don\'t have or need a new toy";
             this.labelData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormSelection

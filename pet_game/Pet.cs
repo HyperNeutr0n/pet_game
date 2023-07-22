@@ -208,5 +208,7 @@ namespace pet_game
             return condition;
         }
         #endregion
+
+        public abstract void ChangeStatus();
     }
 }

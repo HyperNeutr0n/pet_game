@@ -13,7 +13,7 @@ namespace pet_game
     public partial class FormShop : Form
     {
         FormGame gameform;
-        List<Toy> listToy = new List<Toy>();
+        public List<Toy> listToy = new List<Toy>();
         Toy toy1, toy2, toy3;
         int index = 0;
 
@@ -21,34 +21,20 @@ namespace pet_game
         {
             gameform = (FormGame)this.Owner.Owner;
             CreateToys();
-         
-                pictureBox1.BackgroundImage = listToy[index].Picture;
-                labelData.Text = listToy[index].DisplayData();
-           
-
+            pictureBox1.BackgroundImage = listToy[index].Picture;
+            labelData.Text = listToy[index].DisplayData();
+        
         }
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
             try
             {
-                if (label1.Text == "Ball")
-                {
-                    gameform.pet.Buy(toy1);
-                   
-                }
-                else if (label1.Text == "Yarn")
-                {
-                    gameform.pet.Buy(toy2);
-                    
-                }
-                else if (label1.Text == "Stick")
-                {
-                    gameform.pet.Buy(toy3);
-                }
-                gameform.labelPlayerData.Text = gameform.player.DisplayData();
+                gameform.pet.Buy(listToy[index]);
+                listToy.Remove(listToy[index]);
+                gameform.labelCoin.Text = gameform.player.Coins.ToString();
                 MessageBox.Show("Beli");
-             
+                gameform.timerGame.Start();
              
                 this.Close();
                 this.Owner.Close();
@@ -62,38 +48,41 @@ namespace pet_game
 
         private void button2_Click(object sender, EventArgs e)
         {
-            index += 1;
-            if (index < listToy.Count)
-            {
-                pictureBox1.BackgroundImage = listToy[index].Picture;
-                labelData.Text = listToy[index].DisplayData();
-                label1.Text = listToy[index].Name;
-            }
-            else
-            {
-                index = 0;
-                pictureBox1.BackgroundImage = listToy[index].Picture;
-                labelData.Text = listToy[index].DisplayData();
-                label1.Text = listToy[index].Name;
-            }
+           
+                index += 1;
+                if (index > (listToy.Count - 1))
+                {
+                    index = 0;
+                    pictureBox1.BackgroundImage = listToy[index].Picture;
+                    labelData.Text = listToy[index].DisplayData();
+
+
+                }
+                else
+                {
+                    pictureBox1.BackgroundImage = listToy[index].Picture;
+                    labelData.Text = listToy[index].DisplayData();
+                }
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            index -= 1;
-            if (index > -1)
-            {
-                pictureBox1.BackgroundImage = listToy[index].Picture;
-                labelData.Text = listToy[index].DisplayData();
-                label1.Text = listToy[index].Name;
-            }
-            else
-            {
-                index = listToy.Count -1;
-                pictureBox1.BackgroundImage = listToy[index].Picture;
-                labelData.Text = listToy[index].DisplayData();
-                label1.Text = listToy[index].Name;
-            }
+         
+                index -= 1;
+                if (index > -1)
+                {
+                    pictureBox1.BackgroundImage = listToy[index].Picture;
+                    labelData.Text = listToy[index].DisplayData();
+                }
+                else
+                {
+                    index = listToy.Count - 1;
+                    pictureBox1.BackgroundImage = listToy[index].Picture;
+                    labelData.Text = listToy[index].DisplayData();
+                }
+          
         }
 
         public FormShop()
