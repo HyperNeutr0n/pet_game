@@ -63,9 +63,69 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat_afterBathIdle_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_afterBathIdle_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_afterBathIdle_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_afterBathIdle_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cat_bath {
             get {
                 object obj = ResourceManager.GetObject("cat_bath", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_bath_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_bath_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_bath_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_bath_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_eat_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_eat_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_eat_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_eat_001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +156,26 @@ namespace pet_game.Properties {
         internal static System.Drawing.Bitmap cat_happy {
             get {
                 object obj = ResourceManager.GetObject("cat_happy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_idle_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_idle_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_idle_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_idle_001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +216,26 @@ namespace pet_game.Properties {
         internal static System.Drawing.Bitmap cat_sleep {
             get {
                 object obj = ResourceManager.GetObject("cat_sleep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_sleep_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_sleep_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_sleep_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_sleep_001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +286,46 @@ namespace pet_game.Properties {
         internal static System.Drawing.Bitmap cat_vaccine {
             get {
                 object obj = ResourceManager.GetObject("cat_vaccine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_walkingLeft_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_walkingLeft_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_walkingLeft_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_walkingLeft_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_walkingRight_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_walkingRight_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_walkingRight_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_walkingRight_001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

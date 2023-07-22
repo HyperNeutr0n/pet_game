@@ -79,8 +79,33 @@ namespace pet_game
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
         #endregion
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {/*
+            if (File.Exists("DataPlayer.vc"))
+            {
+            FileStream stream = new FileStream("DataPlater.vc", FileMode.Open, FileAccess.Read);
+            BinaryFormatter format = new BinaryFormatter();
+            listPlayer = (List<Player>) format.Deserialize(stream);
+            stream.Close();
+            }
+
+            if (File.Exists("DataPet.vc"))
+            {
+            FileStream stream = new FileStream("DataPet.vc", FileMode.Open, FileAccess.Read);
+            BinaryFormatter format = new BinaryFormatter();
+            listPet = (List<Pet>)format.Deserialize(stream);
+            stream.Close();
+            }
+            */
+        }
     }
 }

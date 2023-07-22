@@ -43,15 +43,18 @@
             this.panelMain.Controls.Add(this.buttonContinueGame);
             this.panelMain.Controls.Add(this.buttonNewGame);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1008, 580);
+            this.panelMain.Size = new System.Drawing.Size(1344, 714);
             this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(397, 349);
+            this.buttonExit.Location = new System.Drawing.Point(529, 430);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.Size = new System.Drawing.Size(100, 28);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@
             // 
             // buttonSetting
             // 
-            this.buttonSetting.Location = new System.Drawing.Point(397, 277);
+            this.buttonSetting.Location = new System.Drawing.Point(529, 341);
+            this.buttonSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetting.Size = new System.Drawing.Size(100, 28);
             this.buttonSetting.TabIndex = 6;
             this.buttonSetting.Text = "Settings";
             this.buttonSetting.UseVisualStyleBackColor = true;
@@ -69,9 +73,10 @@
             // 
             // buttonContinueGame
             // 
-            this.buttonContinueGame.Location = new System.Drawing.Point(397, 213);
+            this.buttonContinueGame.Location = new System.Drawing.Point(529, 262);
+            this.buttonContinueGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonContinueGame.Name = "buttonContinueGame";
-            this.buttonContinueGame.Size = new System.Drawing.Size(75, 23);
+            this.buttonContinueGame.Size = new System.Drawing.Size(100, 28);
             this.buttonContinueGame.TabIndex = 5;
             this.buttonContinueGame.Text = "Continue Game";
             this.buttonContinueGame.UseVisualStyleBackColor = true;
@@ -79,9 +84,10 @@
             // 
             // buttonNewGame
             // 
-            this.buttonNewGame.Location = new System.Drawing.Point(397, 154);
+            this.buttonNewGame.Location = new System.Drawing.Point(529, 190);
+            this.buttonNewGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonNewGame.Name = "buttonNewGame";
-            this.buttonNewGame.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewGame.Size = new System.Drawing.Size(100, 28);
             this.buttonNewGame.TabIndex = 4;
             this.buttonNewGame.Text = "New Game";
             this.buttonNewGame.UseVisualStyleBackColor = true;
@@ -89,13 +95,15 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 582);
+            this.ClientSize = new System.Drawing.Size(1344, 716);
             this.Controls.Add(this.panelMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 

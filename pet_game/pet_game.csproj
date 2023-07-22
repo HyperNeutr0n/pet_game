@@ -216,5 +216,47 @@
   <ItemGroup>
     <None Include="Resources\pngfind.com-smile-emoji-png-215707.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-afterBathIdle-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-afterBathIdle-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-bath-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-bath-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-eat-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-eat-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-idle-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-idle-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-sleep-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-sleep-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-walkingLeft-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-walkingLeft-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-walkingRight-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-walkingRight-001.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
