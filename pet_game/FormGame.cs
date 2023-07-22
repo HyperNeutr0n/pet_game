@@ -280,9 +280,9 @@ namespace pet_game
         {
             if (walkCount < 30)
             {
-                activity = "idle";
                 SmartMove(directionNum);
                 walkCount++;
+                activity = "idle";
             }
             else
             {// delay 5 detik (idle animation)
