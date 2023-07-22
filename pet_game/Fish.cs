@@ -21,7 +21,18 @@ namespace pet_game
         #endregion
 
         #region properties
-        public string Environment { get => environment; set => environment = value; }
+        public string Environment 
+        { 
+            get => environment; 
+            set
+            {
+                if (value == "River" || value == "Sea" || value == "Pond")
+                {
+                    environment = value;
+                }
+                else throw new Exception("Please select an environment for your fish!");
+            }
+        }
         #endregion
 
         #region methods

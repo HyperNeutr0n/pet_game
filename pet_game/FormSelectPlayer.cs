@@ -19,13 +19,13 @@ namespace pet_game
 
         #region objects
         FormGame frmGame;
-        
+        FormMain frmMain;
         #endregion
 
         #region form loads
         private void FormSelectPlayer_Load(object sender, EventArgs e)
         {
-            
+            frmMain = this.Owner as FormMain;
             frmGame = (FormGame)this.Owner.Owner;
         }
         #endregion
@@ -37,12 +37,12 @@ namespace pet_game
             {
                 if (comboBoxPlayer.SelectedItem != null)
                 {
-                    frmGame.player = (Player)comboBoxPlayer.SelectedItem;
-                    foreach (Pet pet in frmGame.listPet)
+                    frmMain.player = (Player)comboBoxPlayer.SelectedItem;
+                    foreach (Pet pet in frmMain.listPet)
                     {
-                        if (pet.Name == frmGame.player.Name)
+                        if (pet.Name == frmMain.player.Name)
                         {
-                            frmGame.pet = pet;
+                            frmMain.pet = pet;
                         }
                     }
                     frmGame.StartGame();

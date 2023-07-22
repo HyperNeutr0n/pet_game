@@ -29,62 +29,63 @@
         private void InitializeComponent()
         {
             this.labelData = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBoxToys = new System.Windows.Forms.PictureBox();
+            this.buttonL = new System.Windows.Forms.Button();
+            this.buttonR = new System.Windows.Forms.Button();
             this.buttonBuy = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToys)).BeginInit();
             this.SuspendLayout();
             // 
             // labelData
             // 
             this.labelData.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelData.Location = new System.Drawing.Point(383, 86);
-            this.labelData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelData.Location = new System.Drawing.Point(483, 181);
             this.labelData.Name = "labelData";
-            this.labelData.Size = new System.Drawing.Size(302, 218);
+            this.labelData.Size = new System.Drawing.Size(201, 142);
             this.labelData.TabIndex = 24;
             this.labelData.Text = "Don\'t have or need a new toy";
             this.labelData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pictureBoxToys
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 270);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxToys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxToys.Location = new System.Drawing.Point(268, 163);
+            this.pictureBoxToys.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxToys.Name = "pictureBoxToys";
+            this.pictureBoxToys.Size = new System.Drawing.Size(195, 176);
+            this.pictureBoxToys.TabIndex = 25;
+            this.pictureBoxToys.TabStop = false;
             // 
-            // button1
+            // buttonL
             // 
-            this.button1.Location = new System.Drawing.Point(151, 400);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 42);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Kiri";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonL.Location = new System.Drawing.Point(329, 385);
+            this.buttonL.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonL.Name = "buttonL";
+            this.buttonL.Size = new System.Drawing.Size(51, 27);
+            this.buttonL.TabIndex = 26;
+            this.buttonL.Text = "Kiri";
+            this.buttonL.UseVisualStyleBackColor = true;
+            this.buttonL.Click += new System.EventHandler(this.buttonL_Click);
             // 
-            // button2
+            // buttonR
             // 
-            this.button2.Location = new System.Drawing.Point(489, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 42);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Kanan";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonR.Location = new System.Drawing.Point(554, 385);
+            this.buttonR.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonR.Name = "buttonR";
+            this.buttonR.Size = new System.Drawing.Size(50, 27);
+            this.buttonR.TabIndex = 27;
+            this.buttonR.Text = "Kanan";
+            this.buttonR.UseVisualStyleBackColor = true;
+            this.buttonR.Click += new System.EventHandler(this.buttonR_Click);
             // 
             // buttonBuy
             // 
             this.buttonBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttonBuy.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuy.ForeColor = System.Drawing.Color.Black;
-            this.buttonBuy.Location = new System.Drawing.Point(256, 389);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonBuy.Location = new System.Drawing.Point(399, 378);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(207, 76);
+            this.buttonBuy.Size = new System.Drawing.Size(138, 49);
             this.buttonBuy.TabIndex = 29;
             this.buttonBuy.Text = "Buy";
             this.buttonBuy.UseVisualStyleBackColor = false;
@@ -92,20 +93,22 @@
             // 
             // FormShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(717, 621);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1024, 621);
             this.Controls.Add(this.buttonBuy);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonR);
+            this.Controls.Add(this.buttonL);
+            this.Controls.Add(this.pictureBoxToys);
             this.Controls.Add(this.labelData);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormShop";
             this.Load += new System.EventHandler(this.FormShop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToys)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,9 +116,9 @@
         #endregion
 
         public System.Windows.Forms.Label labelData;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBoxToys;
+        private System.Windows.Forms.Button buttonL;
+        private System.Windows.Forms.Button buttonR;
         private System.Windows.Forms.Button buttonBuy;
     }
 }

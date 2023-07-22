@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace pet_game
         private int happiness;
         private Image picture;
         private Player owner;
-        private List<Toy> toyList;
+        private BindingList<Toy> toyList;
         #endregion
 
         #region constructor
@@ -28,7 +29,7 @@ namespace pet_game
             this.Happiness = 100;
             this.Picture = picture;
             this.Owner = owner;
-            this.ToyList = new List<Toy>();
+            this.ToyList = new BindingList<Toy>();
         }
         #endregion
 
@@ -104,27 +105,23 @@ namespace pet_game
         }
         public Image Picture { get => picture; set => picture = value; }
         public Player Owner { get => owner; set => owner = value; }
-        public List<Toy> ToyList { get => toyList; set => toyList = value; }
+        public BindingList<Toy> ToyList { get => toyList; set => toyList = value; }
         #endregion
 
         #region methods
         public abstract string DisplayData();
 
+        public abstract void Feed();
+
+        public abstract void ChangeStatus();
+
+        public virtual void Sleep() { }
+
+        public virtual void Play(Toy toy) { }
+
         protected string DisplayDataPet()
         {
             return this.Name + "\nHealth : " + this.Health + "%   Energy : " + this.Energy + "%   Happiness : " + this.Happiness + "%";
-        }
-
-        public abstract void Feed();
-
-        public virtual void Sleep()
-        {
-            return;
-        }
-
-        public virtual void Play(Toy toy)
-        {
-
         }
 
         public void Buy(Toy newToy)
@@ -208,7 +205,5 @@ namespace pet_game
             return condition;
         }
         #endregion
-
-        public abstract void ChangeStatus();
     }
 }

@@ -14,97 +14,21 @@ namespace pet_game
 {
     public partial class FormSelectPet : Form
     {
-        List<Image> selectImage = new List<Image>() { Properties.Resources.cat_happy, Properties.Resources.fish_happy, Properties.Resources.chameleon_happy };
-        int index = 0;
         public FormSelectPet()
         {
             InitializeComponent();
         }
 
         #region objects
-        FormGame frmGame;
+        FormMain frmMain;
+
+        List<Image> selectImage = new List<Image>() { Properties.Resources.cat_happy, Properties.Resources.fish_happy, Properties.Resources.chameleon_happy };
+
+        int index = 0;
         #endregion
 
-        #region form load
-        private void FormSelectPet_Load(object sender, EventArgs e)
-        {
-            frmGame = this.Owner.Owner as FormGame;
-            pictureBoxSeelection.BackgroundImage = selectImage[index];
-            CheckFish();
-           
-        }
-        #endregion
-
-        #region Button change
-        private void buttonL_Click(object sender, EventArgs e)
-        {
-            index -= 1;
-            if (index > -1)
-            {
-                pictureBoxSeelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-            else
-            {
-                index = selectImage.Count - 1;
-                pictureBoxSeelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-        }
-
-        private void buttonR_Click(object sender, EventArgs e)
-        {
-            index += 1;
-            if (index > 2)
-            {
-                index = 0;
-                pictureBoxSeelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-            else
-            {
-                pictureBoxSeelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-        }
-
-        #endregion
-
-        #region play button
-        private void buttonPlay_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmGame.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
-
-                if (index == 0)
-                {
-                    frmGame.pet = new Cat(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player);
-                }
-                else if (index == 1)
-                {
-                    frmGame.pet = new Fish(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player, comboBoxEnvironment.Text);
-                }
-                else if (index == 2)
-                {
-                    frmGame.pet = new Chameleon(textBoxPetName.Text, pictureBoxSeelection.BackgroundImage, frmGame.player, Color.Green);
-                }
-                frmGame.listPlayer.Add(frmGame.player);
-                frmGame.listPet.Add(frmGame.pet);
-                frmGame.StartGame();
-                this.Close();
-                this.Owner.Close();
-
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-       private void CheckFish()
+        #region methods
+        private void CheckFish()
         {
             if (index == 1)
             {
@@ -117,5 +41,91 @@ namespace pet_game
                 comboBoxEnvironment.Visible = false;
             }
         }
+        #endregion
+
+        #region form load
+        private void FormSelectPet_Load(object sender, EventArgs e)
+        {
+            /*frmGame = this.Owner.Owner as FormGame;*/
+            frmMain = this.Owner as FormMain;
+            pictureBoxSelection.BackgroundImage = selectImage[index];
+            CheckFish();
+        }
+        #endregion
+
+        #region button interaction
+        private void buttonL_Click(object sender, EventArgs e)
+        {
+            index -= 1;
+            if (index > -1)
+            {
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                index = selectImage.Count - 1;
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+        }
+
+        private void buttonR_Click(object sender, EventArgs e)
+        {
+            index += 1;
+            if (index > 2)
+            {
+                index = 0;
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region play button
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmMain.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
+
+                if (index == 0)
+                {
+                    frmMain.pet = new Cat(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player);
+                }
+                else if (index == 1)
+                {
+                    frmMain.pet = new Fish(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, comboBoxEnvironment.Text);
+                }
+                else if (index == 2)
+                {
+                    frmMain.pet = new Chameleon(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, Color.Green);
+                }
+
+                frmMain.listPlayer.Add(frmMain.player);
+                frmMain.listPet.Add(frmMain.pet);
+                FormGame frmGame = new FormGame();
+                frmGame.Owner = this.Owner as FormMain;
+                frmGame.TopLevel = false;
+                frmMain.panelMain.Controls.Add(frmGame);
+                frmGame.BringToFront();
+                frmGame.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
 }
