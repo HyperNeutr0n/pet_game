@@ -34,6 +34,9 @@ namespace pet_game
         List<Image> listCatSleep = new List<Image> { Resources.cat_sleep_000, Resources.cat_sleep_001 };
         List<Image> listCatBath = new List<Image> { Resources.cat_bath_000, Resources.cat_bath_001 };
         List<Image> listCatAfterBath = new List<Image> { Resources.cat_afterBathIdle_000, Resources.cat_afterBathIdle_001 };
+        List<Image> listCatVaccine = new List<Image> { Resources.cat_vaccinate_000, Resources.cat_vaccinate_001 };
+        List<Image> listCatAfterVaccine = new List<Image> { Resources.cat_afterBathIdle_000, Resources.cat_afterBathIdle_001 };
+
         #endregion
         #region objects
         FormMain frmMain;
@@ -183,6 +186,8 @@ namespace pet_game
             {
                 ((Cat)frmMain.pet).Vaccinate();
                 labelVaccine.Text = frmMain.pet.DisplayData();
+                activity = "vaccine";
+                walkCount = 30;
             }
             catch (Exception ex)
             {
@@ -268,11 +273,15 @@ namespace pet_game
             }
             else if (activity == "bath")
             {
-                if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatBath[indexImage]; }
+                pictureBoxPet.Image = listCatBath[indexImage];
             }
             else if (activity == "afterBath")
             {
-                if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatAfterBath[indexImage]; }
+                pictureBoxPet.Image = listCatAfterBath[indexImage];
+            }
+            else if (activity == "vaccine")
+            {
+                pictureBoxPet.Image = listCatVaccine[indexImage];
             }
             indexImage++;
         }

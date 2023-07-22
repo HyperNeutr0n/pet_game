@@ -283,6 +283,26 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat_vaccinate_000 {
+            get {
+                object obj = ResourceManager.GetObject("cat_vaccinate_000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_vaccinate_001 {
+            get {
+                object obj = ResourceManager.GetObject("cat_vaccinate_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cat_vaccine {
             get {
                 object obj = ResourceManager.GetObject("cat_vaccine", resourceCulture);
