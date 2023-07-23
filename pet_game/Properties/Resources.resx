@@ -118,6 +118,81 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Activ_Icon14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Activ-Icon14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background-cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BGM_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BGM_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Button_Buy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Buy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Buy_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Buy-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Exits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Exits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Exit_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Exit-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Left_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Left-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Load" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Load.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Load_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Load-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_NewGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-NewGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_NewGame_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-NewGame-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Pause_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Pause-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Play_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Play-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Reset_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Reset-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Right_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Right-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Sound1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Sound1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Button_Use" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Use.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Use_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Use-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cat_afterBathIdle_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-afterBathIdle-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,6 +295,9 @@
   <data name="Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dawnbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dawnbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Energy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lightning-pixel-art-free-vector-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,16 +316,79 @@
   <data name="fish_happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fish_happy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOver.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GameStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngfind.com-smile-emoji-png-215707.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="health_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\health-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icn_Vaccine_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icn-Vaccine-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Bath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Bath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Bath_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Bath-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Clean_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Clean-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Feed_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Feed-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Play_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Play-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Sleep_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Sleep-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Vaccine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Vaccine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu-BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fajrbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nightbackgroundwithmoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nightbackgroundwithmoon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="noonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="success_1_6297" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\success-1-6297.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sunsetbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sunsetbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UseSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UseSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

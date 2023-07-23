@@ -1,10 +1,12 @@
-﻿using System;
+﻿using pet_game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,33 +24,10 @@ namespace pet_game
         #region objects
         public Pet pet;
         public Player player;
+        SoundPlayer sfx;
 
         public List<Player> listPlayer = new List<Player>();
         public List<Pet> listPet = new List<Pet>();
-        #endregion
-
-        #region serialize
-        private void SaveFilePlayer(string filename)
-        {
-            FileStream stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
-            BinaryFormatter format = new BinaryFormatter();
-            format.Serialize(stream, listPlayer);
-            stream.Close();
-        }
-
-        private void SaveFilePet(string filename)
-        {
-            FileStream stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
-            BinaryFormatter format = new BinaryFormatter();
-            format.Serialize(stream, listPet);
-            stream.Close();
-        }
-
-        private void FormGame_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //SaveFilePlayer("DataPlater.vc");
-            //SaveFilePet("DataPet.vc");
-        }
         #endregion
 
         #region button interactions
@@ -106,6 +85,55 @@ namespace pet_game
             stream.Close();
             }
             */
+            PlaySound(Resources.GameStart);
+        }
+
+        #region Hover button
+        private void pictureBoxNew_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxNew.BackgroundImage = Properties.Resources.Button_NewGame;
+        }
+
+        private void pictureBoxLoad_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxLoad.BackgroundImage = Resources.Button_Load_Hover;
+        }
+
+        private void pictureBoxLoad_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxLoad.BackgroundImage = Resources.Button_Load;
+        }
+
+        private void pictureBoxReset_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxReset.BackgroundImage = Resources.Button_Reset_Hover;
+        }
+
+        private void pictureBoxReset_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxReset.BackgroundImage = Resources.Button_Reset;
+        }
+
+        private void pictureBoxExit_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxExit.BackgroundImage = Resources.Button_Exit_Hover;
+        }
+
+        private void pictureBoxExit_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxExit.BackgroundImage = Resources.Button_Exits;
+        }
+
+        private void pictureBoxNew_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxNew.BackgroundImage = Properties.Resources.Button_NewGame_Hover;
+        }
+        #endregion
+
+        public void PlaySound(UnmanagedMemoryStream suara)
+        {
+            sfx = new SoundPlayer(suara);
+            sfx.Play();
         }
     }
 }

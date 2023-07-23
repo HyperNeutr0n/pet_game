@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet_game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -98,5 +99,15 @@ namespace pet_game
             this.Close();
         }
         #endregion
+
+        private void pictureBoxUse_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxUse.BackgroundImage = Resources.Button_Use_Hover;
+        }
+
+        private void pictureBoxUse_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxUse.BackgroundImage = Resources.Button_Use;
+        }
     }
 }

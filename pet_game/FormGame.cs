@@ -53,7 +53,7 @@ namespace pet_game
 
         public void StartGame()
         {
-            
+            frmMain.PlaySound(Resources.PlayStart);
             labelDateTime.Text = DateTime.Now.ToString("dd/MMM/yyyy\nhh:mm:ss");
             labelTitle.Visible = false;
             labelCoin.Text = frmMain.pet.Owner.Coins.ToString();
@@ -71,6 +71,7 @@ namespace pet_game
                 labelVaccine.Visible = true;
                 labelVaccine.Text = frmMain.pet.DisplayData();
                 pictureBoxVac.Visible = true;
+                this.BackgroundImage = Resources.Background_cat;
             }
             else if (frmMain.pet is Fish)
             {
@@ -86,6 +87,7 @@ namespace pet_game
                 buttonBath.Enabled = false;
                 buttonClean.Enabled = false;
                 buttonVaccinate.Enabled = false;
+                this.BackgroundImage = Resources.dawnbackground;
             }
             ProgressBarUpdate();
             timerGame.Start();
@@ -136,6 +138,7 @@ namespace pet_game
             if (frmMain.pet.CheckEnergy() == "Weak" && frmMain.pet.CheckHappy() == "Weak" && frmMain.pet.CheckHealth() == "Weak")
             {
                 timerGame.Stop();
+                frmMain.PlaySound(Resources.GameOver);
                 panelActivity.Visible = false;
                 panelData.Visible = false;
                 MessageBox.Show("You Lose");

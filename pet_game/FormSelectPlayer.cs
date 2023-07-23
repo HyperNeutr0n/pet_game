@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet_game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,5 +64,16 @@ namespace pet_game
             formSelectPet.ShowDialog();
         }
         #endregion
+
+        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play_Hover;
+
+        }
+
+        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play;
+        }
     }
 }

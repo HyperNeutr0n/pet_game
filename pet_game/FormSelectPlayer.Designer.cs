@@ -33,6 +33,8 @@
             this.comboBoxPlayer = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxPlay = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonPlay
@@ -40,7 +42,7 @@
             this.buttonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttonPlay.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPlay.ForeColor = System.Drawing.Color.Black;
-            this.buttonPlay.Location = new System.Drawing.Point(68, 197);
+            this.buttonPlay.Location = new System.Drawing.Point(13, 417);
             this.buttonPlay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(390, 118);
@@ -65,7 +67,7 @@
             this.comboBoxPlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPlayer.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPlayer.FormattingEnabled = true;
-            this.comboBoxPlayer.Location = new System.Drawing.Point(68, 123);
+            this.comboBoxPlayer.Location = new System.Drawing.Point(66, 113);
             this.comboBoxPlayer.Name = "comboBoxPlayer";
             this.comboBoxPlayer.Size = new System.Drawing.Size(390, 53);
             this.comboBoxPlayer.TabIndex = 12;
@@ -73,7 +75,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 332);
+            this.label1.Location = new System.Drawing.Point(5, 346);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 52);
@@ -85,7 +87,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(282, 337);
+            this.linkLabel1.Location = new System.Drawing.Point(326, 356);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(181, 45);
             this.linkLabel1.TabIndex = 14;
@@ -93,12 +95,27 @@
             this.linkLabel1.Text = "Click Here";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // pictureBoxPlay
+            // 
+            this.pictureBoxPlay.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPlay.BackgroundImage = global::pet_game.Properties.Resources.Button_Play;
+            this.pictureBoxPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPlay.Location = new System.Drawing.Point(112, 172);
+            this.pictureBoxPlay.Name = "pictureBoxPlay";
+            this.pictureBoxPlay.Size = new System.Drawing.Size(281, 171);
+            this.pictureBoxPlay.TabIndex = 30;
+            this.pictureBoxPlay.TabStop = false;
+            this.pictureBoxPlay.MouseLeave += new System.EventHandler(this.pictureBoxPlay_MouseLeave);
+            this.pictureBoxPlay.MouseHover += new System.EventHandler(this.pictureBoxPlay_MouseHover);
+            // 
             // FormSelectPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::pet_game.Properties.Resources.sunsetbackground;
             this.ClientSize = new System.Drawing.Size(519, 489);
+            this.Controls.Add(this.pictureBoxPlay);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxPlayer);
@@ -109,6 +126,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSelectPlayer";
             this.Load += new System.EventHandler(this.FormSelectPlayer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +138,6 @@
         private System.Windows.Forms.ComboBox comboBoxPlayer;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBoxPlay;
     }
 }

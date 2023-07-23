@@ -127,5 +127,69 @@ namespace pet_game
             }
         }
         #endregion
+
+        private void pictureBoxRight_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxRight.BackgroundImage = Resources.Button_Right_Hover;
+        }
+
+        private void pictureBoxLeft_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage= Resources.Button_Left_Hover;
+        }
+
+        private void pictureBoxRight_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxRight.BackgroundImage = Resources.Button_Right;
+        }
+
+        private void pictureBoxLeft_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage = Resources.Button_Left;
+        }
+
+        private void pictureBoxRight_Click(object sender, EventArgs e)
+        {
+            index += 1;
+            frmMain.PlaySound(Resources.Button_Sound1);
+            if (index > 2)
+            {
+                index = 0;
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+        }
+
+        private void pictureBoxLeft_Click(object sender, EventArgs e)
+        {
+            index -= 1;
+            frmMain.PlaySound(Resources.Button_Sound1);
+            if (index > -1)
+            {
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+            else
+            {
+                index = selectImage.Count - 1;
+                pictureBoxSelection.BackgroundImage = selectImage[index];
+                CheckFish();
+            }
+        }
+
+        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play_Hover;
+        }
+
+        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play;
+        }
     }
 }

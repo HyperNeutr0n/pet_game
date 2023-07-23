@@ -264,5 +264,149 @@
   <ItemGroup>
     <None Include="Resources\cat-vaccinate-001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activ-Icon14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn-Vaccine-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Bath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Bath-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Clean-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Feed-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Play-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Sleep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Sleep-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Vaccine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Left-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Load-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-NewGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-NewGame-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Pause-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Play-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Reset-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Right-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Use.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Use-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fajrbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Exit-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Exits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dawnbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nightbackgroundwithmoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noonbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunsetbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background-cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayStart.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UseSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameStart.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGM_1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Sound1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success-1-6297.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Buy-Hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
