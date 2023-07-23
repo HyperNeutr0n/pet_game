@@ -25,44 +25,64 @@ namespace pet_game
         #region objects
         public Pet pet;
         public Player player;
-        SoundPlayer sfx,bgm;
-        bool bgPlaying = false;
-        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public List<Player> listPlayer = new List<Player>();
         public List<Pet> listPet = new List<Pet>();
+
+        SoundPlayer sfx;
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         #endregion
 
-        private void FormMain_Load(object sender, EventArgs e)
-        {/*
-            if (File.Exists("DataPlayer.vc"))
-            {
-            FileStream stream = new FileStream("DataPlater.vc", FileMode.Open, FileAccess.Read);
-            BinaryFormatter format = new BinaryFormatter();
-            listPlayer = (List<Player>) format.Deserialize(stream);
-            stream.Close();
-            }
-
-            if (File.Exists("DataPet.vc"))
-            {
-            FileStream stream = new FileStream("DataPet.vc", FileMode.Open, FileAccess.Read);
-            BinaryFormatter format = new BinaryFormatter();
-            listPet = (List<Pet>)format.Deserialize(stream);
-            stream.Close();
-            }
-            */
-            PlaySound(Resources.GameStart);
-            MediaPlayer("genshinOST.mp3");
+        #region sound and bgm
+        public void PlaySfx(UnmanagedMemoryStream suara)
+        {
+            sfx = new SoundPlayer(suara);
+            sfx.Play();
         }
 
-        public void MediaPlayer(string url)
+        public void PlayBgm(string url)
         {
             mxp.URL = url;
             mxp.settings.playCount = 999;
             mxp.Visible = false;
             mxp.Ctlcontrols.play();
         }
+        #endregion
 
-        #region Hover button
+        #region serialize
+        private void LoadPlayerData()
+        {
+            if (File.Exists("DataPlayer.vc"))
+            {
+                FileStream stream = new FileStream("DataPlayer.vc", FileMode.Open, FileAccess.Read);
+                BinaryFormatter format = new BinaryFormatter();
+                listPlayer = (List<Player>)format.Deserialize(stream);
+                stream.Close();
+            }
+        }
+
+        private void LoadPetData()
+        {
+            if (File.Exists("DataPet.vc"))
+            {
+                FileStream stream = new FileStream("DataPet.vc", FileMode.Open, FileAccess.Read);
+                BinaryFormatter format = new BinaryFormatter();
+                listPet = (List<Pet>)format.Deserialize(stream);
+                stream.Close();
+            }
+        }
+        #endregion
+
+        #region form load
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            LoadPlayerData();
+            LoadPetData();
+            PlaySfx(Resources.GameStart);
+            PlayBgm("genshinOST.mp3");
+        }
+        #endregion
+
+        #region button hover
         private void pictureBoxNew_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxNew.BackgroundImage = Properties.Resources.Button_NewGame;
@@ -103,29 +123,11 @@ namespace pet_game
             pictureBoxNew.BackgroundImage = Properties.Resources.Button_NewGame_Hover;
         }
         #endregion
-
-        #region Sound
-        public void PlaySound(UnmanagedMemoryStream suara)
-        {
-            sfx = new SoundPlayer(suara);
-            sfx.Play();
-        }
-
-        public void PlayBgm(UnmanagedMemoryStream suara)
-        {
-            bgm = new SoundPlayer(suara);
-            bgm.PlayLooping();
-        }
-
-        public void playMedia()
-        {
-
-        }
-        #endregion
-        #region button interaction
+        
+        #region button click
         private void pictureBoxNew_Click(object sender, EventArgs e)
         {
-            PlaySound(Resources.Button_Sound1);
+            PlaySfx(Resources.Button_Sound1);
             FormSelectPet formSelectPet = new FormSelectPet();
             formSelectPet.Owner = this;
             formSelectPet.TopLevel = false;
@@ -136,13 +138,13 @@ namespace pet_game
 
         private void pictureBoxLoad_Click(object sender, EventArgs e)
         {
-            PlaySound(Resources.Button_Sound1);
-            /*FormSelectPlayer formSelectPlayer = new FormSelectPlayer();
-          formSelectPlayer.Owner = this;
-          formSelectPlayer.TopLevel = false;
-          panelMain.Controls.Add(formSelectPlayer);
-          formSelectPlayer.BringToFront();
-          formSelectPlayer.Show();*/
+            PlaySfx(Resources.Button_Sound1);
+            FormSelectPlayer formSelectPlayer = new FormSelectPlayer();
+            formSelectPlayer.Owner = this;
+            formSelectPlayer.TopLevel = false;
+            panelMain.Controls.Add(formSelectPlayer);
+            formSelectPlayer.BringToFront();
+            formSelectPlayer.Show();
         }
 
         private void pictureBoxReset_Click(object sender, EventArgs e)
@@ -151,19 +153,9 @@ namespace pet_game
             sfx.PlayLooping();
         }
 
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            wplayer.URL = @"C:\\Games\\genshinOST.mp3";
-        }
-
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
-            PlaySound(Resources.Button_Sound1);
+            PlaySfx(Resources.Button_Sound1);
             Application.Exit();
         }
         #endregion

@@ -50,7 +50,7 @@ namespace pet_game
 
         private void pictureBoxUse_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.UseSound);
+            frmMain.PlaySfx(Resources.UseSound);
             try
             {
                 if (comboBoxToys.SelectedItem != null)
@@ -111,7 +111,5 @@ namespace pet_game
             this.Close();
         }
         #endregion
-
-      
     }
 }

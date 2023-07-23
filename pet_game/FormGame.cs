@@ -27,11 +27,12 @@ namespace pet_game
         int delayCount = 0;
         int indexImage = 0;
         string activity;
-        int detik = 0;
         int batasKiri, batasKanan;
+
+        FormMain frmMain;
         #endregion
 
-        #region Images
+        #region images
         List<Image> listCatIdle = new List<Image> { Resources.cat_idle_000, Resources.cat_idle_001 };
         List<Image> listCatWalkLeft = new List<Image> { Resources.cat_walkingLeft_000, Resources.cat_walkingLeft_001 };
         List<Image> listCatWalkRight = new List<Image> { Resources.cat_walkingRight_000, Resources.cat_walkingRight_001 };
@@ -46,8 +47,22 @@ namespace pet_game
         List<Image> listFishEat = new List<Image> { Resources.Fish_Eat_1, Resources.Fish_Eat_2, Resources.Fish_Eat_3, Resources.Fish_Eat_4, Resources.Fish_Eat_5, Resources.Fish_Eat_6 };
         #endregion
 
-        #region objects
-        FormMain frmMain;
+        #region serialize
+        private void SavePlayerData()
+        {
+            FileStream playerFile = new FileStream("DataPlayer.vc", FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(playerFile, frmMain.listPlayer);
+            playerFile.Close();
+        }
+
+        private void SavePetData()
+        {
+            FileStream petFile = new FileStream("DataPet.vc", FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(petFile, frmMain.listPet);
+            petFile.Close();
+        }
         #endregion
 
         #region methods
@@ -57,21 +72,9 @@ namespace pet_game
             progressBarHealth.Value = frmMain.pet.Health;
             progressBarEnergy.Value = frmMain.pet.Energy;
         }
-        private void SavePlayerData()
-        {
-            FileStream playerFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(playerFile, frmMain.listPlayer);
-        }
-        private void SavePetData()
-        {
-            FileStream petFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(petFile, frmMain.listPlayer);
-        }
         public void StartGame()
         {
-            frmMain.PlaySound(Resources.PlayStart);
+            frmMain.PlaySfx(Resources.PlayStart);
             labelDateTime.Text = DateTime.Now.ToString("dd/MMM/yyyy\nhh:mm:ss");
             labelCoin.Text = frmMain.pet.Owner.Coins.ToString();
             labelPet.Text = frmMain.pet.Name;
@@ -92,7 +95,7 @@ namespace pet_game
                 this.BackgroundImage = Resources.Background_cat;
                 batasKiri = 0;
                 batasKanan = 1350;
-                frmMain.MediaPlayer("BGM_1.wav");
+                frmMain.PlayBgm("BGM_1.wav");
             }
             else if (frmMain.pet is Fish)
             {
@@ -130,7 +133,7 @@ namespace pet_game
         }
         private void Animation(string activity)
         {
-            if (frmMain.pet is Cat)
+            if (frmMain.pet is Cat) // semua animasi cat tidak lebih dari 2 frame
             {
                 if (indexImage > 1)
                 {
@@ -181,7 +184,7 @@ namespace pet_game
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatEat[indexImage]; }
                 if (frmMain.pet is Fish)
                 {
-                    if (indexImage > 5)
+                    if (indexImage > 5) // limit animasi makan fish tidak lebih dari 6 frame
                     {
                         indexImage = 0;
                     }
@@ -208,13 +211,14 @@ namespace pet_game
             }
             indexImage++;
         }
-        public int Direction()
+        public int Direction() // membuat angka random antara 0 atau 1 untuk digunakan sebagai arah
         {
             Random rand = new Random();
             int direction = rand.Next(0, 2);
             return direction;
         }
-        public void SmartMove(int directionNum)
+
+        public void SmartMove(int directionNum) // pengaturan arah bergerak pet
         {
             if (directionNum == 0)
             {
@@ -245,11 +249,17 @@ namespace pet_game
         }
         #endregion
 
-        #region form load
+        #region form load and close
         private void FormGame_Load(object sender, EventArgs e)
         {
             frmMain = this.Owner as FormMain;
             StartGame();
+        }
+
+        private void FormGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SavePetData();
+            SavePlayerData();
         }
         #endregion
 
@@ -260,15 +270,20 @@ namespace pet_game
             labelHealth.Text = frmMain.pet.Health.ToString();
             ProgressBarUpdate();
 
-            if (frmMain.pet.CheckEnergy() == "Weak" && frmMain.pet.CheckHappy() == "Weak" && frmMain.pet.CheckHealth() == "Weak")
+            if (frmMain.pet.CheckHealth() == "very-poor" && frmMain.pet.CheckEnergy() == "weak" && frmMain.pet.CheckHappy() == "unhappy")
             {
                 timerGame.Stop();
-                frmMain.PlaySound(Resources.GameOver);
+                frmMain.PlaySfx(Resources.GameOver);
                 panelActivity.Visible = false;
                 panelData.Visible = false;
+
+                frmMain.listPet.Remove(frmMain.pet);
+                frmMain.listPlayer.Remove(frmMain.player);
                 MessageBox.Show("You Lose");
+                this.Close();
             }
         }
+
         private void timerPet_Tick(object sender, EventArgs e)
         {
             if (walkCount < 30)
@@ -305,7 +320,7 @@ namespace pet_game
         }
         #endregion
 
-        #region Activity Hover
+        #region button hover
         private void pictureBoxEat_MouseHover(object sender, EventArgs e)
         {
             pictureBoxEat.BackgroundImage = Resources.Icon_Feed_Hover;
@@ -374,10 +389,10 @@ namespace pet_game
         }
         #endregion
 
-        #region Buttons
+        #region button click
         private void pictureBoxEat_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             frmMain.pet.Feed();
             ProgressBarUpdate();
             activity = "eat";
@@ -387,7 +402,7 @@ namespace pet_game
 
         private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             timerGame.Stop();
             FormSelectToys frmSelectToys = new FormSelectToys();
             frmSelectToys.Owner = this;
@@ -401,7 +416,7 @@ namespace pet_game
 
         private void pictureBoxSleep_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             frmMain.pet.Sleep();
             ProgressBarUpdate();
             activity = "sleep";
@@ -411,7 +426,7 @@ namespace pet_game
 
         private void pictureBoxBath_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             ((Cat)frmMain.pet).Bath();
             ProgressBarUpdate();
             activity = "bath";
@@ -421,7 +436,7 @@ namespace pet_game
 
         private void pictureBoxVaccine_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             try
             {
                 ((Cat)frmMain.pet).Vaccinate();
@@ -438,7 +453,7 @@ namespace pet_game
 
         private void pictureBoxClean_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             try
             {
                 ((Fish)frmMain.pet).Clean();
@@ -452,6 +467,11 @@ namespace pet_game
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void pictureBoxPause_Click(object sender, EventArgs e)

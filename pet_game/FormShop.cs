@@ -53,7 +53,7 @@ namespace pet_game
         }
         #endregion
 
-        #region button interaction
+        #region button hover
 
         private void pictureBoxBuy_MouseHover(object sender, EventArgs e)
         {
@@ -84,10 +84,12 @@ namespace pet_game
         {
             pictureBoxLeft.BackgroundImage = Resources.Button_Left;
         }
+        #endregion
 
+        #region button click
         private void pictureBoxBuy_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.UseSound);
+            frmMain.PlaySfx(Resources.UseSound);
             try
             {
                 frmMain.pet.Buy(listToy[index]);
@@ -105,7 +107,7 @@ namespace pet_game
 
         private void pictureBoxLeft_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             index -= 1;
             if (index > -1)
             {
@@ -122,7 +124,7 @@ namespace pet_game
 
         private void pictureBoxRight_Click(object sender, EventArgs e)
         {
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             index += 1;
             if (index > (listToy.Count - 1))
             {
@@ -136,8 +138,6 @@ namespace pet_game
                 labelData.Text = listToy[index].DisplayData();
             }
         }
-
-       
         #endregion
     }
 }

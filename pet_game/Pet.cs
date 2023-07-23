@@ -154,17 +154,21 @@ namespace pet_game
         public string CheckHealth()
         {
             string condition = "";
-            if(this.Health >= 10 && this.Health <= 50)
+            if(this.Health >= 10 && this.Health <= 25)
             {
-                condition = "Weak";
+                condition = "very-poor";
             }
-            else if (this.Health >= 51 && this.Health <= 75)
+            else if (this.Health <= 60)
             {
-                condition = "Moderate";
+                condition = "poor";
             }
-            else 
+            else if (this.Health <= 80)
             {
-                condition = "Strong";
+                condition = "good";
+            }
+            else
+            {
+                condition = "very-good";
             }
             return condition;
         }
@@ -174,15 +178,15 @@ namespace pet_game
             string condition = "";
             if (this.Energy >= 10 && this.Energy <= 50)
             {
-                condition = "Weak";
+                condition = "weak";
             }
-            else if (this.Energy >= 51 && this.Energy <= 75)
+            else if (this.Energy <= 75)
             {
-                condition = "Moderate";
+                condition = "moderate";
             }
             else
             {
-                condition = "Strong";
+                condition = "strong";
             }
             return condition;
         }
@@ -190,17 +194,13 @@ namespace pet_game
         public string CheckHappy()
         {
             string condition = "";
-            if (this.Happiness >= 10 && this.Happiness <= 50)
+            if (this.Happiness >= 10 && this.Happiness <= 60)
             {
-                condition = "Weak";
-            }
-            else if (this.Happiness >= 51 && this.Happiness <= 75)
-            {
-                condition = "Moderate";
+                condition = "unhappy";
             }
             else
             {
-                condition = "Strong";
+                condition = "happy";
             }
             return condition;
         }

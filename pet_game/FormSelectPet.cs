@@ -53,15 +53,7 @@ namespace pet_game
         }
         #endregion
 
-        #region button interaction
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
-        #region Button leftRight
+        #region button hover
         private void pictureBoxRight_MouseHover(object sender, EventArgs e)
         {
             pictureBoxRight.BackgroundImage = Resources.Button_Right_Hover;
@@ -82,10 +74,22 @@ namespace pet_game
             pictureBoxLeft.BackgroundImage = Resources.Button_Left;
         }
 
+        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play_Hover;
+        }
+
+        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Button_Play;
+        }
+        #endregion
+
+        #region button click
         private void pictureBoxRight_Click(object sender, EventArgs e)
         {
             index += 1;
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             if (index > 2)
             {
                 index = 0;
@@ -102,7 +106,7 @@ namespace pet_game
         private void pictureBoxLeft_Click(object sender, EventArgs e)
         {
             index -= 1;
-            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.PlaySfx(Resources.Button_Sound1);
             if (index > -1)
             {
                 pictureBoxSelection.BackgroundImage = selectImage[index];
@@ -116,18 +120,13 @@ namespace pet_game
             }
         }
 
-        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            pictureBoxPlay.BackgroundImage = Resources.Button_Play_Hover;
-        }
-
-        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxPlay.BackgroundImage = Resources.Button_Play;
+            this.Close();
         }
         #endregion
 
-        #region button PLay
+        #region button play
         private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
             try
@@ -155,6 +154,7 @@ namespace pet_game
                 frmMain.panelMain.Controls.Add(frmGame);
                 frmGame.BringToFront();
                 frmGame.Show();
+                this.Close();
             }
             catch (Exception ex)
             {
