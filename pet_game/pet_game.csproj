@@ -417,5 +417,66 @@
   <ItemGroup>
     <None Include="Resources\Environment-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y2mate.com - 01 Genshin Impact Main ThemeGenshin Impact.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Eat-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveL-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveL-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveL-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveR-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveR-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-MoveR-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Clean.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

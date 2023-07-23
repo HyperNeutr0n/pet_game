@@ -20,13 +20,18 @@ namespace pet_game
         {
             InitializeComponent();
         }
+        #region global variable
         int gravity = 2;
         int walkCount = 0;
         int directionNum = 0;
         int delayCount = 0;
         int indexImage = 0;
         string activity;
-        #region CatImages
+        int detik = 0;
+        int batasKiri, batasKanan;
+        #endregion
+
+        #region Images
         List<Image> listCatIdle = new List<Image> { Resources.cat_idle_000, Resources.cat_idle_001 };
         List<Image> listCatWalkLeft = new List<Image> { Resources.cat_walkingLeft_000, Resources.cat_walkingLeft_001 };
         List<Image> listCatWalkRight = new List<Image> { Resources.cat_walkingRight_000, Resources.cat_walkingRight_001 };
@@ -36,11 +41,13 @@ namespace pet_game
         List<Image> listCatAfterBath = new List<Image> { Resources.cat_afterBathIdle_000, Resources.cat_afterBathIdle_001 };
         List<Image> listCatVaccine = new List<Image> { Resources.cat_vaccinate_000, Resources.cat_vaccinate_001 };
         List<Image> listCatAfterVaccine = new List<Image> { Resources.cat_afterBathIdle_000, Resources.cat_afterBathIdle_001 };
-
+        List<Image> listFishWalkLeft = new List<Image> { Resources.Fish_MoveL_1, Resources.Fish_MoveL_2, Resources.Fish_MoveL_3 };
+        List<Image> listFishWalkRight = new List<Image> { Resources.Fish_MoveR_1, Resources.Fish_MoveR_2, Resources.Fish_MoveR_3 };
+        List<Image> listFishEat = new List<Image> { Resources.Fish_Eat_1, Resources.Fish_Eat_2, Resources.Fish_Eat_3, Resources.Fish_Eat_4, Resources.Fish_Eat_5, Resources.Fish_Eat_6 };
         #endregion
+
         #region objects
         FormMain frmMain;
-        int detik = 0;
         #endregion
 
         #region methods
@@ -50,7 +57,18 @@ namespace pet_game
             progressBarHealth.Value = frmMain.pet.Health;
             progressBarEnergy.Value = frmMain.pet.Energy;
         }
-
+        private void SavePlayerData()
+        {
+            FileStream playerFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(playerFile, frmMain.listPlayer);
+        }
+        private void SavePetData()
+        {
+            FileStream petFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(petFile, frmMain.listPlayer);
+        }
         public void StartGame()
         {
             frmMain.PlaySound(Resources.PlayStart);
@@ -72,6 +90,9 @@ namespace pet_game
                 pictureBoxSpecial.Visible = true;
                 pictureBoxSpecial.BackgroundImage = Resources.Suntik;
                 this.BackgroundImage = Resources.Background_cat;
+                batasKiri = 0;
+                batasKanan = 1350;
+                frmMain.MediaPlayer("BGM_1.wav");
             }
             else if (frmMain.pet is Fish)
             {
@@ -88,6 +109,8 @@ namespace pet_game
                 labelSpecialStatus.Text = frmMain.pet.DisplayData();
                 pictureBoxPet.Top = 240;
                 pictureBoxClean.Top = 110;
+                batasKiri = 350;
+                batasKanan = 993;
                 this.BackgroundImage = Properties.Resources.Background_Ikan;
             }
             else if (frmMain.pet is Chameleon)
@@ -105,181 +128,65 @@ namespace pet_game
             ProgressBarUpdate();
             timerGame.Start();
         }
-
-        private void ChangeActivity(string activity)
+        private void Animation(string activity)
         {
             if (frmMain.pet is Cat)
             {
-                if (activity == "Feed")
+                if (indexImage > 1)
                 {
-                    pictureBoxPet.Image = Properties.Resources.cat_feed;
+                    indexImage = 0;
                 }
-                else if (activity == "-")
-                {
-                    pictureBoxPet.Image = Properties.Resources.cat_happy;
-                }
-            }
-            timerImage.Start();
-        }
-        #endregion
-
-        #region form load
-        private void FormGame_Load(object sender, EventArgs e)
-        {
-            frmMain = this.Owner as FormMain;
-            StartGame();
-        }
-        #endregion
-
-        #region game timer
-        private void timerImage_Tick(object sender, EventArgs e)
-        {
-            detik++;
-            if (detik == 3)
-            {
-                timerImage.Stop();
-                ChangeActivity("-");
-            }
-        }
-
-        private void timerGame_Tick(object sender, EventArgs e)
-        {
-            frmMain.pet.ChangeStatus();
-            labelHealth.Text = frmMain.pet.Health.ToString();
-            ProgressBarUpdate();
-
-            if (frmMain.pet.CheckEnergy() == "Weak" && frmMain.pet.CheckHappy() == "Weak" && frmMain.pet.CheckHealth() == "Weak")
-            {
-                timerGame.Stop();
-                frmMain.PlaySound(Resources.GameOver);
-                panelActivity.Visible = false;
-                panelData.Visible = false;
-                MessageBox.Show("You Lose");
-            }
-        }
-        #endregion
-
-        #region pet interaction buttons
-        private void buttonFeed_Click(object sender, EventArgs e)
-        {
-            frmMain.pet.Feed();
-            ProgressBarUpdate();
-            activity = "eat";
-            walkCount = 30;
-        }
-
-        private void buttonSleep_Click(object sender, EventArgs e)
-        {
-            frmMain.pet.Sleep();
-            ProgressBarUpdate();
-            activity = "sleep";
-            walkCount = 30;
-        }
-
-        private void buttonPlay_Click(object sender, EventArgs e)
-        {
-            timerGame.Stop();
-            FormSelectToys frmSelectToys = new FormSelectToys();
-            frmSelectToys.Owner = this;
-            frmSelectToys.TopLevel = false;
-            frmMain.panelMain.Controls.Add(frmSelectToys);
-            frmSelectToys.BringToFront();
-            frmSelectToys.Show();
-            walkCount = 30;
-        }
-
-        private void buttonBath_Click(object sender, EventArgs e)
-        {
-            ((Cat)frmMain.pet).Bath();
-            ProgressBarUpdate();
-            activity = "bath";
-            walkCount = 30;
-        }
-
-        private void buttonVaccinate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ((Cat)frmMain.pet).Vaccinate();
-                labelSpecialStatus.Text = frmMain.pet.DisplayData();
-                activity = "vaccine";
-                walkCount = 30;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void buttonClean_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ((Fish)frmMain.pet).Clean();
-                ProgressBarUpdate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //SavePlayerData();
-            //SavePetData();
-            this.Close();
-        }
-        private void SavePlayerData()
-        {
-            FileStream playerFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(playerFile, frmMain.listPlayer);
-        }
-        private void SavePetData()
-        {
-            FileStream petFile = new FileStream("DataPlater.vc", FileMode.Create, FileAccess.Write);
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(petFile, frmMain.listPlayer);
-        }
-        private void panelData_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void Animation(string activity)
-        {
-            if (indexImage > 1)
-            {
-                indexImage = 0;
             }
             if (activity == "idle")
             {
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatIdle[indexImage]; }
-                if (frmMain.pet is Fish) { pictureBoxPet.Image = listCatIdle[indexImage]; }
+                if (frmMain.pet is Fish)
+                {
+                    if (indexImage > 2)
+                    {
+                        indexImage = 0;
+                    }
+                    pictureBoxPet.Image = listFishWalkLeft[indexImage];
+                }
                 if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listCatIdle[indexImage]; }
             }
-            else if (activity == "walkingLeft")
+            else if (activity == "walkingLeft" || activity == "clean")
             {
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatWalkLeft[indexImage]; }
-                if (frmMain.pet is Fish) { pictureBoxPet.Image = listCatWalkLeft[indexImage]; }
+                if (frmMain.pet is Fish)
+                {
+                    if (indexImage > 2)
+                    {
+                        indexImage = 0;
+                    }
+                    pictureBoxPet.Image = listFishWalkLeft[indexImage];
+                }
                 if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listCatWalkLeft[indexImage]; }
             }
-            else if (activity == "walkingRight")
+            else if (activity == "walkingRight" || activity == "clean")
             {
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatWalkRight[indexImage]; }
-                if (frmMain.pet is Fish) { pictureBoxPet.Image = listCatWalkRight[indexImage]; }
+                if (frmMain.pet is Fish)
+                {
+                    if (indexImage > 2)
+                    {
+                        indexImage = 0;
+                    }
+                    pictureBoxPet.Image = listFishWalkRight[indexImage];
+                }
                 if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listCatWalkRight[indexImage]; }
             }
-            else if(activity == "eat")
+            else if (activity == "eat")
             {
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatEat[indexImage]; }
-                if (frmMain.pet is Fish) { pictureBoxPet.Image = listCatEat[indexImage]; }
+                if (frmMain.pet is Fish)
+                {
+                    if (indexImage > 5)
+                    {
+                        indexImage = 0;
+                    }
+                    pictureBoxPet.Image = listFishEat[indexImage];
+                }
                 if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listCatEat[indexImage]; }
             }
             else if (activity == "sleep")
@@ -301,13 +208,78 @@ namespace pet_game
             }
             indexImage++;
         }
+        public int Direction()
+        {
+            Random rand = new Random();
+            int direction = rand.Next(0, 2);
+            return direction;
+        }
+        public void SmartMove(int directionNum)
+        {
+            if (directionNum == 0)
+            {
+                if (pictureBoxPet.Left > batasKiri)
+                {
+                    activity = "walkingLeft";
+                    Animation(activity);
+                    pictureBoxPet.Left -= gravity;
+                }
+                else
+                {
+                    walkCount = 30;
+                }
+            }
+            else if (directionNum == 1)
+            {
+                if (pictureBoxPet.Left < batasKanan)
+                {
+                    activity = "walkingRight";
+                    Animation(activity);
+                    pictureBoxPet.Left += gravity;
+                }
+                else
+                {
+                    walkCount = 30;
+                }
+            }
+        }
+        #endregion
+
+        #region form load
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+            frmMain = this.Owner as FormMain;
+            StartGame();
+        }
+        #endregion
+
+        #region game timer
+        private void timerGame_Tick(object sender, EventArgs e)
+        {
+            frmMain.pet.ChangeStatus();
+            labelHealth.Text = frmMain.pet.Health.ToString();
+            ProgressBarUpdate();
+
+            if (frmMain.pet.CheckEnergy() == "Weak" && frmMain.pet.CheckHappy() == "Weak" && frmMain.pet.CheckHealth() == "Weak")
+            {
+                timerGame.Stop();
+                frmMain.PlaySound(Resources.GameOver);
+                panelActivity.Visible = false;
+                panelData.Visible = false;
+                MessageBox.Show("You Lose");
+            }
+        }
         private void timerPet_Tick(object sender, EventArgs e)
         {
             if (walkCount < 30)
             {
                 SmartMove(directionNum);
                 walkCount++;
-                activity = "idle";
+                if (frmMain.pet is Cat)
+                {
+                    activity = "idle";
+                }
+
             }
             else
             {// delay 5 detik (idle animation)
@@ -323,47 +295,16 @@ namespace pet_game
                         activity = "afterBath";
                         walkCount = 30;
                     }
+                    else if (activity == "clean")
+                    {
+                        pictureBoxSpray.Visible = false;
+                    }
                 }
             }
-           
-        }
-        public int Direction()
-        {
-            Random rand = new Random();
-            int direction = rand.Next(0, 2);
-            return direction;
-        }
-        public void SmartMove(int directionNum)
-        {
-            if (directionNum == 0)
-            {
-                if (pictureBoxPet.Left > 0)
-                {
-                    activity = "walkingLeft";
-                    Animation(activity);
-                    pictureBoxPet.Left -= gravity;
-                }
-                else
-                {
-                    walkCount = 30;
-                }
-            }
-            else if (directionNum == 1)
-            {
-                if (pictureBoxPet.Left < 1350)
-                {
-                    activity = "walkingRight";
-                    Animation(activity);
-                    pictureBoxPet.Left += gravity;
-                }
-                else
-                {
-                    walkCount = 30;
-                }
-            }
-        }
 
-      
+        }
+        #endregion
+
         #region Activity Hover
         private void pictureBoxEat_MouseHover(object sender, EventArgs e)
         {
@@ -423,9 +364,17 @@ namespace pet_game
         {
             pictureBoxClean.BackgroundImage = Resources.Icon_Clean;
         }
-
+        private void pictureBoxPause_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxPause.BackgroundImage = Resources.Button_Pause_Hover;
+        }
+        private void pictureBoxPause_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPause.BackgroundImage = Resources.Button_Pause;
+        }
         #endregion
-        #region Activity interaction
+
+        #region Buttons
         private void pictureBoxEat_Click(object sender, EventArgs e)
         {
             frmMain.PlaySound(Resources.Button_Sound1);
@@ -433,6 +382,7 @@ namespace pet_game
             ProgressBarUpdate();
             activity = "eat";
             walkCount = 30;
+            delayCount = 0;
         }
 
         private void pictureBoxPlay_Click(object sender, EventArgs e)
@@ -446,6 +396,7 @@ namespace pet_game
             frmSelectToys.BringToFront();
             frmSelectToys.Show();
             walkCount = 30;
+            delayCount = 0;
         }
 
         private void pictureBoxSleep_Click(object sender, EventArgs e)
@@ -455,6 +406,7 @@ namespace pet_game
             ProgressBarUpdate();
             activity = "sleep";
             walkCount = 30;
+            delayCount = 0;
         }
 
         private void pictureBoxBath_Click(object sender, EventArgs e)
@@ -464,6 +416,7 @@ namespace pet_game
             ProgressBarUpdate();
             activity = "bath";
             walkCount = 30;
+            delayCount = 0;
         }
 
         private void pictureBoxVaccine_Click(object sender, EventArgs e)
@@ -475,6 +428,7 @@ namespace pet_game
                 labelSpecialStatus.Text = frmMain.pet.DisplayData();
                 activity = "vaccine";
                 walkCount = 30;
+                delayCount = 0;
             }
             catch (Exception ex)
             {
@@ -489,11 +443,21 @@ namespace pet_game
             {
                 ((Fish)frmMain.pet).Clean();
                 ProgressBarUpdate();
+                activity = "clean";
+                pictureBoxSpray.Visible = true;
+                walkCount = 30;
+                delayCount = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void pictureBoxPause_Click(object sender, EventArgs e)
+        {
+            timerGame.Stop();
+            timerPet.Stop();
         }
         #endregion
     }

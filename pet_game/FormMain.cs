@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,18 +26,11 @@ namespace pet_game
         public Pet pet;
         public Player player;
         SoundPlayer sfx,bgm;
-        
-
+        bool bgPlaying = false;
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public List<Player> listPlayer = new List<Player>();
         public List<Pet> listPet = new List<Pet>();
         #endregion
-
-       
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void FormMain_Load(object sender, EventArgs e)
         {/*
@@ -57,6 +51,15 @@ namespace pet_game
             }
             */
             PlaySound(Resources.GameStart);
+            MediaPlayer("genshinOST.mp3");
+        }
+
+        public void MediaPlayer(string url)
+        {
+            mxp.URL = url;
+            mxp.settings.playCount = 999;
+            mxp.Visible = false;
+            mxp.Ctlcontrols.play();
         }
 
         #region Hover button
@@ -146,6 +149,16 @@ namespace pet_game
         {
             sfx = new SoundPlayer(Resources.PlayStart);
             sfx.PlayLooping();
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            wplayer.URL = @"C:\\Games\\genshinOST.mp3";
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)

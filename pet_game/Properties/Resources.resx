@@ -202,9 +202,6 @@
   <data name="cat_afterBathIdle_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-afterBathIdle-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cat_bath" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_bath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cat_bath_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-bath-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,14 +214,8 @@
   <data name="cat_eat_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-eat-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cat_feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cat_food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat_food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat_happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_happy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_idle_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-idle-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,17 +223,8 @@
   <data name="cat_idle_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-idle-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cat_play_ball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_play_ball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat_play_yarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_play_yarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cat_shower" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat_shower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat_sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_sleep_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-sleep-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,9 +240,6 @@
   </data>
   <data name="cat_toys_yarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat_toys_yarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat_vaccinate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat_vaccinate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_vaccinate_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-vaccinate-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,15 +262,6 @@
   <data name="cat_walkingRight_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-walkingRight-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chameleon_changecolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chameleon_changecolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chameleon_feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chameleon_feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chameleon_happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chameleon_happy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="chameleon_leaves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chameleon_leaves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,20 +277,47 @@
   <data name="Environment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Environment-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fish_clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fish_clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fish_Clean1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Clean.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fish_cleaningtools" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fish_cleaningtools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fish_Eat_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fish_feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fish_feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fish_Eat_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_Eat_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_Eat_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_Eat_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_Eat_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-Eat-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fish_food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fish_food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fish_happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fish_happy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fish_MoveL_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveL-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_MoveL_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveL-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_MoveL_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveL-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_MoveR_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveR-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_MoveR_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveR-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fish_MoveR_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fish-MoveR-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameOver.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -399,5 +396,8 @@
   </data>
   <data name="UseSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UseSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="y2mate_com___01_Genshin_Impact_Main_ThemeGenshin_Impact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\y2mate.com - 01 Genshin Impact Main ThemeGenshin Impact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
