@@ -38,7 +38,7 @@ namespace pet_game
         #region methods
         public override string DisplayData()
         {
-            return base.DisplayDataPet() + "\nEnvironment : " + this.Environment;
+            return  this.Environment;
         }
 
         public override void Feed()

@@ -408,5 +408,14 @@
   <ItemGroup>
     <None Include="Resources\Button-Buy-Hover.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background-Ikan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suntik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Environment-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

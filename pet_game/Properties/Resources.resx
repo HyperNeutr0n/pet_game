@@ -127,6 +127,9 @@
   <data name="Background_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background-cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background_Ikan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background-Ikan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BGM_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BGM_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -301,6 +304,9 @@
   <data name="Energy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lightning-pixel-art-free-vector-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Environment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Environment-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fish_clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fish_clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -387,6 +393,9 @@
   </data>
   <data name="sunsetbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sunsetbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Suntik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Suntik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UseSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UseSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

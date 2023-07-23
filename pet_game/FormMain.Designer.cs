@@ -33,10 +33,6 @@
             this.pictureBoxReset = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoad = new System.Windows.Forms.PictureBox();
             this.pictureBoxNew = new System.Windows.Forms.PictureBox();
-            this.buttonNewGame = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonSetting = new System.Windows.Forms.Button();
-            this.buttonContinueGame = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReset)).BeginInit();
@@ -52,10 +48,6 @@
             this.panelMain.Controls.Add(this.pictureBoxReset);
             this.panelMain.Controls.Add(this.pictureBoxLoad);
             this.panelMain.Controls.Add(this.pictureBoxNew);
-            this.panelMain.Controls.Add(this.buttonNewGame);
-            this.panelMain.Controls.Add(this.buttonExit);
-            this.panelMain.Controls.Add(this.buttonSetting);
-            this.panelMain.Controls.Add(this.buttonContinueGame);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMain.Name = "panelMain";
@@ -73,6 +65,7 @@
             this.pictureBoxExit.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxExit.TabIndex = 11;
             this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
             this.pictureBoxExit.MouseLeave += new System.EventHandler(this.pictureBoxExit_MouseLeave);
             this.pictureBoxExit.MouseHover += new System.EventHandler(this.pictureBoxExit_MouseHover);
             // 
@@ -86,6 +79,7 @@
             this.pictureBoxReset.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxReset.TabIndex = 10;
             this.pictureBoxReset.TabStop = false;
+            this.pictureBoxReset.Click += new System.EventHandler(this.pictureBoxReset_Click);
             this.pictureBoxReset.MouseLeave += new System.EventHandler(this.pictureBoxReset_MouseLeave);
             this.pictureBoxReset.MouseHover += new System.EventHandler(this.pictureBoxReset_MouseHover);
             // 
@@ -99,6 +93,7 @@
             this.pictureBoxLoad.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxLoad.TabIndex = 9;
             this.pictureBoxLoad.TabStop = false;
+            this.pictureBoxLoad.Click += new System.EventHandler(this.pictureBoxLoad_Click);
             this.pictureBoxLoad.MouseLeave += new System.EventHandler(this.pictureBoxLoad_MouseLeave);
             this.pictureBoxLoad.MouseHover += new System.EventHandler(this.pictureBoxLoad_MouseHover);
             // 
@@ -112,55 +107,9 @@
             this.pictureBoxNew.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxNew.TabIndex = 8;
             this.pictureBoxNew.TabStop = false;
+            this.pictureBoxNew.Click += new System.EventHandler(this.pictureBoxNew_Click);
             this.pictureBoxNew.MouseLeave += new System.EventHandler(this.pictureBoxNew_MouseLeave);
             this.pictureBoxNew.MouseHover += new System.EventHandler(this.pictureBoxNew_MouseHover);
-            // 
-            // buttonNewGame
-            // 
-            this.buttonNewGame.BackColor = System.Drawing.Color.Transparent;
-            this.buttonNewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonNewGame.Location = new System.Drawing.Point(967, 243);
-            this.buttonNewGame.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonNewGame.Name = "buttonNewGame";
-            this.buttonNewGame.Size = new System.Drawing.Size(190, 110);
-            this.buttonNewGame.TabIndex = 4;
-            this.buttonNewGame.Text = "NEw Game";
-            this.buttonNewGame.UseVisualStyleBackColor = false;
-            this.buttonNewGame.Click += new System.EventHandler(this.buttonNewGame_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(996, 817);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(173, 64);
-            this.buttonExit.TabIndex = 7;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonSetting
-            // 
-            this.buttonSetting.Location = new System.Drawing.Point(1009, 508);
-            this.buttonSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(169, 95);
-            this.buttonSetting.TabIndex = 6;
-            this.buttonSetting.Text = "Settings";
-            this.buttonSetting.UseVisualStyleBackColor = true;
-            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
-            // 
-            // buttonContinueGame
-            // 
-            this.buttonContinueGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonContinueGame.Location = new System.Drawing.Point(1009, 357);
-            this.buttonContinueGame.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonContinueGame.Name = "buttonContinueGame";
-            this.buttonContinueGame.Size = new System.Drawing.Size(134, 78);
-            this.buttonContinueGame.TabIndex = 5;
-            this.buttonContinueGame.Text = "Continue Game";
-            this.buttonContinueGame.UseVisualStyleBackColor = true;
-            this.buttonContinueGame.Click += new System.EventHandler(this.buttonContinueGame_Click);
             // 
             // FormMain
             // 
@@ -183,10 +132,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Button buttonSetting;
-        private System.Windows.Forms.Button buttonContinueGame;
-        private System.Windows.Forms.Button buttonNewGame;
         public System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.PictureBox pictureBoxNew;
         private System.Windows.Forms.PictureBox pictureBoxExit;

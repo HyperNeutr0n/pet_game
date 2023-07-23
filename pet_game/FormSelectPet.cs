@@ -54,37 +54,6 @@ namespace pet_game
         #endregion
 
         #region button interaction
-        private void buttonL_Click(object sender, EventArgs e)
-        {
-            index -= 1;
-            if (index > -1)
-            {
-                pictureBoxSelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-            else
-            {
-                index = selectImage.Count - 1;
-                pictureBoxSelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-        }
-
-        private void buttonR_Click(object sender, EventArgs e)
-        {
-            index += 1;
-            if (index > 2)
-            {
-                index = 0;
-                pictureBoxSelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-            else
-            {
-                pictureBoxSelection.BackgroundImage = selectImage[index];
-                CheckFish();
-            }
-        }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -92,42 +61,7 @@ namespace pet_game
         }
         #endregion
 
-        #region play button
-        private void buttonPlay_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmMain.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
-
-                if (index == 0)
-                {
-                    frmMain.pet = new Cat(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player);
-                }
-                else if (index == 1)
-                {
-                    frmMain.pet = new Fish(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, comboBoxEnvironment.Text);
-                }
-                else if (index == 2)
-                {
-                    frmMain.pet = new Chameleon(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, Color.Green);
-                }
-
-                frmMain.listPlayer.Add(frmMain.player);
-                frmMain.listPet.Add(frmMain.pet);
-                FormGame frmGame = new FormGame();
-                frmGame.Owner = this.Owner as FormMain;
-                frmGame.TopLevel = false;
-                frmMain.panelMain.Controls.Add(frmGame);
-                frmGame.BringToFront();
-                frmGame.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
+        #region Button leftRight
         private void pictureBoxRight_MouseHover(object sender, EventArgs e)
         {
             pictureBoxRight.BackgroundImage = Resources.Button_Right_Hover;
@@ -191,5 +125,42 @@ namespace pet_game
         {
             pictureBoxPlay.BackgroundImage = Resources.Button_Play;
         }
+        #endregion
+
+        #region button PLay
+        private void pictureBoxPlay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmMain.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
+
+                if (index == 0)
+                {
+                    frmMain.pet = new Cat(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player);
+                }
+                else if (index == 1)
+                {
+                    frmMain.pet = new Fish(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, comboBoxEnvironment.Text);
+                }
+                else if (index == 2)
+                {
+                    frmMain.pet = new Chameleon(textBoxPetName.Text, pictureBoxSelection.BackgroundImage, frmMain.player, Color.Green);
+                }
+
+                frmMain.listPlayer.Add(frmMain.player);
+                frmMain.listPet.Add(frmMain.pet);
+                FormGame frmGame = new FormGame();
+                frmGame.Owner = this.Owner as FormMain;
+                frmGame.TopLevel = false;
+                frmMain.panelMain.Controls.Add(frmGame);
+                frmGame.BringToFront();
+                frmGame.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
 }

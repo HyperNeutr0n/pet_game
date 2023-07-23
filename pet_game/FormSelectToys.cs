@@ -37,16 +37,28 @@ namespace pet_game
         #endregion
 
         #region form interaction
-        private void buttonPlay_Click(object sender, EventArgs e)
+
+        private void pictureBoxUse_MouseHover(object sender, EventArgs e)
         {
+            pictureBoxUse.BackgroundImage = Resources.Button_Use_Hover;
+        }
+
+        private void pictureBoxUse_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxUse.BackgroundImage = Resources.Button_Use;
+        }
+
+        private void pictureBoxUse_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.UseSound);
             try
             {
                 if (comboBoxToys.SelectedItem != null)
                 {
                     if (frmMain.pet is Cat)
                     {
-
                         frmMain.pet.Play(selectToy);
+
                     }
                     this.Close();
                 }
@@ -100,14 +112,6 @@ namespace pet_game
         }
         #endregion
 
-        private void pictureBoxUse_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxUse.BackgroundImage = Resources.Button_Use_Hover;
-        }
-
-        private void pictureBoxUse_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxUse.BackgroundImage = Resources.Button_Use;
-        }
+      
     }
 }

@@ -34,10 +34,7 @@ namespace pet_game
             this.labelPetName = new System.Windows.Forms.Label();
             this.textBoxPlayerName = new System.Windows.Forms.TextBox();
             this.labelPlayerName = new System.Windows.Forms.Label();
-            this.buttonPlay = new System.Windows.Forms.Button();
             this.labelEnvirontment = new System.Windows.Forms.Label();
-            this.buttonL = new System.Windows.Forms.Button();
-            this.buttonR = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.pictureBoxLeft = new System.Windows.Forms.PictureBox();
             this.pictureBoxRight = new System.Windows.Forms.PictureBox();
@@ -103,20 +100,6 @@ namespace pet_game
             this.labelPlayerName.Text = "Enter Player Name :";
             this.labelPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonPlay
-            // 
-            this.buttonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonPlay.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPlay.ForeColor = System.Drawing.Color.Black;
-            this.buttonPlay.Location = new System.Drawing.Point(190, 736);
-            this.buttonPlay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(388, 122);
-            this.buttonPlay.TabIndex = 13;
-            this.buttonPlay.Text = "Let\'s Play";
-            this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
             // labelEnvirontment
             // 
             this.labelEnvirontment.BackColor = System.Drawing.Color.Transparent;
@@ -128,26 +111,6 @@ namespace pet_game
             this.labelEnvirontment.TabIndex = 21;
             this.labelEnvirontment.Text = "Environment :";
             this.labelEnvirontment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonL
-            // 
-            this.buttonL.Location = new System.Drawing.Point(125, 305);
-            this.buttonL.Name = "buttonL";
-            this.buttonL.Size = new System.Drawing.Size(120, 115);
-            this.buttonL.TabIndex = 24;
-            this.buttonL.Text = "L";
-            this.buttonL.UseVisualStyleBackColor = true;
-            this.buttonL.Click += new System.EventHandler(this.buttonL_Click);
-            // 
-            // buttonR
-            // 
-            this.buttonR.Location = new System.Drawing.Point(1269, 305);
-            this.buttonR.Name = "buttonR";
-            this.buttonR.Size = new System.Drawing.Size(120, 115);
-            this.buttonR.TabIndex = 25;
-            this.buttonR.Text = "R";
-            this.buttonR.UseVisualStyleBackColor = true;
-            this.buttonR.Click += new System.EventHandler(this.buttonR_Click);
             // 
             // buttonBack
             // 
@@ -209,6 +172,7 @@ namespace pet_game
             this.pictureBoxPlay.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxPlay.TabIndex = 29;
             this.pictureBoxPlay.TabStop = false;
+            this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBoxPlay_Click);
             this.pictureBoxPlay.MouseLeave += new System.EventHandler(this.pictureBoxPlay_MouseLeave);
             this.pictureBoxPlay.MouseHover += new System.EventHandler(this.pictureBoxPlay_MouseHover);
             // 
@@ -224,15 +188,12 @@ namespace pet_game
             this.Controls.Add(this.pictureBoxLeft);
             this.Controls.Add(this.pictureBoxRight);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.buttonR);
-            this.Controls.Add(this.buttonL);
             this.Controls.Add(this.pictureBoxSelection);
             this.Controls.Add(this.comboBoxEnvironment);
             this.Controls.Add(this.textBoxPetName);
             this.Controls.Add(this.labelPetName);
             this.Controls.Add(this.textBoxPlayerName);
             this.Controls.Add(this.labelPlayerName);
-            this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.labelEnvirontment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -256,11 +217,8 @@ namespace pet_game
         public System.Windows.Forms.Label labelPetName;
         private System.Windows.Forms.TextBox textBoxPlayerName;
         public System.Windows.Forms.Label labelPlayerName;
-        private System.Windows.Forms.Button buttonPlay;
         public System.Windows.Forms.Label labelEnvirontment;
         private System.Windows.Forms.PictureBox pictureBoxSelection;
-        private System.Windows.Forms.Button buttonL;
-        private System.Windows.Forms.Button buttonR;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.PictureBox pictureBoxRight;
         private System.Windows.Forms.PictureBox pictureBoxLeft;

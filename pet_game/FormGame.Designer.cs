@@ -33,29 +33,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelHealth = new System.Windows.Forms.Label();
-            this.labelVaccine = new System.Windows.Forms.Label();
-            this.pictureBoxVac = new System.Windows.Forms.PictureBox();
+            this.labelSpecialStatus = new System.Windows.Forms.Label();
+            this.pictureBoxSpecial = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPetIcon = new System.Windows.Forms.PictureBox();
             this.labelPet = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.labelCoin = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHealth = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCoin = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEnergy = new System.Windows.Forms.PictureBox();
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.labelPlayer = new System.Windows.Forms.Label();
             this.progressBarEnergy = new System.Windows.Forms.ProgressBar();
             this.progressBarHealth = new System.Windows.Forms.ProgressBar();
             this.progressBarHappy = new System.Windows.Forms.ProgressBar();
-            this.panelActivity = new System.Windows.Forms.Panel();
-            this.buttonSleep = new System.Windows.Forms.Button();
-            this.buttonClean = new System.Windows.Forms.Button();
-            this.buttonVaccinate = new System.Windows.Forms.Button();
-            this.buttonBath = new System.Windows.Forms.Button();
-            this.buttonPlay = new System.Windows.Forms.Button();
-            this.buttonFeed = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
             this.timerImage = new System.Windows.Forms.Timer(this.components);
             this.timerPetIdling = new System.Windows.Forms.Timer(this.components);
@@ -66,15 +58,15 @@
             this.pictureBoxBath = new System.Windows.Forms.PictureBox();
             this.pictureBoxVaccine = new System.Windows.Forms.PictureBox();
             this.pictureBoxSleep = new System.Windows.Forms.PictureBox();
+            this.panelActivity = new System.Windows.Forms.Panel();
             this.panelData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpecial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPetIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHealth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnergy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
-            this.panelActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).BeginInit();
@@ -82,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBath)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVaccine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSleep)).BeginInit();
+            this.panelActivity.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelData
@@ -90,16 +83,16 @@
             this.panelData.Controls.Add(this.button1);
             this.panelData.Controls.Add(this.buttonExit);
             this.panelData.Controls.Add(this.labelHealth);
-            this.panelData.Controls.Add(this.labelVaccine);
-            this.panelData.Controls.Add(this.pictureBoxVac);
+            this.panelData.Controls.Add(this.labelSpecialStatus);
+            this.panelData.Controls.Add(this.pictureBoxSpecial);
             this.panelData.Controls.Add(this.pictureBox5);
-            this.panelData.Controls.Add(this.pictureBox4);
+            this.panelData.Controls.Add(this.pictureBoxPetIcon);
             this.panelData.Controls.Add(this.labelPet);
             this.panelData.Controls.Add(this.labelDateTime);
             this.panelData.Controls.Add(this.labelCoin);
-            this.panelData.Controls.Add(this.pictureBox2);
-            this.panelData.Controls.Add(this.pictureBox3);
-            this.panelData.Controls.Add(this.pictureBox1);
+            this.panelData.Controls.Add(this.pictureBoxHealth);
+            this.panelData.Controls.Add(this.pictureBoxCoin);
+            this.panelData.Controls.Add(this.pictureBoxEnergy);
             this.panelData.Controls.Add(this.pictureBoxIcon);
             this.panelData.Controls.Add(this.labelPlayer);
             this.panelData.Controls.Add(this.progressBarEnergy);
@@ -146,31 +139,31 @@
             this.labelHealth.Text = "HAPPY PET GAME";
             this.labelHealth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelVaccine
+            // labelSpecialStatus
             // 
-            this.labelVaccine.BackColor = System.Drawing.Color.Transparent;
-            this.labelVaccine.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVaccine.Location = new System.Drawing.Point(287, 205);
-            this.labelVaccine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelVaccine.Name = "labelVaccine";
-            this.labelVaccine.Size = new System.Drawing.Size(130, 42);
-            this.labelVaccine.TabIndex = 14;
-            this.labelVaccine.Text = "HAPPY PET GAME";
-            this.labelVaccine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelVaccine.Visible = false;
+            this.labelSpecialStatus.BackColor = System.Drawing.Color.Transparent;
+            this.labelSpecialStatus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpecialStatus.Location = new System.Drawing.Point(287, 205);
+            this.labelSpecialStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSpecialStatus.Name = "labelSpecialStatus";
+            this.labelSpecialStatus.Size = new System.Drawing.Size(130, 42);
+            this.labelSpecialStatus.TabIndex = 14;
+            this.labelSpecialStatus.Text = "HAPPY PET GAME";
+            this.labelSpecialStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelSpecialStatus.Visible = false;
             // 
-            // pictureBoxVac
+            // pictureBoxSpecial
             // 
-            this.pictureBoxVac.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVac.BackgroundImage = global::pet_game.Properties.Resources.cat_vaccine;
-            this.pictureBoxVac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxVac.Location = new System.Drawing.Point(225, 201);
-            this.pictureBoxVac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxVac.Name = "pictureBoxVac";
-            this.pictureBoxVac.Size = new System.Drawing.Size(55, 49);
-            this.pictureBoxVac.TabIndex = 13;
-            this.pictureBoxVac.TabStop = false;
-            this.pictureBoxVac.Visible = false;
+            this.pictureBoxSpecial.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxSpecial.BackgroundImage = global::pet_game.Properties.Resources.cat_vaccine;
+            this.pictureBoxSpecial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSpecial.Location = new System.Drawing.Point(225, 201);
+            this.pictureBoxSpecial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxSpecial.Name = "pictureBoxSpecial";
+            this.pictureBoxSpecial.Size = new System.Drawing.Size(55, 49);
+            this.pictureBoxSpecial.TabIndex = 13;
+            this.pictureBoxSpecial.TabStop = false;
+            this.pictureBoxSpecial.Visible = false;
             // 
             // pictureBox5
             // 
@@ -183,16 +176,16 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBoxPetIcon
             // 
-            this.pictureBox4.BackgroundImage = global::pet_game.Properties.Resources.Happy;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(334, 9);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 45);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxPetIcon.BackgroundImage = global::pet_game.Properties.Resources.Happy;
+            this.pictureBoxPetIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPetIcon.Location = new System.Drawing.Point(334, 9);
+            this.pictureBoxPetIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxPetIcon.Name = "pictureBoxPetIcon";
+            this.pictureBoxPetIcon.Size = new System.Drawing.Size(46, 45);
+            this.pictureBoxPetIcon.TabIndex = 11;
+            this.pictureBoxPetIcon.TabStop = false;
             // 
             // labelPet
             // 
@@ -209,7 +202,7 @@
             // labelDateTime
             // 
             this.labelDateTime.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDateTime.Location = new System.Drawing.Point(1065, 9);
+            this.labelDateTime.Location = new System.Drawing.Point(1111, -2);
             this.labelDateTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDateTime.Name = "labelDateTime";
             this.labelDateTime.Size = new System.Drawing.Size(266, 141);
@@ -229,39 +222,39 @@
             this.labelCoin.Text = "HAPPY PET GAME";
             this.labelCoin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
+            // pictureBoxHealth
             // 
-            this.pictureBox2.BackgroundImage = global::pet_game.Properties.Resources.health_icon;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 55);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 45);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxHealth.BackgroundImage = global::pet_game.Properties.Resources.health_icon;
+            this.pictureBoxHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxHealth.Location = new System.Drawing.Point(28, 55);
+            this.pictureBoxHealth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxHealth.Name = "pictureBoxHealth";
+            this.pictureBoxHealth.Size = new System.Drawing.Size(46, 45);
+            this.pictureBoxHealth.TabIndex = 8;
+            this.pictureBoxHealth.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxCoin
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::pet_game.Properties.Resources.Coin;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 201);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 49);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxCoin.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCoin.BackgroundImage = global::pet_game.Properties.Resources.Coin;
+            this.pictureBoxCoin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCoin.Location = new System.Drawing.Point(26, 201);
+            this.pictureBoxCoin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxCoin.Name = "pictureBoxCoin";
+            this.pictureBoxCoin.Size = new System.Drawing.Size(55, 49);
+            this.pictureBoxCoin.TabIndex = 9;
+            this.pictureBoxCoin.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBoxEnergy
             // 
-            this.pictureBox1.BackgroundImage = global::pet_game.Properties.Resources.Energy;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 45);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxEnergy.BackgroundImage = global::pet_game.Properties.Resources.Energy;
+            this.pictureBoxEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnergy.Location = new System.Drawing.Point(28, 101);
+            this.pictureBoxEnergy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxEnergy.Name = "pictureBoxEnergy";
+            this.pictureBoxEnergy.Size = new System.Drawing.Size(46, 45);
+            this.pictureBoxEnergy.TabIndex = 7;
+            this.pictureBoxEnergy.TabStop = false;
             // 
             // pictureBoxIcon
             // 
@@ -313,117 +306,6 @@
             this.progressBarHappy.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBarHappy.TabIndex = 6;
             // 
-            // panelActivity
-            // 
-            this.panelActivity.BackColor = System.Drawing.Color.Transparent;
-            this.panelActivity.Controls.Add(this.buttonSleep);
-            this.panelActivity.Controls.Add(this.buttonClean);
-            this.panelActivity.Controls.Add(this.buttonVaccinate);
-            this.panelActivity.Controls.Add(this.buttonBath);
-            this.panelActivity.Controls.Add(this.buttonPlay);
-            this.panelActivity.Controls.Add(this.buttonFeed);
-            this.panelActivity.Location = new System.Drawing.Point(49, 367);
-            this.panelActivity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelActivity.Name = "panelActivity";
-            this.panelActivity.Size = new System.Drawing.Size(1328, 115);
-            this.panelActivity.TabIndex = 2;
-            // 
-            // buttonSleep
-            // 
-            this.buttonSleep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonSleep.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSleep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonSleep.Location = new System.Drawing.Point(242, 12);
-            this.buttonSleep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonSleep.Name = "buttonSleep";
-            this.buttonSleep.Size = new System.Drawing.Size(184, 86);
-            this.buttonSleep.TabIndex = 5;
-            this.buttonSleep.Text = "Sleep";
-            this.buttonSleep.UseVisualStyleBackColor = false;
-            this.buttonSleep.Click += new System.EventHandler(this.buttonSleep_Click);
-            // 
-            // buttonClean
-            // 
-            this.buttonClean.BackColor = System.Drawing.Color.Green;
-            this.buttonClean.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClean.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonClean.Location = new System.Drawing.Point(1120, 12);
-            this.buttonClean.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonClean.Name = "buttonClean";
-            this.buttonClean.Size = new System.Drawing.Size(184, 86);
-            this.buttonClean.TabIndex = 4;
-            this.buttonClean.Text = "Clean";
-            this.buttonClean.UseVisualStyleBackColor = false;
-            this.buttonClean.Click += new System.EventHandler(this.buttonClean_Click);
-            // 
-            // buttonVaccinate
-            // 
-            this.buttonVaccinate.BackColor = System.Drawing.Color.Olive;
-            this.buttonVaccinate.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVaccinate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonVaccinate.Location = new System.Drawing.Point(908, 12);
-            this.buttonVaccinate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonVaccinate.Name = "buttonVaccinate";
-            this.buttonVaccinate.Size = new System.Drawing.Size(184, 86);
-            this.buttonVaccinate.TabIndex = 3;
-            this.buttonVaccinate.Text = "Vaccinate";
-            this.buttonVaccinate.UseVisualStyleBackColor = false;
-            this.buttonVaccinate.Click += new System.EventHandler(this.buttonVaccinate_Click);
-            // 
-            // buttonBath
-            // 
-            this.buttonBath.BackColor = System.Drawing.Color.Teal;
-            this.buttonBath.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonBath.Location = new System.Drawing.Point(687, 12);
-            this.buttonBath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonBath.Name = "buttonBath";
-            this.buttonBath.Size = new System.Drawing.Size(184, 86);
-            this.buttonBath.TabIndex = 2;
-            this.buttonBath.Text = "Bath";
-            this.buttonBath.UseVisualStyleBackColor = false;
-            this.buttonBath.Click += new System.EventHandler(this.buttonBath_Click);
-            // 
-            // buttonPlay
-            // 
-            this.buttonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.buttonPlay.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPlay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonPlay.Location = new System.Drawing.Point(462, 12);
-            this.buttonPlay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(184, 86);
-            this.buttonPlay.TabIndex = 1;
-            this.buttonPlay.Text = "Play";
-            this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
-            // buttonFeed
-            // 
-            this.buttonFeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonFeed.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFeed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonFeed.Location = new System.Drawing.Point(21, 12);
-            this.buttonFeed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonFeed.Name = "buttonFeed";
-            this.buttonFeed.Size = new System.Drawing.Size(184, 86);
-            this.buttonFeed.TabIndex = 0;
-            this.buttonFeed.Text = "Feed";
-            this.buttonFeed.UseVisualStyleBackColor = false;
-            this.buttonFeed.Click += new System.EventHandler(this.buttonFeed_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(1007, 546);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(494, 66);
-            this.labelTitle.TabIndex = 3;
-            this.labelTitle.Text = "HAPPY PET GAME";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // timerGame
             // 
             this.timerGame.Interval = 1000;
@@ -456,66 +338,98 @@
             this.pictureBoxEat.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEat.BackgroundImage = global::pet_game.Properties.Resources.Icon_Feed;
             this.pictureBoxEat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEat.Location = new System.Drawing.Point(1416, 28);
+            this.pictureBoxEat.Location = new System.Drawing.Point(13, 11);
             this.pictureBoxEat.Name = "pictureBoxEat";
             this.pictureBoxEat.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxEat.TabIndex = 6;
             this.pictureBoxEat.TabStop = false;
+            this.pictureBoxEat.Click += new System.EventHandler(this.pictureBoxEat_Click);
+            this.pictureBoxEat.MouseLeave += new System.EventHandler(this.pictureBoxEat_MouseLeave);
+            this.pictureBoxEat.MouseHover += new System.EventHandler(this.pictureBoxEat_MouseHover);
             // 
             // pictureBoxPlay
             // 
             this.pictureBoxPlay.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPlay.BackgroundImage = global::pet_game.Properties.Resources.Icon_Play;
             this.pictureBoxPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPlay.Location = new System.Drawing.Point(1417, 106);
+            this.pictureBoxPlay.Location = new System.Drawing.Point(14, 89);
             this.pictureBoxPlay.Name = "pictureBoxPlay";
             this.pictureBoxPlay.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxPlay.TabIndex = 7;
             this.pictureBoxPlay.TabStop = false;
+            this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBoxPlay_Click);
+            this.pictureBoxPlay.MouseLeave += new System.EventHandler(this.pictureBoxPlay_MouseLeave);
+            this.pictureBoxPlay.MouseHover += new System.EventHandler(this.pictureBoxPlay_MouseHover);
             // 
             // pictureBoxClean
             // 
             this.pictureBoxClean.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxClean.BackgroundImage = global::pet_game.Properties.Resources.Icon_Clean;
             this.pictureBoxClean.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxClean.Location = new System.Drawing.Point(1416, 434);
+            this.pictureBoxClean.Location = new System.Drawing.Point(13, 417);
             this.pictureBoxClean.Name = "pictureBoxClean";
             this.pictureBoxClean.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxClean.TabIndex = 8;
             this.pictureBoxClean.TabStop = false;
+            this.pictureBoxClean.Click += new System.EventHandler(this.pictureBoxClean_Click);
+            this.pictureBoxClean.MouseLeave += new System.EventHandler(this.pictureBoxClean_MouseLeave);
+            this.pictureBoxClean.MouseHover += new System.EventHandler(this.pictureBoxClean_MouseHover);
             // 
             // pictureBoxBath
             // 
             this.pictureBoxBath.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxBath.BackgroundImage = global::pet_game.Properties.Resources.Icon_Bath;
             this.pictureBoxBath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBath.Location = new System.Drawing.Point(1416, 274);
+            this.pictureBoxBath.Location = new System.Drawing.Point(13, 257);
             this.pictureBoxBath.Name = "pictureBoxBath";
             this.pictureBoxBath.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxBath.TabIndex = 9;
             this.pictureBoxBath.TabStop = false;
+            this.pictureBoxBath.Click += new System.EventHandler(this.pictureBoxBath_Click);
+            this.pictureBoxBath.MouseLeave += new System.EventHandler(this.pictureBoxBath_MouseLeave);
+            this.pictureBoxBath.MouseHover += new System.EventHandler(this.pictureBoxBath_MouseHover);
             // 
             // pictureBoxVaccine
             // 
             this.pictureBoxVaccine.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxVaccine.BackgroundImage = global::pet_game.Properties.Resources.Icon_Vaccine;
             this.pictureBoxVaccine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxVaccine.Location = new System.Drawing.Point(1416, 353);
+            this.pictureBoxVaccine.Location = new System.Drawing.Point(13, 336);
             this.pictureBoxVaccine.Name = "pictureBoxVaccine";
             this.pictureBoxVaccine.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxVaccine.TabIndex = 10;
             this.pictureBoxVaccine.TabStop = false;
+            this.pictureBoxVaccine.Click += new System.EventHandler(this.pictureBoxVaccine_Click);
+            this.pictureBoxVaccine.MouseLeave += new System.EventHandler(this.pictureBoxVaccine_MouseLeave);
+            this.pictureBoxVaccine.MouseHover += new System.EventHandler(this.pictureBoxVaccine_MouseHover);
             // 
             // pictureBoxSleep
             // 
             this.pictureBoxSleep.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxSleep.BackgroundImage = global::pet_game.Properties.Resources.Icon_Sleep;
             this.pictureBoxSleep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSleep.Location = new System.Drawing.Point(1416, 195);
+            this.pictureBoxSleep.Location = new System.Drawing.Point(13, 178);
             this.pictureBoxSleep.Name = "pictureBoxSleep";
             this.pictureBoxSleep.Size = new System.Drawing.Size(84, 83);
             this.pictureBoxSleep.TabIndex = 11;
             this.pictureBoxSleep.TabStop = false;
+            this.pictureBoxSleep.Click += new System.EventHandler(this.pictureBoxSleep_Click);
+            this.pictureBoxSleep.MouseLeave += new System.EventHandler(this.pictureBoxSleep_MouseLeave);
+            this.pictureBoxSleep.MouseHover += new System.EventHandler(this.pictureBoxSleep_MouseHover);
+            // 
+            // panelActivity
+            // 
+            this.panelActivity.BackColor = System.Drawing.Color.Transparent;
+            this.panelActivity.Controls.Add(this.pictureBoxSleep);
+            this.panelActivity.Controls.Add(this.pictureBoxVaccine);
+            this.panelActivity.Controls.Add(this.pictureBoxBath);
+            this.panelActivity.Controls.Add(this.pictureBoxClean);
+            this.panelActivity.Controls.Add(this.pictureBoxPlay);
+            this.panelActivity.Controls.Add(this.pictureBoxEat);
+            this.panelActivity.Location = new System.Drawing.Point(1403, 17);
+            this.panelActivity.Name = "panelActivity";
+            this.panelActivity.Size = new System.Drawing.Size(106, 513);
+            this.panelActivity.TabIndex = 12;
             // 
             // FormGame
             // 
@@ -524,15 +438,8 @@
             this.BackgroundImage = global::pet_game.Properties.Resources.Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1512, 895);
-            this.Controls.Add(this.pictureBoxSleep);
-            this.Controls.Add(this.pictureBoxVaccine);
-            this.Controls.Add(this.pictureBoxBath);
-            this.Controls.Add(this.pictureBoxClean);
-            this.Controls.Add(this.pictureBoxPlay);
-            this.Controls.Add(this.pictureBoxEat);
-            this.Controls.Add(this.pictureBoxPet);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.panelActivity);
+            this.Controls.Add(this.pictureBoxPet);
             this.Controls.Add(this.panelData);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -542,14 +449,13 @@
             this.Text = "Happy Pet Game";
             this.Load += new System.EventHandler(this.FormGame_Load);
             this.panelData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpecial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPetIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHealth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnergy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
-            this.panelActivity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).EndInit();
@@ -557,36 +463,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBath)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVaccine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSleep)).EndInit();
+            this.panelActivity.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonClean;
-        private System.Windows.Forms.Button buttonVaccinate;
-        private System.Windows.Forms.Button buttonBath;
-        private System.Windows.Forms.Button buttonPlay;
-        private System.Windows.Forms.Button buttonFeed;
         public System.Windows.Forms.Label labelDateTime;
         public System.Windows.Forms.Panel panelData;
-        public System.Windows.Forms.Panel panelActivity;
-        public System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button buttonSleep;
         private System.Windows.Forms.Timer timerImage;
         private System.Windows.Forms.ProgressBar progressBarHealth;
         private System.Windows.Forms.ProgressBar progressBarEnergy;
         private System.Windows.Forms.ProgressBar progressBarHappy;
         private System.Windows.Forms.PictureBox pictureBoxIcon;
         public System.Windows.Forms.Label labelPlayer;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxHealth;
+        private System.Windows.Forms.PictureBox pictureBoxEnergy;
+        private System.Windows.Forms.PictureBox pictureBoxCoin;
         public System.Windows.Forms.Label labelCoin;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxPetIcon;
         public System.Windows.Forms.Label labelPet;
-        private System.Windows.Forms.PictureBox pictureBoxVac;
-        public System.Windows.Forms.Label labelVaccine;
+        private System.Windows.Forms.PictureBox pictureBoxSpecial;
+        public System.Windows.Forms.Label labelSpecialStatus;
         public System.Windows.Forms.Timer timerGame;
         public System.Windows.Forms.Label labelHealth;
         private System.Windows.Forms.Button buttonExit;
@@ -599,6 +498,7 @@
         private System.Windows.Forms.PictureBox pictureBoxBath;
         private System.Windows.Forms.PictureBox pictureBoxVaccine;
         private System.Windows.Forms.PictureBox pictureBoxSleep;
+        private System.Windows.Forms.Panel panelActivity;
     }
 }
 

@@ -53,23 +53,7 @@ namespace pet_game
         }
         #endregion
 
-        #region form interaction
-        private void buttonBuy_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmMain.pet.Buy(listToy[index]);
-                listToy.Remove(listToy[index]);
-                frmGame.labelCoin.Text = frmMain.player.Coins.ToString();
-                MessageBox.Show("Terbeli");
-
-                this.Close();
-            }
-            catch(Exception ex)
-            { 
-                MessageBox.Show(ex.Message);
-            }
-        }
+        #region button interaction
 
         private void pictureBoxBuy_MouseHover(object sender, EventArgs e)
         {
@@ -101,8 +85,27 @@ namespace pet_game
             pictureBoxLeft.BackgroundImage = Resources.Button_Left;
         }
 
-        private void buttonL_Click(object sender, EventArgs e)
+        private void pictureBoxBuy_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySound(Resources.UseSound);
+            try
+            {
+                frmMain.pet.Buy(listToy[index]);
+                listToy.Remove(listToy[index]);
+                frmGame.labelCoin.Text = frmMain.player.Coins.ToString();
+                MessageBox.Show("Terbeli");
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBoxLeft_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
             index -= 1;
             if (index > -1)
             {
@@ -117,8 +120,9 @@ namespace pet_game
             }
         }
 
-        private void buttonR_Click(object sender, EventArgs e)
+        private void pictureBoxRight_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySound(Resources.Button_Sound1);
             index += 1;
             if (index > (listToy.Count - 1))
             {
@@ -132,6 +136,8 @@ namespace pet_game
                 labelData.Text = listToy[index].DisplayData();
             }
         }
+
+       
         #endregion
     }
 }

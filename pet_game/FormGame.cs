@@ -55,7 +55,6 @@ namespace pet_game
         {
             frmMain.PlaySound(Resources.PlayStart);
             labelDateTime.Text = DateTime.Now.ToString("dd/MMM/yyyy\nhh:mm:ss");
-            labelTitle.Visible = false;
             labelCoin.Text = frmMain.pet.Owner.Coins.ToString();
             labelPet.Text = frmMain.pet.Name;
             labelPlayer.Text = frmMain.player.Name; 
@@ -67,26 +66,40 @@ namespace pet_game
 
             if (frmMain.pet is Cat)
             {
-                buttonClean.Enabled = false;
-                labelVaccine.Visible = true;
-                labelVaccine.Text = frmMain.pet.DisplayData();
-                pictureBoxVac.Visible = true;
+                pictureBoxClean.Enabled = false;
+                labelSpecialStatus.Visible = true;
+                labelSpecialStatus.Text = frmMain.pet.DisplayData();
+                pictureBoxSpecial.Visible = true;
+                pictureBoxSpecial.BackgroundImage = Resources.Suntik;
                 this.BackgroundImage = Resources.Background_cat;
             }
             else if (frmMain.pet is Fish)
             {
-                buttonSleep.Enabled = false;
-                buttonPlay.Enabled = true;
-                buttonBath.Enabled = false;
-                buttonVaccinate.Enabled = false;
-                this.BackgroundImage = Properties.Resources.shop;
+                pictureBoxSleep.Enabled = false;
+                pictureBoxSleep.Visible = false;
+                pictureBoxPlay.Enabled = true;
+                pictureBoxBath.Enabled = false;
+                pictureBoxBath.Visible = false;
+                pictureBoxVaccine.Enabled = false;
+                pictureBoxVaccine.Visible = false;
+                pictureBoxSpecial.Visible = true;
+                pictureBoxSpecial.BackgroundImage = Resources.Environment;
+                labelSpecialStatus.Visible = true;
+                labelSpecialStatus.Text = frmMain.pet.DisplayData();
+                pictureBoxPet.Top = 240;
+                pictureBoxClean.Top = 110;
+                this.BackgroundImage = Properties.Resources.Background_Ikan;
             }
             else if (frmMain.pet is Chameleon)
             {
-                buttonPlay.Enabled = false;
-                buttonBath.Enabled = false;
-                buttonClean.Enabled = false;
-                buttonVaccinate.Enabled = false;
+                pictureBoxPlay.Enabled = false;
+                pictureBoxPlay.Visible = false;
+                pictureBoxBath.Enabled = false;
+                pictureBoxBath.Visible= false;
+                pictureBoxClean.Enabled = false;
+                pictureBoxClean.Visible = false;
+                pictureBoxVaccine.Enabled = false;
+                pictureBoxVaccine.Visible = false;
                 this.BackgroundImage = Resources.dawnbackground;
             }
             ProgressBarUpdate();
@@ -188,7 +201,7 @@ namespace pet_game
             try
             {
                 ((Cat)frmMain.pet).Vaccinate();
-                labelVaccine.Text = frmMain.pet.DisplayData();
+                labelSpecialStatus.Text = frmMain.pet.DisplayData();
                 activity = "vaccine";
                 walkCount = 30;
             }
@@ -350,9 +363,138 @@ namespace pet_game
             }
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+      
+        #region Activity Hover
+        private void pictureBoxEat_MouseHover(object sender, EventArgs e)
         {
-
+            pictureBoxEat.BackgroundImage = Resources.Icon_Feed_Hover;
         }
+
+        private void pictureBoxEat_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxEat.BackgroundImage = Resources.Icon_Feed;
+        }
+
+        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Icon_Play_hover;
+        }
+
+        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPlay.BackgroundImage = Resources.Icon_Play;
+        }
+
+        private void pictureBoxSleep_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxSleep.BackgroundImage = Resources.Icon_Sleep_Hover;
+        }
+        private void pictureBoxSleep_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxSleep.BackgroundImage = Resources.Icon_Sleep;
+        }
+
+        private void pictureBoxBath_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBath.BackgroundImage= Resources.Icon_Bath_Hover;
+        }
+
+        private void pictureBoxBath_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBath.BackgroundImage = Resources.Icon_Bath;
+        }
+
+        private void pictureBoxVaccine_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxVaccine.BackgroundImage = Resources.Icn_Vaccine_Hover;
+        }
+
+        private void pictureBoxVaccine_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxVaccine.BackgroundImage = Resources.Icon_Vaccine;
+        }
+
+        private void pictureBoxClean_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxClean.BackgroundImage = Resources.Icon_Clean_hover;
+        }
+
+        private void pictureBoxClean_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxClean.BackgroundImage = Resources.Icon_Clean;
+        }
+
+        #endregion
+        #region Activity interaction
+        private void pictureBoxEat_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.pet.Feed();
+            ProgressBarUpdate();
+            activity = "eat";
+            walkCount = 30;
+        }
+
+        private void pictureBoxPlay_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            timerGame.Stop();
+            FormSelectToys frmSelectToys = new FormSelectToys();
+            frmSelectToys.Owner = this;
+            frmSelectToys.TopLevel = false;
+            frmMain.panelMain.Controls.Add(frmSelectToys);
+            frmSelectToys.BringToFront();
+            frmSelectToys.Show();
+            walkCount = 30;
+        }
+
+        private void pictureBoxSleep_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            frmMain.pet.Sleep();
+            ProgressBarUpdate();
+            activity = "sleep";
+            walkCount = 30;
+        }
+
+        private void pictureBoxBath_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            ((Cat)frmMain.pet).Bath();
+            ProgressBarUpdate();
+            activity = "bath";
+            walkCount = 30;
+        }
+
+        private void pictureBoxVaccine_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            try
+            {
+                ((Cat)frmMain.pet).Vaccinate();
+                labelSpecialStatus.Text = frmMain.pet.DisplayData();
+                activity = "vaccine";
+                walkCount = 30;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBoxClean_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySound(Resources.Button_Sound1);
+            try
+            {
+                ((Fish)frmMain.pet).Clean();
+                ProgressBarUpdate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
 }

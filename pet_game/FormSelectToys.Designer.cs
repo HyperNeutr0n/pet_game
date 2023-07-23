@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxToys = new System.Windows.Forms.ComboBox();
             this.labelToys = new System.Windows.Forms.Label();
-            this.buttonPlay = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelData = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             // linkLabelBuy
             // 
             this.linkLabelBuy.AutoSize = true;
+            this.linkLabelBuy.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelBuy.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelBuy.Location = new System.Drawing.Point(627, 770);
             this.linkLabelBuy.Name = "linkLabelBuy";
@@ -55,6 +55,7 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(501, 665);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -77,6 +78,7 @@
             // 
             // labelToys
             // 
+            this.labelToys.BackColor = System.Drawing.Color.Transparent;
             this.labelToys.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelToys.Location = new System.Drawing.Point(501, 58);
             this.labelToys.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -86,22 +88,9 @@
             this.labelToys.Text = "Select Toy :";
             this.labelToys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonPlay
-            // 
-            this.buttonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonPlay.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPlay.ForeColor = System.Drawing.Color.Black;
-            this.buttonPlay.Location = new System.Drawing.Point(101, 503);
-            this.buttonPlay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(390, 118);
-            this.buttonPlay.TabIndex = 20;
-            this.buttonPlay.Text = "Let\'s Play";
-            this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(550, 214);
             this.pictureBox1.Name = "pictureBox1";
@@ -112,6 +101,7 @@
             // 
             // labelData
             // 
+            this.labelData.BackColor = System.Drawing.Color.Transparent;
             this.labelData.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelData.Location = new System.Drawing.Point(860, 238);
             this.labelData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -141,6 +131,7 @@
             this.pictureBoxUse.Size = new System.Drawing.Size(281, 171);
             this.pictureBoxUse.TabIndex = 29;
             this.pictureBoxUse.TabStop = false;
+            this.pictureBoxUse.Click += new System.EventHandler(this.pictureBoxUse_Click);
             this.pictureBoxUse.MouseLeave += new System.EventHandler(this.pictureBoxUse_MouseLeave);
             this.pictureBoxUse.MouseHover += new System.EventHandler(this.pictureBoxUse_MouseHover);
             // 
@@ -160,7 +151,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxToys);
             this.Controls.Add(this.labelToys);
-            this.Controls.Add(this.buttonPlay);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSelectToys";
@@ -180,7 +170,6 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxToys;
         public System.Windows.Forms.Label labelToys;
-        private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label labelData;
         private System.Windows.Forms.Button buttonBack;

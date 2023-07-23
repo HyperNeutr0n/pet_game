@@ -91,6 +91,16 @@ namespace pet_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_Ikan {
+            get {
+                object obj = ResourceManager.GetObject("Background_Ikan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream BGM_1 {
@@ -671,6 +681,16 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Environment {
+            get {
+                object obj = ResourceManager.GetObject("Environment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fish_clean {
             get {
                 object obj = ResourceManager.GetObject("fish_clean", resourceCulture);
@@ -950,6 +970,16 @@ namespace pet_game.Properties {
         internal static System.Drawing.Bitmap sunsetbackground {
             get {
                 object obj = ResourceManager.GetObject("sunsetbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Suntik {
+            get {
+                object obj = ResourceManager.GetObject("Suntik", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
