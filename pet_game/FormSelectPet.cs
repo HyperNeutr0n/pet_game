@@ -131,6 +131,13 @@ namespace pet_game
         {
             try
             {
+                foreach (Player player in frmMain.listPlayer)
+                {
+                    if(textBoxPlayerName.Text == player.Name)
+                    {
+                        throw new Exception("Player name already taken");
+                    }
+                }
                 frmMain.player = new Player(textBoxPlayerName.Text, 100, DateTime.Now);
 
                 if (index == 0)

@@ -438,7 +438,7 @@ namespace pet_game
                 frmMain.PlaySfx(Resources.GameOver);
                 panelActivity.Visible = false;
                 panelData.Visible = false;
-
+                pictureBoxColor.Visible = false;
                 frmMain.listPet.Remove(frmMain.pet);
                 frmMain.listPlayer.Remove(frmMain.player);
                 MessageBox.Show("You Lose");
@@ -456,11 +456,11 @@ namespace pet_game
                 if (frmMain.pet is Cat || frmMain.pet is Chameleon)
                 {
                     activity = "idle";
-                    if(frmMain.pet is Cat)
+                    if(frmMain.pet is Cat && animationDuration == 29)
                     {
                         frmMain.PlaySfx(Resources.Cat_Meow);
                     }
-                    else if(frmMain.pet is Chameleon)
+                    else if(frmMain.pet is Chameleon && animationDuration == 29)
                     {
                         frmMain.PlaySfx(Resources.Chameleon_leaf);
                     }

@@ -104,15 +104,17 @@ namespace pet_game
 
         private void comboBoxPlayer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            frmMain.player = (Player)comboBoxPlayer.SelectedItem;
-            foreach(Pet pet in frmMain.listPet)
+            if(comboBoxPlayer.SelectedIndex > -1)
             {
-                if (pet.Owner.Name == frmMain.player.Name)
+                frmMain.player = (Player)comboBoxPlayer.SelectedItem;
+                foreach (Pet pet in frmMain.listPet)
                 {
-                    pictureBoxPlayer.BackgroundImage = pet.Picture;
+                    if (pet.Owner.Name == frmMain.player.Name)
+                    {
+                        pictureBoxPlayer.BackgroundImage = pet.Picture;
+                    }
                 }
             }
-            
         }
     }
 }
