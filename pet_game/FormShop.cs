@@ -79,7 +79,6 @@ namespace pet_game
         #endregion
 
         #region button hover
-
         private void pictureBoxBuy_MouseHover(object sender, EventArgs e)
         {
             pictureBoxBuy.BackgroundImage = Resources.Button_Buy_Hover;
@@ -109,6 +108,16 @@ namespace pet_game
         {
             pictureBoxLeft.BackgroundImage = Resources.Button_Left;
         }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
+        }
         #endregion
 
         #region button click
@@ -133,16 +142,6 @@ namespace pet_game
         {
             frmMain.PlaySfx(Resources.Button_Sound1);
             this.Close();
-        }
-
-        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
-        }
-
-        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
         }
 
         private void pictureBoxLeft_Click(object sender, EventArgs e)

@@ -210,9 +210,7 @@ namespace pet_game
 
         public virtual int CheckTotalDecoration() // kalkukasi jumlah dekorasi
         {
-            
-                return 0;
-            
+            return 0;
         }
         #endregion
     }

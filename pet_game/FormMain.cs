@@ -52,10 +52,6 @@ namespace pet_game
             mxp.Ctlcontrols.play();
             bgmActive = true;
         }
-        public void MuteBgm()
-        {
-            mxp.Ctlcontrols.stop();
-        }
         #endregion
 
         #region serialize

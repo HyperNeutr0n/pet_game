@@ -83,6 +83,16 @@ namespace pet_game
         {
             pictureBoxPlay.BackgroundImage = Resources.Button_Play;
         }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
+        }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
         #endregion
 
         #region button click
@@ -120,8 +130,9 @@ namespace pet_game
             }
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void pictureBoxBack_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.Button_Sound1);
             this.Close();
         }
         #endregion
@@ -169,21 +180,5 @@ namespace pet_game
             }
         }
         #endregion
-
-        private void pictureBoxBack_Click(object sender, EventArgs e)
-        {
-            frmMain.PlaySfx(Resources.Button_Sound1);
-            this.Close();
-        }
-
-        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
-        }
-
-        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
-        }
     }
 }

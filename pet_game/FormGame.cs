@@ -20,6 +20,7 @@ namespace pet_game
         {
             InitializeComponent();
         }
+
         #region global variable
         public int rangeWalk = 2;
         public int animationDuration = 0;
@@ -90,7 +91,6 @@ namespace pet_game
             labelHealth.Text = frmMain.pet.Health.ToString();
             labelEnergy.Text = frmMain.pet.Energy.ToString();
             labelHappy.Text = frmMain.pet.Happiness.ToString();
-            //labelCoin.Text = frmMain.player.Coins.ToString();
         }
 
         public void StartGame()
@@ -112,6 +112,7 @@ namespace pet_game
             if (frmMain.pet is Cat)
             {
                 pictureBoxClean.Enabled = false;
+                pictureBoxClean.Visible = false;
                 labelSpecialStatus.Visible = true;
                 labelSpecialStatus.Text = frmMain.pet.DisplayData();
                 pictureBoxSpecial.Visible = true;
@@ -314,11 +315,11 @@ namespace pet_game
             {
                 pictureBoxPet.Image = listCatVaccine[indexImage];
             }
-            else if(activity == "afterVaccine")
+            else if (activity == "afterVaccine")
             {
                 pictureBoxPet.Image = listCatAfterVaccine[indexImage];
             }
-            else if(activity == "play")
+            else if (activity == "play")
             {
                 pictureBoxPet.Size = new Size(212, 194);
                 if(toy == "Yarn")
@@ -471,7 +472,8 @@ namespace pet_game
                 }
             }
             else
-            {   // delay 5 detik (idle animation)
+            {   // delay 4 detik (idle animation)
+                // 1 detik = 10 delay count
                 delayCount++;
                 Animation(activity);
                 if (delayCount > 40)
@@ -483,7 +485,8 @@ namespace pet_game
                     {
                         activity = "afterBath";
                         animationDuration = 30;
-                    }else if(activity == "vaccine")
+                    }
+                    else if(activity == "vaccine")
                     {
                         activity = "afterVaccine";
                         animationDuration = 30;
@@ -491,7 +494,8 @@ namespace pet_game
                     else if (activity == "clean")
                     {
                         pictureBoxSpray.Visible = false;
-                    }else if(activity == "play")
+                    }
+                    else if(activity == "play")
                     {
                         pictureBoxPet.Size = new Size(172, 154);
                     }
@@ -747,7 +751,6 @@ namespace pet_game
             pictureBoxResume.BackgroundImage = Resources.Button_Resume_Hover;
         }
 
-
         private void pictureBoxColor_Click(object sender, EventArgs e)
         {
             ChamColorIndex++;
@@ -772,11 +775,6 @@ namespace pet_game
                 ((Chameleon)frmMain.pet).ChangeColor(Color.Green);
                 labelSpecialStatus.Text = "Green";
             }
-        }
-
-        private void pictureBoxPet_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBoxResume_Click(object sender, EventArgs e)

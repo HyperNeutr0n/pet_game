@@ -42,6 +42,16 @@ namespace pet_game
         {
             pictureBoxPlay.BackgroundImage = Resources.Button_Play;
         }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
+        }
         #endregion
 
         #region button click
@@ -85,23 +95,14 @@ namespace pet_game
             formSelectPet.Show();
             this.Close();
         }
-        #endregion
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
-        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
-        }
-
-        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
-        }
-
+        #region combo box changes
         private void comboBoxPlayer_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBoxPlayer.SelectedIndex > -1)
@@ -116,5 +117,6 @@ namespace pet_game
                 }
             }
         }
+        #endregion
     }
 }

@@ -43,7 +43,6 @@ namespace pet_game
         #endregion
 
         #region form interaction
-
         private void pictureBoxUse_MouseHover(object sender, EventArgs e)
         {
             pictureBoxUse.BackgroundImage = Resources.Button_Use_Hover;
@@ -82,14 +81,6 @@ namespace pet_game
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FormShop shop = new FormShop();
-            shop.Owner = this;
-            shop.ShowDialog();
-         
-        }
-
         private void comboBoxToys_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxToys.SelectedIndex > -1)
@@ -100,10 +91,12 @@ namespace pet_game
                 if(comboBoxToys.Text == "Ball")
                 {
                     pictureBoxToy.BackgroundImage = Resources.cat_toys_ball;
-                }else if (comboBoxToys.Text == "Yarn")
+                }
+                else if (comboBoxToys.Text == "Yarn")
                 {
                     pictureBoxToy.BackgroundImage = Resources.cat_toys_yarn;
-                }else if (comboBoxToys.Text == "Stick")
+                }
+                else if (comboBoxToys.Text == "Stick")
                 {
                     pictureBoxToy.BackgroundImage = Resources.cat_toys_stick;
                 }
@@ -128,8 +121,6 @@ namespace pet_game
             frmGame.timerGame.Start();
             frmGame.timerPet.Start();
         }
-
-
         #endregion
 
         #region button interaction

@@ -51,19 +51,6 @@ namespace pet_game
         }
         #endregion
 
-        #region form interaction
-        private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxDelete.BackgroundImage = Resources.Button_Play_Hover;
-
-        }
-
-        private void pictureBoxPlay_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxDelete.BackgroundImage = Resources.Button_Play;
-        }
-        #endregion
-
         #region button click
         private void pictureBoxDelete_Click(object sender, EventArgs e)
         {
@@ -93,18 +80,15 @@ namespace pet_game
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             frmMain.PlaySfx(Resources.Button_Sound1);
             this.Close();
         }
+        #endregion
 
+        #region button hover
         private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxBack.BackgroundImage = Resources.Button_Back1;
@@ -119,5 +103,11 @@ namespace pet_game
         {
             pictureBoxDelete.BackgroundImage = Resources.Button_ResetData2;
         }
+
+        private void FormResetPlayer_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxDelete.BackgroundImage = Resources.Button_ResetData1;
+        }
+        #endregion
     }
 }
