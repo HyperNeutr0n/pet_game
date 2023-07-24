@@ -31,7 +31,7 @@ namespace pet_game
         }
         #endregion
 
-        #region form interaction
+        #region button hover
         private void pictureBoxPlay_MouseHover(object sender, EventArgs e)
         {
             pictureBoxPlay.BackgroundImage = Resources.Button_Play_Hover;
@@ -42,7 +42,9 @@ namespace pet_game
         {
             pictureBoxPlay.BackgroundImage = Resources.Button_Play;
         }
+        #endregion
 
+        #region button click
         private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
             try

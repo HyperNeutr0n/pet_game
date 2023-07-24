@@ -25,8 +25,8 @@ namespace pet_game
         #region objects
         public Pet pet;
         public Player player;
-        public List<Player> listPlayer = new List<Player>();
-        public List<Pet> listPet = new List<Pet>();
+        public BindingList<Player> listPlayer = new BindingList<Player>();
+        public BindingList<Pet> listPet = new BindingList<Pet>();
 
         SoundPlayer sfx;
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
@@ -55,7 +55,7 @@ namespace pet_game
             {
                 FileStream stream = new FileStream("DataPlayer.vc", FileMode.Open, FileAccess.Read);
                 BinaryFormatter format = new BinaryFormatter();
-                listPlayer = (List<Player>)format.Deserialize(stream);
+                listPlayer = (BindingList<Player>)format.Deserialize(stream);
                 stream.Close();
             }
         }
@@ -66,7 +66,7 @@ namespace pet_game
             {
                 FileStream stream = new FileStream("DataPet.vc", FileMode.Open, FileAccess.Read);
                 BinaryFormatter format = new BinaryFormatter();
-                listPet = (List<Pet>)format.Deserialize(stream);
+                listPet = (BindingList<Pet>)format.Deserialize(stream);
                 stream.Close();
             }
         }
@@ -81,7 +81,6 @@ namespace pet_game
             string dir = Environment.CurrentDirectory;
             dir = dir.Substring(0, dir.Length - 9);
             dir += "BGM\\genshin.mp3";
-            textBox1.Text = dir;
             PlaySfx(Resources.GameStart);
             PlayBgm(dir);
         }
@@ -154,8 +153,12 @@ namespace pet_game
 
         private void pictureBoxReset_Click(object sender, EventArgs e)
         {
-            sfx = new SoundPlayer(Resources.PlayStart);
-            sfx.PlayLooping();
+            FormResetPlayer formResetPlayer = new FormResetPlayer();
+            formResetPlayer.Owner = this;
+            formResetPlayer.TopLevel = false;
+            panelMain.Controls.Add(formResetPlayer);
+            formResetPlayer.BringToFront();
+            formResetPlayer.Show();
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
@@ -164,10 +167,5 @@ namespace pet_game
             Application.Exit();
         }
         #endregion
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
