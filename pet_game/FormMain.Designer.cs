@@ -53,17 +53,15 @@
             this.panelMain.Controls.Add(this.pictureBoxLoad);
             this.panelMain.Controls.Add(this.pictureBoxNew);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1344, 714);
+            this.panelMain.Size = new System.Drawing.Size(1008, 580);
             this.panelMain.TabIndex = 0;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // mxp
             // 
             this.mxp.Enabled = true;
             this.mxp.Location = new System.Drawing.Point(142, 349);
-            this.mxp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mxp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mxp.Name = "mxp";
             this.mxp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mxp.OcxState")));
             this.mxp.Size = new System.Drawing.Size(273, 110);
@@ -74,10 +72,10 @@
             this.pictureBoxExit.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxExit.BackgroundImage = global::pet_game.Properties.Resources.Button_Exits;
             this.pictureBoxExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxExit.Location = new System.Drawing.Point(555, 569);
-            this.pictureBoxExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxExit.Location = new System.Drawing.Point(416, 462);
+            this.pictureBoxExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(251, 137);
+            this.pictureBoxExit.Size = new System.Drawing.Size(188, 111);
             this.pictureBoxExit.TabIndex = 11;
             this.pictureBoxExit.TabStop = false;
             this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
@@ -89,10 +87,10 @@
             this.pictureBoxReset.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxReset.BackgroundImage = global::pet_game.Properties.Resources.Button_Reset;
             this.pictureBoxReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxReset.Location = new System.Drawing.Point(555, 427);
-            this.pictureBoxReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxReset.Location = new System.Drawing.Point(416, 347);
+            this.pictureBoxReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxReset.Name = "pictureBoxReset";
-            this.pictureBoxReset.Size = new System.Drawing.Size(251, 137);
+            this.pictureBoxReset.Size = new System.Drawing.Size(188, 111);
             this.pictureBoxReset.TabIndex = 10;
             this.pictureBoxReset.TabStop = false;
             this.pictureBoxReset.Click += new System.EventHandler(this.pictureBoxReset_Click);
@@ -104,10 +102,10 @@
             this.pictureBoxLoad.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLoad.BackgroundImage = global::pet_game.Properties.Resources.Button_Load;
             this.pictureBoxLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLoad.Location = new System.Drawing.Point(555, 286);
-            this.pictureBoxLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLoad.Location = new System.Drawing.Point(416, 232);
+            this.pictureBoxLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxLoad.Name = "pictureBoxLoad";
-            this.pictureBoxLoad.Size = new System.Drawing.Size(251, 137);
+            this.pictureBoxLoad.Size = new System.Drawing.Size(188, 111);
             this.pictureBoxLoad.TabIndex = 9;
             this.pictureBoxLoad.TabStop = false;
             this.pictureBoxLoad.Click += new System.EventHandler(this.pictureBoxLoad_Click);
@@ -119,10 +117,10 @@
             this.pictureBoxNew.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNew.BackgroundImage = global::pet_game.Properties.Resources.Button_NewGame;
             this.pictureBoxNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxNew.Location = new System.Drawing.Point(555, 146);
-            this.pictureBoxNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxNew.Location = new System.Drawing.Point(416, 119);
+            this.pictureBoxNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxNew.Name = "pictureBoxNew";
-            this.pictureBoxNew.Size = new System.Drawing.Size(251, 137);
+            this.pictureBoxNew.Size = new System.Drawing.Size(188, 111);
             this.pictureBoxNew.TabIndex = 8;
             this.pictureBoxNew.TabStop = false;
             this.pictureBoxNew.Click += new System.EventHandler(this.pictureBoxNew_Click);
@@ -131,11 +129,10 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 716);
+            this.ClientSize = new System.Drawing.Size(1008, 582);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

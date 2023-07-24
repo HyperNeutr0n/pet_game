@@ -173,10 +173,5 @@ namespace pet_game
             Application.Exit();
         }
         #endregion
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
     }
 }

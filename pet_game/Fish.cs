@@ -38,13 +38,14 @@ namespace pet_game
         #region methods
         public override string DisplayData()
         {
-            return  this.Environment;
+            return this.Environment;
         }
 
         public override void Feed()
         {
             base.Health += 20;
             base.Energy += 40;
+            base.Owner.Coins += 3000;
         }
 
         public void Clean()
@@ -61,18 +62,25 @@ namespace pet_game
             }
         }
 
-        public override void ChangeStatus()
+        public override void ChangeStatus() // semakin sedikit dekorasi semakin cepat status fish turun
         {
-            base.Happiness -= (5 - CheckDeco());
-            base.Health -= (5 - CheckDeco());
-            base.Energy -= (5 - CheckDeco());
+            base.Happiness -= (5 - CheckTotalDecoration());
+            base.Health -= (5 - CheckTotalDecoration());
+            base.Energy -= (5 - CheckTotalDecoration());
         }
 
-        public int CheckDeco()
+        public int CheckTotalDecoration() // kalkukasi jumlah dekorasi
         {
-            if (base.ToyList.Count !=  0)
+            if (base.ToyList.Count > -1)
             {
-                return ToyList.Count *1;
+                if (base.ToyList.Count < 5)
+                {
+                    return base.ToyList.Count;
+                }
+                else
+                {
+                    return 4;
+                }
             }
             else
             {

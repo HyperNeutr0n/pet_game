@@ -49,7 +49,7 @@ namespace pet_game
 
         public override void Play(Toy toy)
         {
-            if(toy != null)
+            if (toy != null)
             {
                 base.Happiness += toy.Benefit;
             }

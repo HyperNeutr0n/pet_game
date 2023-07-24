@@ -118,7 +118,7 @@ namespace pet_game
         #region form close
         private void FormSelectToys_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmGame.ProgressBarUpdate();
+            frmGame.PanelDataUpdate();
             frmGame.timerGame.Start();
             frmGame.timerPet.Start();
         }
@@ -128,10 +128,5 @@ namespace pet_game
             this.Close();
         }
         #endregion
-
-        private void labelData_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -28,7 +28,7 @@ namespace pet_game
         public int indexImage = 0;
         public string activity, toy;
         public int mostLeft, mostRight;
-        public bool gameState = false;
+        public bool gameRunning = false;
 
         FormMain frmMain;
         #endregion
@@ -75,25 +75,33 @@ namespace pet_game
         #endregion
 
         #region methods
-        public void ProgressBarUpdate()
+        public void PanelDataUpdate()
         {
-            progressBarHappy.Value = frmMain.pet.Happiness;
             progressBarHealth.Value = frmMain.pet.Health;
+            progressBarHappy.Value = frmMain.pet.Happiness;
             progressBarEnergy.Value = frmMain.pet.Energy;
+            labelHealth.Text = frmMain.pet.Health.ToString();
+            labelEnergy.Text = frmMain.pet.Energy.ToString();
+            labelHappy.Text = frmMain.pet.Happiness.ToString();
+            labelCoin.Text = frmMain.player.Coins.ToString();
         }
+
         public void StartGame()
         {
             frmMain.PlaySfx(Resources.PlayStart);
             labelDateTime.Text = DateTime.Now.ToString("dd/MMM/yyyy\nhh:mm:ss");
             labelCoin.Text = frmMain.pet.Owner.Coins.ToString();
             labelPet.Text = frmMain.pet.Name;
-            labelPlayer.Text = frmMain.player.Name; 
+            labelPlayer.Text = frmMain.player.Name;
+            labelHealth.Visible = true;
+            labelEnergy.Visible = true;
+            labelHappy.Visible = true;
             panelData.Visible = true;
             panelActivity.Visible = true;
 
             pictureBoxPet.Image = frmMain.pet.Picture;
             pictureBoxPet.SizeMode = PictureBoxSizeMode.StretchImage;
-            gameState = true;
+            gameRunning = true;
             if (frmMain.pet is Cat)
             {
                 pictureBoxClean.Enabled = false;
@@ -131,7 +139,7 @@ namespace pet_game
                 pictureBoxPlay.Enabled = false;
                 pictureBoxPlay.Visible = false;
                 pictureBoxBath.Enabled = false;
-                pictureBoxBath.Visible= false;
+                pictureBoxBath.Visible = false;
                 pictureBoxClean.Enabled = false;
                 pictureBoxClean.Visible = false;
                 pictureBoxVaccine.Enabled = false;
@@ -143,26 +151,29 @@ namespace pet_game
                 mostRight = 993;
                 frmMain.PlayBgm("BGM\\chameleon.mp3");
             }
-            ProgressBarUpdate();
+            PanelDataUpdate();
             timerGame.Start();
         }
+
         private void Animation(string activity)
         {
-            if (frmMain.pet is Chameleon && activity == "idle") // pengecualian untuk idle chameleon
+            // pengaturan jumlah frame untuk cat dan chameleon
+            // karena jumlah frame cat dan chamelon sama maka bisa dilakukan pengecekan diawal
+            if (frmMain.pet is Chameleon && activity == "idle") // pengecualian untuk idle chameleon punya 6 frame
             {
                 if (indexImage > 6)
                 {
                     indexImage = 0;
                 }
             }
-            else if(frmMain.pet is Cat || frmMain.pet is Chameleon)// khusus activity frame cat dan chameleon
+            else if (frmMain.pet is Cat || frmMain.pet is Chameleon)
             {
-                if(indexImage > 1)
+                if (indexImage > 1)
                 {
                     indexImage = 0;
                 }
             }
-            //====================================================================================================
+            // pengaturan animasi yang digunakan berdasarkan aktivitas
             if (activity == "idle")
             {
                 if (frmMain.pet is Cat) { pictureBoxPet.Image = listCatIdle[indexImage]; }
@@ -176,10 +187,6 @@ namespace pet_game
                 }
                 if (frmMain.pet is Chameleon) 
                 { 
-                    if(indexImage > 6)
-                    {
-                        indexImage = 0;
-                    }
                     pictureBoxPet.Image = listChameleonIdle[indexImage]; 
                 }
             }
@@ -238,10 +245,12 @@ namespace pet_game
             else if (activity == "vaccine")
             {
                 pictureBoxPet.Image = listCatVaccine[indexImage];
-            }else if(activity == "afterVaccine")
+            }
+            else if(activity == "afterVaccine")
             {
                 pictureBoxPet.Image = listCatAfterVaccine[indexImage];
-            }else if(activity == "play")
+            }
+            else if(activity == "play")
             {
                 pictureBoxPet.Size = new Size(212, 194);
                 if(toy == "Yarn")
@@ -259,6 +268,7 @@ namespace pet_game
             }
             indexImage++;
         }
+
         public int Direction() // membuat angka random antara 0 atau 1 untuk digunakan sebagai arah
         {
             Random rand = new Random();
@@ -338,7 +348,7 @@ namespace pet_game
         private void timerGame_Tick(object sender, EventArgs e)
         {
             frmMain.pet.ChangeStatus();
-            ProgressBarUpdate();
+            PanelDataUpdate();
             if(frmMain.pet is Fish)
             {
                 CheckFishItem();
@@ -360,7 +370,7 @@ namespace pet_game
 
         private void timerPet_Tick(object sender, EventArgs e)
         {
-            label1.Text = toy;
+            // jika durasi pet berjalan kurang dari 3 detik
             if (animationDuration < 30)
             {
                 SmartMove(directionNum);
@@ -369,10 +379,9 @@ namespace pet_game
                 {
                     activity = "idle";
                 }
-
             }
             else
-            {// delay 5 detik (idle animation)
+            {   // delay 5 detik (idle animation)
                 delayCount++;
                 Animation(activity);
                 if (delayCount > 40)
@@ -402,7 +411,7 @@ namespace pet_game
         }
         #endregion
 
-        #region button hover
+        #region button activity hover
         private void pictureBoxEat_MouseHover(object sender, EventArgs e)
         {
             pictureBoxEat.BackgroundImage = Resources.Icon_Feed_Hover;
@@ -427,6 +436,7 @@ namespace pet_game
         {
             pictureBoxSleep.BackgroundImage = Resources.Icon_Sleep_Hover;
         }
+
         private void pictureBoxSleep_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxSleep.BackgroundImage = Resources.Icon_Sleep;
@@ -461,22 +471,14 @@ namespace pet_game
         {
             pictureBoxClean.BackgroundImage = Resources.Icon_Clean;
         }
-        private void pictureBoxPause_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxPause.BackgroundImage = Resources.Button_Pause_Hover;
-        }
-        private void pictureBoxPause_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxPause.BackgroundImage = Resources.Button_Pause;
-        }
         #endregion
 
-        #region button click
+        #region button activity click
         private void pictureBoxEat_Click(object sender, EventArgs e)
         {
             frmMain.PlaySfx(Resources.Button_Sound1);
             frmMain.pet.Feed();
-            ProgressBarUpdate();
+            PanelDataUpdate();
             activity = "eat";
             animationDuration = 30;
             delayCount = 0;
@@ -499,7 +501,7 @@ namespace pet_game
         {
             frmMain.PlaySfx(Resources.Button_Sound1);
             frmMain.pet.Sleep();
-            ProgressBarUpdate();
+            PanelDataUpdate();
             activity = "sleep";
             animationDuration = 30;
             delayCount = 0;
@@ -509,7 +511,7 @@ namespace pet_game
         {
             frmMain.PlaySfx(Resources.Button_Sound1);
             ((Cat)frmMain.pet).Bath();
-            ProgressBarUpdate();
+            PanelDataUpdate();
             activity = "bath";
             animationDuration = 30;
             delayCount = 0;
@@ -538,7 +540,7 @@ namespace pet_game
             try
             {
                 ((Fish)frmMain.pet).Clean();
-                ProgressBarUpdate();
+                PanelDataUpdate();
                 activity = "clean";
                 pictureBoxSpray.Visible = true;
                 animationDuration = 30;
@@ -549,40 +551,41 @@ namespace pet_game
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
-        private void pictureBoxResume_Click(object sender, EventArgs e)
+        #region button pause interaction
+        private void pictureBoxPause_MouseHover(object sender, EventArgs e)
         {
-            timerGame.Start();
-            timerPet.Start();
-            gameState = true;
-            panelPause.Visible = false;
-            pictureBox.SendToBack();
-            pictureBox.BackColor = Color.Transparent;
+            pictureBoxPause.BackgroundImage = Resources.Button_Pause_Hover;
         }
 
-        private void pictureBoxHome_Click(object sender, EventArgs e)
+        private void pictureBoxPause_MouseLeave(object sender, EventArgs e)
         {
-            SavePlayerData();
-            SavePetData();
-            this.Close();
+            pictureBoxPause.BackgroundImage = Resources.Button_Pause;
         }
 
-        private void pictureBoxBGM_Click(object sender, EventArgs e)
+        private void pictureBoxPause_Click(object sender, EventArgs e)
         {
-            if(frmMain.bgmActive == true)
+            if (gameRunning == true)
             {
-                pictureBoxBGM.BackgroundImage = Resources.Button_Mute;
-                frmMain.mxp.Ctlcontrols.pause();
-                frmMain.bgmActive = false;
-            }
-            else
-            {
-                pictureBoxBGM.BackgroundImage = Resources.Button_Sound;
-                frmMain.mxp.Ctlcontrols.play();
-                frmMain.bgmActive = true;
+                timerGame.Stop();
+                timerPet.Stop();
+                gameRunning = false;
+                panelPause.Visible = true;
+                pictureBoxTransparent.BringToFront();
+                pictureBoxTransparent.BackColor = Color.FromArgb(125, Color.Black);
+                panelPause.BringToFront();
+                PictureBox pictureBoxPauseIcon = new PictureBox();
+                pictureBoxPauseIcon.Location = new Point(661, 156);
+                pictureBoxPauseIcon.Size = new Size(328, 8);
+                pictureBoxPauseIcon.BackgroundImage = Resources.pauseIcon;
+                pictureBoxPauseIcon.BackgroundImageLayout = ImageLayout.Stretch;
+                pictureBoxPauseIcon.BringToFront();
             }
         }
+        #endregion
 
+        #region paused interaction
         private void pictureBoxBGM_MouseHover(object sender, EventArgs e)
         {
             if (frmMain.bgmActive == true)
@@ -607,34 +610,62 @@ namespace pet_game
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBoxBGM_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxPause_Click(object sender, EventArgs e)
-        {
-            if (gameState == true)
+            if (frmMain.bgmActive == true)
             {
-                timerGame.Stop();
-                timerPet.Stop();
-                gameState = false;
-                panelPause.Visible = true;
-                pictureBox.BringToFront();
-                pictureBox.BackColor = Color.FromArgb(125, Color.Black);
-                panelPause.BringToFront();
-                PictureBox pictureBoxPauseIcon = new PictureBox();
-                pictureBoxPauseIcon.Location = new Point(661, 156);
-                pictureBoxPauseIcon.Size = new Size(328, 8);
-                pictureBoxPauseIcon.BackgroundImage = Resources.pauseIcon;
-                pictureBoxPauseIcon.BackgroundImageLayout = ImageLayout.Stretch;
-                pictureBoxPauseIcon.BringToFront();
+                pictureBoxBGM.BackgroundImage = Resources.Button_Mute;
+                frmMain.mxp.Ctlcontrols.pause();
+                frmMain.bgmActive = false;
             }
+            else
+            {
+                pictureBoxBGM.BackgroundImage = Resources.Button_Sound;
+                frmMain.mxp.Ctlcontrols.play();
+                frmMain.bgmActive = true;
+            }
+        }
+
+        private void pictureBoxHome_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxHome.BackgroundImage = Resources.Button_Home_Hover;
+        }
+
+        private void pictureBoxHome_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxHome.BackgroundImage = Resources.Button_Home;
+        }
+
+        private void pictureBoxHome_Click(object sender, EventArgs e)
+        {
+            SavePlayerData();
+            SavePetData();
+            this.Close();
+        }
+
+        private void pictureBoxResume_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxResume.BackgroundImage = Resources.Button_Resum;
+        }
+
+        private void pictureBoxResume_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxResume.BackgroundImage = Resources.Button_Resume_Hover;
+        }
+
+        private void pictureBoxResume_Click(object sender, EventArgs e)
+        {
+            gameRunning = true;
+            panelPause.Visible = false;
+            pictureBoxTransparent.SendToBack();
+            pictureBoxTransparent.BackColor = Color.Transparent;
+            timerGame.Start();
+            timerPet.Start();
+        }
+
+        private void pictureBoxTransparent_Click(object sender, EventArgs e)
+        {
+            pictureBoxResume_Click(sender, e);
         }
         #endregion
     }

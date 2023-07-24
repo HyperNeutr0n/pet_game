@@ -40,7 +40,7 @@ namespace pet_game
         {
             base.Health += 60;
             base.Energy += 60;
-
+            base.Owner.Coins += 1000;
         }
 
         public void ChangeColor(Color newColor)
