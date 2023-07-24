@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMain = new System.Windows.Forms.Panel();
+            this.mxp = new AxWMPLib.AxWindowsMediaPlayer();
             this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             this.pictureBoxReset = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoad = new System.Windows.Forms.PictureBox();
             this.pictureBoxNew = new System.Windows.Forms.PictureBox();
-            this.mxp = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mxp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mxp)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -53,10 +53,20 @@
             this.panelMain.Controls.Add(this.pictureBoxLoad);
             this.panelMain.Controls.Add(this.pictureBoxNew);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1344, 714);
             this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
+            // mxp
+            // 
+            this.mxp.Enabled = true;
+            this.mxp.Location = new System.Drawing.Point(142, 349);
+            this.mxp.Name = "mxp";
+            this.mxp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mxp.OcxState")));
+            this.mxp.Size = new System.Drawing.Size(273, 110);
+            this.mxp.TabIndex = 12;
             // 
             // pictureBoxExit
             // 
@@ -118,32 +128,23 @@
             this.pictureBoxNew.MouseLeave += new System.EventHandler(this.pictureBoxNew_MouseLeave);
             this.pictureBoxNew.MouseHover += new System.EventHandler(this.pictureBoxNew_MouseHover);
             // 
-            // mxp
-            // 
-            this.mxp.Enabled = true;
-            this.mxp.Location = new System.Drawing.Point(142, 349);
-            this.mxp.Name = "mxp";
-            this.mxp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mxp.OcxState")));
-            this.mxp.Size = new System.Drawing.Size(273, 110);
-            this.mxp.TabIndex = 12;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 716);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mxp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mxp)).EndInit();
             this.ResumeLayout(false);
 
         }

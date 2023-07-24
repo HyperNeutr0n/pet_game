@@ -102,7 +102,7 @@ namespace pet_game
                 this.BackgroundImage = Resources.Background_cat;
                 batasKiri = 0;
                 batasKanan = 1350;
-                frmMain.PlayBgm("genshinOST.mp3");
+                frmMain.PlayBgm(".\\cat.wav");
             }
             else if (frmMain.pet is Fish)
             {

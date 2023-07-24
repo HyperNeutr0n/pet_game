@@ -78,7 +78,7 @@ namespace pet_game
             LoadPlayerData();
             LoadPetData();
             PlaySfx(Resources.GameStart);
-            PlayBgm("genshinOST.mp3");
+            PlayBgm(".\\genshin.mp3");
         }
         #endregion
 
@@ -159,5 +159,10 @@ namespace pet_game
             Application.Exit();
         }
         #endregion
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
