@@ -118,7 +118,6 @@ namespace pet_game
             try
             {
                 frmMain.pet.Buy(listToy[index]);
-                listToy.Remove(listToy[index]);
                 frmGame.labelCoin.Text = frmMain.player.Coins.ToString();
                 MessageBox.Show("Sold");
 

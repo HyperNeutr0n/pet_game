@@ -333,6 +333,26 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_ResetData1 {
+            get {
+                object obj = ResourceManager.GetObject("Button_ResetData1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_ResetData2 {
+            get {
+                object obj = ResourceManager.GetObject("Button_ResetData2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Resum {
             get {
                 object obj = ResourceManager.GetObject("Button_Resum", resourceCulture);

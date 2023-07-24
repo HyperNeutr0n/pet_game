@@ -138,7 +138,7 @@ namespace pet_game
                         throw new Exception("Player name already taken");
                     }
                 }
-                frmMain.player = new Player(textBoxPlayerName.Text, 100, DateTime.Now);
+                frmMain.player = new Player(textBoxPlayerName.Text, 100000, DateTime.Now);
 
                 if (index == 0)
                 {

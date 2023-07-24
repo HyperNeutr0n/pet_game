@@ -196,6 +196,12 @@
   <data name="Button_Reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_ResetData1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-ResetData1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_ResetData2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-ResetData2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Reset_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Reset-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

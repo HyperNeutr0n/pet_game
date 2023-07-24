@@ -39,7 +39,7 @@
             // pictureBoxDelete
             // 
             this.pictureBoxDelete.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxDelete.BackgroundImage = global::pet_game.Properties.Resources.Button_Play;
+            this.pictureBoxDelete.BackgroundImage = global::pet_game.Properties.Resources.Button_ResetData1;
             this.pictureBoxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxDelete.Location = new System.Drawing.Point(507, 352);
             this.pictureBoxDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -48,6 +48,7 @@
             this.pictureBoxDelete.TabIndex = 33;
             this.pictureBoxDelete.TabStop = false;
             this.pictureBoxDelete.Click += new System.EventHandler(this.pictureBoxDelete_Click);
+            this.pictureBoxDelete.MouseLeave += new System.EventHandler(this.pictureBoxDelete_MouseLeave);
             // 
             // comboBoxPlayer
             // 
@@ -59,7 +60,6 @@
             this.comboBoxPlayer.Name = "comboBoxPlayer";
             this.comboBoxPlayer.Size = new System.Drawing.Size(347, 46);
             this.comboBoxPlayer.TabIndex = 32;
-          
             // 
             // labelPlayer
             // 
@@ -100,7 +100,7 @@
             this.Controls.Add(this.comboBoxPlayer);
             this.Controls.Add(this.labelPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormResetPlayer";
             this.Text = "FormResetPlayer";
             this.Load += new System.EventHandler(this.FormResetPlayer_Load);

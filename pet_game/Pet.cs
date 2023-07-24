@@ -135,6 +135,7 @@ namespace pet_game
                     sudahpunya = true;
                     break;
                 }
+
                 if (sudahpunya == false)
                 {
                     this.toyList.Add(newToy);

@@ -114,5 +114,10 @@ namespace pet_game
         {
             pictureBoxBack.BackgroundImage = Resources.Button_Back2;
         }
+
+        private void pictureBoxDelete_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxDelete.BackgroundImage = Resources.Button_ResetData2;
+        }
     }
 }

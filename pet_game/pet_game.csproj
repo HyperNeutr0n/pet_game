@@ -673,5 +673,11 @@
   <ItemGroup>
     <None Include="Resources\Color_Wheel-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-ResetData1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-ResetData2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
