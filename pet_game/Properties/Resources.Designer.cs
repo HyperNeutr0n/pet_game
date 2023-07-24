@@ -878,6 +878,15 @@ namespace pet_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream genshinost {
+            get {
+                return ResourceManager.GetStream("genshinost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Happy {
@@ -1151,15 +1160,6 @@ namespace pet_game.Properties {
             get {
                 object obj = ResourceManager.GetObject("WaterFilterIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream y2mate_com___01_Genshin_Impact_Main_ThemeGenshin_Impact {
-            get {
-                return ResourceManager.GetStream("y2mate_com___01_Genshin_Impact_Main_ThemeGenshin_Impact", resourceCulture);
             }
         }
     }

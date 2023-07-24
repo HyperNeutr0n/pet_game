@@ -364,6 +364,9 @@
   <data name="GameStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="genshinost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BGM\genshinost.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngfind.com-smile-emoji-png-215707.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -447,8 +450,5 @@
   </data>
   <data name="WaterFilterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WaterFilterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="y2mate_com___01_Genshin_Impact_Main_ThemeGenshin_Impact" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\y2mate.com - 01 Genshin Impact Main ThemeGenshin Impact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

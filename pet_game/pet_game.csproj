@@ -535,5 +535,11 @@
   <ItemGroup>
     <None Include="Resources\WaterFilter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="BGM\genshin.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BGM\genshinost.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

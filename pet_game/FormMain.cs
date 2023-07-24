@@ -77,8 +77,13 @@ namespace pet_game
         {
             LoadPlayerData();
             LoadPetData();
+
+            string dir = Environment.CurrentDirectory;
+            dir = dir.Substring(0, dir.Length - 9);
+            dir += "BGM\\genshin.mp3";
+            textBox1.Text = dir;
             PlaySfx(Resources.GameStart);
-            PlayBgm(".\\genshin.mp3");
+            PlayBgm(dir);
         }
         #endregion
 
