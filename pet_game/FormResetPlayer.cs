@@ -67,6 +67,7 @@ namespace pet_game
         #region button click
         private void pictureBoxDelete_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.UseSound);
             try
             {
                 if (comboBoxPlayer.SelectedItem != null)
@@ -97,5 +98,21 @@ namespace pet_game
             this.Close();
         }
         #endregion
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySfx(Resources.Button_Sound1);
+            this.Close();
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
+        }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
     }
 }

@@ -69,7 +69,7 @@ namespace pet_game
             base.Energy -= (5 - CheckTotalDecoration());
         }
 
-        public int CheckTotalDecoration() // kalkukasi jumlah dekorasi
+        public override int CheckTotalDecoration() // kalkukasi jumlah dekorasi
         {
             if (base.ToyList.Count > -1)
             {

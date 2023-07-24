@@ -43,13 +43,24 @@ namespace pet_game
             }
             else if(frmMain.pet is Fish) 
             {
-                toy1 = new Toy("Water FIlter", 1000, 10, Properties.Resources.WaterFilterIcon);
+                toy1 = new Toy("Water Filter", 1000, 10, Properties.Resources.WaterFilterIcon);
                 listToy.Add(toy1);
 
                 toy2 = new Toy("Lamp", 500, 10, Properties.Resources.Lampu_Ikan);
                 listToy.Add(toy2);
 
                 toy3 = new Toy("Starfish", 400, 10, Properties.Resources.Starfish);
+                listToy.Add(toy3);
+            }
+            else if(frmMain.pet is Chameleon)
+            {
+                toy1 = new Toy("Humidifier", 1000, 10, Properties.Resources.Humidifier);
+                listToy.Add(toy1);
+
+                toy2 = new Toy("Lamp", 500, 10, Properties.Resources.Lampu_Ikan);
+                listToy.Add(toy2);
+
+                toy3 = new Toy("Vines", 700, 10, Properties.Resources.vines);
                 listToy.Add(toy3);
             }
         }
@@ -117,6 +128,22 @@ namespace pet_game
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySfx(Resources.Button_Sound1);
+            this.Close();
+        }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
         }
 
         private void pictureBoxLeft_Click(object sender, EventArgs e)

@@ -31,8 +31,9 @@
             this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
             this.comboBoxPlayer = new System.Windows.Forms.ComboBox();
             this.labelPlayer = new System.Windows.Forms.Label();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxDelete
@@ -40,10 +41,9 @@
             this.pictureBoxDelete.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxDelete.BackgroundImage = global::pet_game.Properties.Resources.Button_Play;
             this.pictureBoxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxDelete.Location = new System.Drawing.Point(380, 286);
-            this.pictureBoxDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxDelete.Location = new System.Drawing.Point(570, 440);
             this.pictureBoxDelete.Name = "pictureBoxDelete";
-            this.pictureBoxDelete.Size = new System.Drawing.Size(187, 111);
+            this.pictureBoxDelete.Size = new System.Drawing.Size(280, 171);
             this.pictureBoxDelete.TabIndex = 33;
             this.pictureBoxDelete.TabStop = false;
             this.pictureBoxDelete.Click += new System.EventHandler(this.pictureBoxDelete_Click);
@@ -53,48 +53,55 @@
             this.comboBoxPlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPlayer.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPlayer.FormattingEnabled = true;
-            this.comboBoxPlayer.Location = new System.Drawing.Point(346, 189);
-            this.comboBoxPlayer.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPlayer.Location = new System.Drawing.Point(519, 291);
             this.comboBoxPlayer.Name = "comboBoxPlayer";
-            this.comboBoxPlayer.Size = new System.Drawing.Size(261, 38);
+            this.comboBoxPlayer.Size = new System.Drawing.Size(390, 53);
             this.comboBoxPlayer.TabIndex = 32;
             // 
             // labelPlayer
             // 
             this.labelPlayer.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlayer.Location = new System.Drawing.Point(309, 140);
+            this.labelPlayer.Location = new System.Drawing.Point(464, 215);
+            this.labelPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPlayer.Name = "labelPlayer";
-            this.labelPlayer.Size = new System.Drawing.Size(337, 34);
+            this.labelPlayer.Size = new System.Drawing.Size(506, 52);
             this.labelPlayer.TabIndex = 31;
             this.labelPlayer.Text = "Select Player to Reset:";
             this.labelPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonBack
+            // pictureBoxBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(31, 28);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 34;
-            this.buttonBack.Text = "< Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.pictureBoxBack.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBack.BackgroundImage = global::pet_game.Properties.Resources.Button_Back1;
+            this.pictureBoxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBack.Location = new System.Drawing.Point(48, 44);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(153, 82);
+            this.pictureBoxBack.TabIndex = 35;
+            this.pictureBoxBack.TabStop = false;
+            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
+            this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
+            this.pictureBoxBack.MouseHover += new System.EventHandler(this.pictureBoxBack_MouseHover);
             // 
             // FormResetPlayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pet_game.Properties.Resources.sunsetbackground;
-            this.ClientSize = new System.Drawing.Size(1008, 580);
-            this.Controls.Add(this.buttonBack);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1512, 892);
+            this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.pictureBoxDelete);
             this.Controls.Add(this.comboBoxPlayer);
             this.Controls.Add(this.labelPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormResetPlayer";
             this.Text = "FormResetPlayer";
             this.Load += new System.EventHandler(this.FormResetPlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,6 +111,6 @@
         private System.Windows.Forms.PictureBox pictureBoxDelete;
         private System.Windows.Forms.ComboBox comboBoxPlayer;
         public System.Windows.Forms.Label labelPlayer;
-        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBoxBack;
     }
 }

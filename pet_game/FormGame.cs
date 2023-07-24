@@ -29,6 +29,7 @@ namespace pet_game
         public string activity, toy;
         public int mostLeft, mostRight;
         public bool gameRunning = false;
+        public int ChamColorIndex = 0;
 
         FormMain frmMain;
         #endregion
@@ -54,6 +55,12 @@ namespace pet_game
         List<Image> listCatPlayBall = new List<Image> { Resources.Cat_Play_Ball, Resources.Cat_Play_Ball2};
         List<Image> listCatPlayStick = new List<Image> { Resources.Cat_Play_Stick, Resources.Cat_Play_Stick2 };
         List<Image> listCatPlayYarn = new List<Image> { Resources.Cat_Play_Yarn, Resources.Cat_Play_Yarn2 };
+        List<Image> listChameleonWalkRight3 = new List<Image> { Resources.Chameleon_Color3, Resources.Chaemeleon_Color3_Walk };
+        List<Image> listChameleonWalkLeft3 = new List<Image> { Resources.Chaemeleon_Color3_Kiri, Resources.Chaemeleon_Color3_KiriWalk };
+        List<Image> listChameleonWalkRight4 = new List<Image> { Resources.Chameleon_Color4, Resources.Chaemeleon_Color4_Walk };
+        List<Image> listChameleonWalkLeft4 = new List<Image> { Resources.Chaemeleon_Color4_Kiri, Resources.Chaemeleon_Color4_KiriWalk };
+        List<Image> listChameleonWalkRight5 = new List<Image> { Resources.Chameleon_Color5, Resources.Chaemeleon_Color5_Walk };
+        List<Image> listChameleonWalkLeft5 = new List<Image> { Resources.Chaemeleon_Color5_Kiri, Resources.Chaemeleon_Color5_KiriWalk };
         #endregion
 
         #region serialize
@@ -110,6 +117,7 @@ namespace pet_game
                 pictureBoxSpecial.Visible = true;
                 pictureBoxSpecial.BackgroundImage = Resources.Suntik;
                 this.BackgroundImage = Resources.Background_cat;
+                pictureBoxPetIcon.BackgroundImage = Resources.PetIconCat;
                 mostLeft = 0;
                 mostRight = 1350;
                 frmMain.PlayBgm("BGM\\cat.mp3");
@@ -127,6 +135,7 @@ namespace pet_game
                 pictureBoxSpecial.BackgroundImage = Resources.Environment;
                 labelSpecialStatus.Visible = true;
                 labelSpecialStatus.Text = frmMain.pet.DisplayData();
+                pictureBoxPetIcon.BackgroundImage = Resources.PetIconFish;
                 pictureBoxPet.Top = 240;
                 pictureBoxClean.Top = 110;
                 mostLeft = 350;
@@ -136,16 +145,38 @@ namespace pet_game
             }
             else if (frmMain.pet is Chameleon)
             {
-                pictureBoxPlay.Enabled = false;
-                pictureBoxPlay.Visible = false;
+                pictureBoxPlay.Enabled = true;
+                pictureBoxPlay.Visible = true;
                 pictureBoxBath.Enabled = false;
                 pictureBoxBath.Visible = false;
                 pictureBoxClean.Enabled = false;
                 pictureBoxClean.Visible = false;
                 pictureBoxVaccine.Enabled = false;
                 pictureBoxVaccine.Visible = false;
+                pictureBoxPetIcon.BackgroundImage = Resources.PetIconCham;
                 pictureBoxPet.Size = new Size(122, 104);
-                pictureBoxPet.Top = 327;
+                pictureBoxPet.Top = 333;
+                labelSpecialStatus.Visible = true;
+                pictureBoxSpecial.Visible= true;
+                pictureBoxSpecial.BackgroundImage = Resources.ColorWheel;
+                if (((Chameleon)frmMain.pet).CurrentColor == Color.Green)
+                {
+                    labelSpecialStatus.Text = "Green";
+                }
+                else if (((Chameleon)frmMain.pet).CurrentColor == Color.Blue)
+                {
+                    labelSpecialStatus.Text = "Blue";
+                }
+                else if (((Chameleon)frmMain.pet).CurrentColor == Color.Yellow)
+                {
+                    labelSpecialStatus.Text = "Yellow";
+                }
+                else if (((Chameleon)frmMain.pet).CurrentColor == Color.Red)
+                {
+                    labelSpecialStatus.Text = "Red";
+                }
+                pictureBoxColor.Visible = true;
+                pictureBoxColor.Top = 270;
                 this.BackgroundImage = Resources.Background_Cham;
                 mostLeft = 350;
                 mostRight = 993;
@@ -201,7 +232,25 @@ namespace pet_game
                     }
                     pictureBoxPet.Image = listFishWalkLeft[indexImage];
                 }
-                if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listChameleonWalkLeft[indexImage]; }
+                if (frmMain.pet is Chameleon)
+                {
+                    if (((Chameleon)frmMain.pet).CurrentColor == Color.Green)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkLeft[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Blue)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkLeft3[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Yellow)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkLeft5[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Red)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkLeft4[indexImage]; }
+                    }
+                }
             }
             else if (activity == "walkingRight" || activity == "clean")
             {
@@ -214,7 +263,26 @@ namespace pet_game
                     }
                     pictureBoxPet.Image = listFishWalkRight[indexImage];
                 }
-                if (frmMain.pet is Chameleon) { pictureBoxPet.Image = listChameleonWalkRight[indexImage]; }
+                if (frmMain.pet is Chameleon)
+                {
+                    if (((Chameleon)frmMain.pet).CurrentColor == Color.Green)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkRight[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Blue)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkRight3[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Yellow)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkRight5[indexImage]; }
+                    }
+                    else if (((Chameleon)frmMain.pet).CurrentColor == Color.Red)
+                    {
+                        { pictureBoxPet.Image = listChameleonWalkRight4[indexImage]; }
+                    }
+                }
+                
             }
             else if (activity == "eat")
             {
@@ -324,6 +392,16 @@ namespace pet_game
                     {
                         pictureBoxLamp.Visible = true;
                     }
+                    else if(t.Name == "Humidifier")
+                    {
+                        pictureBoxwater.Image = Resources.Humidifier;
+                        pictureBoxwater.Visible = true;
+
+                    }
+                    else if(t.Name == "Vines")
+                    {
+                        pictureBoxVines.Visible = true;
+                    }
                 }
             }
         }
@@ -349,7 +427,7 @@ namespace pet_game
         {
             frmMain.pet.ChangeStatus();
             PanelDataUpdate();
-            if(frmMain.pet is Fish)
+            if(frmMain.pet is Fish || frmMain.pet is Chameleon)
             {
                 CheckFishItem();
             }
@@ -378,6 +456,18 @@ namespace pet_game
                 if (frmMain.pet is Cat || frmMain.pet is Chameleon)
                 {
                     activity = "idle";
+                    if(frmMain.pet is Cat)
+                    {
+                        frmMain.PlaySfx(Resources.Cat_Meow);
+                    }
+                    else if(frmMain.pet is Chameleon)
+                    {
+                        frmMain.PlaySfx(Resources.Chameleon_leaf);
+                    }
+                }
+                if (frmMain.pet is Fish)
+                {
+                    frmMain.PlaySfx(Resources.Fish_Bubble);
                 }
             }
             else
@@ -495,6 +585,7 @@ namespace pet_game
             frmMain.panelMain.Controls.Add(frmSelectToys);
             frmSelectToys.BringToFront();
             frmSelectToys.Show();
+            
         }
 
         private void pictureBoxSleep_Click(object sender, EventArgs e)
@@ -600,6 +691,7 @@ namespace pet_game
 
         private void pictureBoxBGM_MouseLeave(object sender, EventArgs e)
         {
+
             if (frmMain.bgmActive == true)
             {
                 pictureBoxBGM.BackgroundImage = Resources.Button_Sound;
@@ -612,6 +704,7 @@ namespace pet_game
 
         private void pictureBoxBGM_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.Button_Sound1);
             if (frmMain.bgmActive == true)
             {
                 pictureBoxBGM.BackgroundImage = Resources.Button_Mute;
@@ -638,6 +731,7 @@ namespace pet_game
 
         private void pictureBoxHome_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.Button_Sound1);
             SavePlayerData();
             SavePetData();
             this.Close();
@@ -653,8 +747,36 @@ namespace pet_game
             pictureBoxResume.BackgroundImage = Resources.Button_Resume_Hover;
         }
 
+
+        private void pictureBoxColor_Click(object sender, EventArgs e)
+        {
+            ChamColorIndex++;
+            if (ChamColorIndex == 1)
+            {
+                ((Chameleon)frmMain.pet).ChangeColor(Color.Blue);
+                labelSpecialStatus.Text = "Blue";
+            }
+            else if (ChamColorIndex == 2)
+            {
+                ((Chameleon)frmMain.pet).ChangeColor(Color.Yellow);
+                labelSpecialStatus.Text = "Yellow";
+            }
+            else if (ChamColorIndex == 3)
+            {
+                ((Chameleon)frmMain.pet).ChangeColor(Color.Red);
+                labelSpecialStatus.Text = "Red";
+            }
+            else if (ChamColorIndex > 3)
+            {
+                ChamColorIndex = 0;
+                ((Chameleon)frmMain.pet).ChangeColor(Color.Green);
+                labelSpecialStatus.Text = "Green";
+            }
+        }
+
         private void pictureBoxResume_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.Button_Sound1);
             gameRunning = true;
             panelPause.Visible = false;
             pictureBoxTransparent.SendToBack();

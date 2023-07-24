@@ -27,20 +27,21 @@ namespace pet_game
         #region methods
         public override string DisplayData()
         {
-            return base.DisplayDataPet() + "\nCurrent Color : " + this.CurrentColor.ToString();
+            return this.CurrentColor.ToString();
         }
 
         public override void Feed()
         {
             base.Health += 30;
             base.Energy += 50;
+            base.Owner.Coins += 4000;
         }
 
         public override void Sleep()
         {
             base.Health += 60;
             base.Energy += 60;
-            base.Owner.Coins += 1000;
+            base.Owner.Coins += 6000;
         }
 
         public void ChangeColor(Color newColor)
@@ -50,9 +51,27 @@ namespace pet_game
 
         public override void ChangeStatus()
         {
-            base.Happiness -= 5;
-            base.Health -= 5;
-            base.Energy -= 5;
+            base.Happiness -= (5 - CheckTotalDecoration());
+            base.Health -= (5 - CheckTotalDecoration());
+            base.Energy -= (5 - CheckTotalDecoration());
+        }
+        public override int CheckTotalDecoration() // kalkukasi jumlah dekorasi
+        {
+            if (base.ToyList.Count > -1)
+            {
+                if (base.ToyList.Count < 5)
+                {
+                    return base.ToyList.Count;
+                }
+                else
+                {
+                    return 4;
+                }
+            }
+            else
+            {
+                return 0;
+            }
         }
         #endregion
     }

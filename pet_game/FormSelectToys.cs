@@ -33,6 +33,12 @@ namespace pet_game
             frmMain = this.Owner.Owner as FormMain;
             comboBoxToys.DataSource = frmMain.pet.ToyList;
             comboBoxToys.DisplayMember = "Name";
+
+            if(frmMain.pet is Chameleon || frmMain.pet is Fish)
+            {
+                labelToys.Text = "Decoration List";
+                pictureBoxUse.Visible= false;
+            }
         }
         #endregion
 
@@ -104,7 +110,7 @@ namespace pet_game
             }
         }
 
-        private void linkLabelBuy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void linkLabelBuy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormShop frmShop = new FormShop();
             frmShop.Owner = this;
@@ -123,9 +129,24 @@ namespace pet_game
             frmGame.timerPet.Start();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+
+        #endregion
+
+        #region button interaction
+        private void pictureBoxBack_Click(object sender, EventArgs e)
         {
+            frmMain.PlaySfx(Resources.Button_Sound1);
             this.Close();
+        }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
         }
         #endregion
     }

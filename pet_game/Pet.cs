@@ -204,6 +204,13 @@ namespace pet_game
             }
             return condition;
         }
+
+        public virtual int CheckTotalDecoration() // kalkukasi jumlah dekorasi
+        {
+            
+                return 0;
+            
+        }
         #endregion
     }
 }

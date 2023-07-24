@@ -619,5 +619,59 @@
   <ItemGroup>
     <None Include="Resources\cat-afterVaccine-001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Humidifier.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Meow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-leaf.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fish-Bubble.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PetIconCat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PetIconCham.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PetIconFish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color3-Kiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color3-KiriWalk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color3-Walk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color4-Kiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color4-KiriWalk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color4-Walk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color5-Kiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color5-KiriWalk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaemeleon-Color5-Walk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_Wheel-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

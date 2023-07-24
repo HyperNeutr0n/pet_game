@@ -131,7 +131,7 @@ namespace pet_game
         {
             try
             {
-                frmMain.player = new Player(textBoxPlayerName.Text, 500, DateTime.Now);
+                frmMain.player = new Player(textBoxPlayerName.Text, 100, DateTime.Now);
 
                 if (index == 0)
                 {
@@ -162,5 +162,21 @@ namespace pet_game
             }
         }
         #endregion
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            frmMain.PlaySfx(Resources.Button_Sound1);
+            this.Close();
+        }
+
+        private void pictureBoxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back1;
+        }
+
+        private void pictureBoxBack_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxBack.BackgroundImage = Resources.Button_Back2;
+        }
     }
 }

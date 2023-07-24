@@ -39,16 +39,21 @@ namespace pet_game
         {
             base.Health += 30;
             base.Energy += 50;
+            base.Owner.Coins += 4000;
         }
 
         public override void Sleep()
         {
             base.Health += 20;
             base.Energy += 70;
+            base.Owner.Coins += 4500;
         }
 
         public override void Play(Toy toy)
         {
+            base.Happiness += 50;
+            base.Energy -= 30;
+            base.Owner.Coins += 2500;
             if (toy != null)
             {
                 base.Happiness += toy.Benefit;
@@ -58,6 +63,7 @@ namespace pet_game
         public void Bath()
         {
             base.Health += 30;
+            base.Owner.Coins += 1500;
         }
 
         public void Vaccinate()
@@ -77,6 +83,7 @@ namespace pet_game
             {
                 throw new Exception("Not enough coin");
             }
+            base.Owner.Coins += 1500;
         }
 
         public override void ChangeStatus()
