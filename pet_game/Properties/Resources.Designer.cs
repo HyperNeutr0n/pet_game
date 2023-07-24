@@ -541,9 +541,149 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Color1 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Color1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Color2 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Color2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Color3 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Color3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Color4 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Color4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Color5 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Color5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Default {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Default__Kiri {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Default__Kiri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Feed {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Feed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Feed2 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Feed2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Idle {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Idle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chameleon_leaves {
             get {
                 object obj = ResourceManager.GetObject("chameleon_leaves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Sleep1 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Sleep1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chameleon_Sleep2 {
+            get {
+                object obj = ResourceManager.GetObject("Chameleon_Sleep2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChameleonWalks {
+            get {
+                object obj = ResourceManager.GetObject("ChameleonWalks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChameleonWalks___Kiri {
+            get {
+                object obj = ResourceManager.GetObject("ChameleonWalks___Kiri", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -889,6 +1029,16 @@ namespace pet_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lampu_Ikan {
+            get {
+                object obj = ResourceManager.GetObject("Lampu_Ikan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Menu_BG {
             get {
                 object obj = ResourceManager.GetObject("Menu-BG", resourceCulture);
@@ -946,6 +1096,16 @@ namespace pet_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Starfish {
+            get {
+                object obj = ResourceManager.GetObject("Starfish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream success_1_6297 {
@@ -980,6 +1140,26 @@ namespace pet_game.Properties {
         internal static System.IO.UnmanagedMemoryStream UseSound {
             get {
                 return ResourceManager.GetStream("UseSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WaterFilterFish {
+            get {
+                object obj = ResourceManager.GetObject("WaterFilterFish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WaterFilterIcon {
+            get {
+                object obj = ResourceManager.GetObject("WaterFilterIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

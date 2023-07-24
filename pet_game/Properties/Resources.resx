@@ -262,8 +262,50 @@
   <data name="cat_walkingRight_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-walkingRight-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ChameleonWalks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChameleonWalks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChameleonWalks___Kiri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChameleonWalks - Kiri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Color1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Color1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Color2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Color2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Color3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Color3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Color4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Color4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Color5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Color5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Default__Kiri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Default -Kiri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Feed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Feed2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chameleon_leaves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chameleon_leaves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Sleep1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Sleep1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chameleon_Sleep2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chameleon-Sleep2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -367,6 +409,9 @@
   <data name="Icon_Vaccine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Vaccine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lampu_Ikan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lampu-Ikan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menu-BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fajrbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -385,6 +430,9 @@
   <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Starfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Starfish-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="success_1_6297" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\success-1-6297.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -396,6 +444,12 @@
   </data>
   <data name="UseSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UseSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WaterFilterFish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WaterFilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WaterFilterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WaterFilterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="y2mate_com___01_Genshin_Impact_Main_ThemeGenshin_Impact" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\y2mate.com - 01 Genshin Impact Main ThemeGenshin Impact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

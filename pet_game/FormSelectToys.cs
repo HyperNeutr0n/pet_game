@@ -30,7 +30,6 @@ namespace pet_game
         {
             frmGame = this.Owner as FormGame;
             frmMain = this.Owner.Owner as FormMain;
-
             comboBoxToys.DataSource = frmMain.pet.ToyList;
             comboBoxToys.DisplayMember = "Name";
         }

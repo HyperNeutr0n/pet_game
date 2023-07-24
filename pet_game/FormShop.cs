@@ -30,14 +30,28 @@ namespace pet_game
         #region methods
         private void CreateToys()
         {
-            toy1 = new Toy("Ball", 500, 10, Properties.Resources.cat_toys_ball);
-            listToy.Add(toy1);
+            if (frmMain.pet is Cat)
+            {
+                toy1 = new Toy("Ball", 500, 10, Properties.Resources.cat_toys_ball);
+                listToy.Add(toy1);
 
-            toy2 = new Toy("Yarn", 500, 10, Properties.Resources.cat_toys_yarn);
-            listToy.Add(toy2);
+                toy2 = new Toy("Yarn", 500, 10, Properties.Resources.cat_toys_yarn);
+                listToy.Add(toy2);
 
-            toy3 = new Toy("Stick", 500, 10, Properties.Resources.cat_toys_stick);
-            listToy.Add(toy3);
+                toy3 = new Toy("Stick", 500, 10, Properties.Resources.cat_toys_stick);
+                listToy.Add(toy3);
+            }
+            else if(frmMain.pet is Fish) 
+            {
+                toy1 = new Toy("Water FIlter", 1000, 10, Properties.Resources.WaterFilterIcon);
+                listToy.Add(toy1);
+
+                toy2 = new Toy("Lamp", 500, 10, Properties.Resources.Lampu_Ikan);
+                listToy.Add(toy2);
+
+                toy3 = new Toy("Starfish", 400, 10, Properties.Resources.Starfish);
+                listToy.Add(toy3);
+            }
         }
         #endregion
 

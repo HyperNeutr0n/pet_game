@@ -22,7 +22,7 @@ namespace pet_game
         #region objects
         FormMain frmMain;
 
-        List<Image> selectImage = new List<Image>() { Properties.Resources.cat_idle_000, Properties.Resources.Fish_MoveL_1, Properties.Resources.cat_food };
+        List<Image> selectImage = new List<Image>() { Properties.Resources.cat_idle_000, Properties.Resources.Fish_MoveL_1, Properties.Resources.Chameleon_Default};
 
         int index = 0;
         #endregion

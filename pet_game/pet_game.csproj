@@ -478,5 +478,62 @@
   <ItemGroup>
     <None Include="Resources\Fish-Clean.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Color1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Color2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Color3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Color4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Color5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Feed2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Sleep1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Sleep2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChameleonWalks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chameleon-Default -Kiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChameleonWalks - Kiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaterFilterIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lampu-Ikan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Starfish-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaterFiler1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaterFilter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
