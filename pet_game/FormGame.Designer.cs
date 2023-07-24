@@ -126,7 +126,7 @@
             this.panelData.Controls.Add(this.progressBarHealth);
             this.panelData.Controls.Add(this.progressBarHappy);
             this.panelData.Location = new System.Drawing.Point(27, 11);
-            this.panelData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelData.Margin = new System.Windows.Forms.Padding(4);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(1051, 164);
             this.panelData.TabIndex = 1;
@@ -365,12 +365,13 @@
             this.pictureBoxPet.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPet.Location = new System.Drawing.Point(584, 537);
-            this.pictureBoxPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxPet.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxPet.Name = "pictureBoxPet";
             this.pictureBoxPet.Size = new System.Drawing.Size(192, 174);
             this.pictureBoxPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPet.TabIndex = 5;
             this.pictureBoxPet.TabStop = false;
+            this.pictureBoxPet.Click += new System.EventHandler(this.pictureBoxPet_Click);
             // 
             // pictureBoxEat
             // 
@@ -662,7 +663,7 @@
             this.Controls.Add(this.pictureBoxTransparent);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormGame";
             this.Opacity = 0.2D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

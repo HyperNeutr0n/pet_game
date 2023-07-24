@@ -90,7 +90,7 @@ namespace pet_game
             labelHealth.Text = frmMain.pet.Health.ToString();
             labelEnergy.Text = frmMain.pet.Energy.ToString();
             labelHappy.Text = frmMain.pet.Happiness.ToString();
-            labelCoin.Text = frmMain.player.Coins.ToString();
+            //labelCoin.Text = frmMain.player.Coins.ToString();
         }
 
         public void StartGame()
@@ -772,6 +772,11 @@ namespace pet_game
                 ((Chameleon)frmMain.pet).ChangeColor(Color.Green);
                 labelSpecialStatus.Text = "Green";
             }
+        }
+
+        private void pictureBoxPet_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBoxResume_Click(object sender, EventArgs e)

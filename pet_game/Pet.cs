@@ -131,14 +131,16 @@ namespace pet_game
                 bool sudahpunya = false;
                 foreach (Toy toy in ToyList)
                 {
-                    if (toy.Name == newToy.Name) 
-                    sudahpunya = true;
-                    break;
+                    if (toy.Name == newToy.Name)
+                    {
+                        sudahpunya = true;
+                        break;
+                    }
                 }
 
                 if (sudahpunya == false)
                 {
-                    this.toyList.Add(newToy);
+                    this.ToyList.Add(newToy);
                     this.Owner.Coins -= newToy.Price;
                 }
                 else

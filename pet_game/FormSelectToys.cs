@@ -92,7 +92,7 @@ namespace pet_game
 
         private void comboBoxToys_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxToys.SelectedIndex != -1)
+            if (comboBoxToys.SelectedIndex > -1)
             {
                 selectToy = (Toy)comboBoxToys.SelectedItem;
                 pictureBoxToy.Image = selectToy.Picture;
