@@ -27,6 +27,7 @@ namespace pet_game
         public Player player;
         public BindingList<Player> listPlayer = new BindingList<Player>();
         public BindingList<Pet> listPet = new BindingList<Pet>();
+        public bool bgmActive = false;
 
         SoundPlayer sfx;
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
@@ -41,10 +42,19 @@ namespace pet_game
 
         public void PlayBgm(string url)
         {
-            mxp.URL = url;
+            string dir = Environment.CurrentDirectory;
+            dir = dir.Substring(0, dir.Length - 9);
+            dir += url;
+            mxp.URL = dir;
             mxp.settings.playCount = 999;
             mxp.Visible = false;
+            mxp.settings.volume = 70;
             mxp.Ctlcontrols.play();
+            bgmActive = true;
+        }
+        public void MuteBgm()
+        {
+            mxp.Ctlcontrols.stop();
         }
         #endregion
 
@@ -77,12 +87,8 @@ namespace pet_game
         {
             LoadPlayerData();
             LoadPetData();
-
-            string dir = Environment.CurrentDirectory;
-            dir = dir.Substring(0, dir.Length - 9);
-            dir += "BGM\\genshin.mp3";
             PlaySfx(Resources.GameStart);
-            PlayBgm(dir);
+            PlayBgm("BGM\\genshin.mp3");
         }
         #endregion
 
@@ -167,5 +173,10 @@ namespace pet_game
             Application.Exit();
         }
         #endregion
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

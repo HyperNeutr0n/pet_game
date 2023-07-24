@@ -550,5 +550,74 @@
   <ItemGroup>
     <None Include="BGM\genshinost.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background-Cham.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelActivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelStatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Home-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Resum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Resume-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Mute-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Sound-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1cfd845441f8398611bf8b72a08afe6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Ball2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Stick2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Yarn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat-Play-Yarn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-afterVaccine-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-afterVaccine-001.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

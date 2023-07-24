@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,7 +58,13 @@ namespace pet_game
                     if (frmMain.pet is Cat)
                     {
                         frmMain.pet.Play(selectToy);
-
+                        frmGame.timerGame.Start();
+                        frmGame.timerPet.Start();
+                        frmGame.toy = comboBoxToys.Text;
+                        frmGame.activity = "play";
+                        frmGame.animationDuration = 30;
+                        frmGame.delayCount = 0;
+                        //frmGame.activity
                     }
                     this.Close();
                 }
@@ -82,8 +89,18 @@ namespace pet_game
             if (comboBoxToys.SelectedIndex != -1)
             {
                 selectToy = (Toy)comboBoxToys.SelectedItem;
-                pictureBox1.Image = selectToy.Picture;
+                pictureBoxToy.Image = selectToy.Picture;
                 labelData.Text = selectToy.DisplayData();
+                if(comboBoxToys.Text == "Ball")
+                {
+                    pictureBoxToy.BackgroundImage = Resources.cat_toys_ball;
+                }else if (comboBoxToys.Text == "Yarn")
+                {
+                    pictureBoxToy.BackgroundImage = Resources.cat_toys_yarn;
+                }else if (comboBoxToys.Text == "Stick")
+                {
+                    pictureBoxToy.BackgroundImage = Resources.cat_toys_stick;
+                }
             }
         }
 
@@ -103,6 +120,7 @@ namespace pet_game
         {
             frmGame.ProgressBarUpdate();
             frmGame.timerGame.Start();
+            frmGame.timerPet.Start();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -110,5 +128,10 @@ namespace pet_game
             this.Close();
         }
         #endregion
+
+        private void labelData_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

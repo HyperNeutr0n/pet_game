@@ -131,7 +131,7 @@ namespace pet_game
         {
             try
             {
-                frmMain.player = new Player(textBoxPlayerName.Text, 1000, DateTime.Now);
+                frmMain.player = new Player(textBoxPlayerName.Text, 1000000000, DateTime.Now);
 
                 if (index == 0)
                 {

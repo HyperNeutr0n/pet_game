@@ -127,8 +127,17 @@
   <data name="Background_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background-cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background_Cham" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background-Cham.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background_Ikan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background-Ikan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Back2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_Buy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Buy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,6 +151,12 @@
   <data name="Button_Exit_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Exit-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Home_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Home-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +168,12 @@
   </data>
   <data name="Button_Load_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Load-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Mute_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Mute-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_NewGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-NewGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,14 +199,26 @@
   <data name="Button_Reset_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Reset-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_Resum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Resum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Resume_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Resume-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_Right_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Right-Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Sound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Sound1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Sound1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Button_Sound_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Sound-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_Use" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Use.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -198,6 +231,12 @@
   </data>
   <data name="cat_afterBathIdle_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-afterBathIdle-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_afterVaccine_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat-afterVaccine-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_afterVaccine_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat-afterVaccine-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_bath_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-bath-000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -219,6 +258,24 @@
   </data>
   <data name="cat_idle_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-idle-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Ball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Ball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Ball2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Ball2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Stick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Stick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Stick2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Stick2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Yarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Yarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cat_Play_Yarn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat-Play-Yarn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_shower" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat_shower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +316,7 @@
   <data name="cat_walkingRight_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-walkingRight-001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ChameleonWalks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ChameleonWalks_kanan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChameleonWalks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ChameleonWalks___Kiri" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -364,9 +421,6 @@
   <data name="GameStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="genshinost" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BGM\genshinost.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngfind.com-smile-emoji-png-215707.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -420,6 +474,18 @@
   </data>
   <data name="noonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanelActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanelActivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanelData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanelData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanelStatus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanelStatus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pauseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d1cfd845441f8398611bf8b72a08afe6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PlayStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

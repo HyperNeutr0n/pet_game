@@ -109,7 +109,7 @@ namespace pet_game
                 frmMain.pet.Buy(listToy[index]);
                 listToy.Remove(listToy[index]);
                 frmGame.labelCoin.Text = frmMain.player.Coins.ToString();
-                MessageBox.Show("Terbeli");
+                MessageBox.Show("Sold");
 
                 this.Close();
             }
